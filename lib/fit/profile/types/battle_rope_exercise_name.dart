@@ -1,0 +1,30 @@
+class BattleRopeExerciseName {
+  static const int alternatingFigureEight = 0;
+  static const int alternatingJumpWave = 1;
+  static const int alternatingKneelingToStandingWave = 2;
+  static const int alternatingLungeWave = 3;
+  static const int alternatingSquatWave = 4;
+  static const int alternatingWave = 5;
+  static const int alternatingWaveWithLateralShuffle = 6;
+  static const int clapWave = 7;
+  static const int doubleArmFigureEight = 8;
+  static const int doubleArmSideToSideSnake = 9;
+  static const int doubleArmSideWave = 10;
+  static const int doubleArmSlam = 11;
+  static const int doubleArmWave = 12;
+  static const int grapplerToss = 13;
+  static const int hipToss = 14;
+  static const int inAndOutWave = 15;
+  static const int insideCircle = 16;
+  static const int jumpingJacks = 17;
+  static const int outsideCircle = 18;
+  static const int rainbow = 19;
+  static const int sidePlankWave = 20;
+  static const int sidewinder = 21;
+  static const int sittingRussianTwist = 22;
+  static const int snakeWave = 23;
+  static const int splitJack = 24;
+  static const int stageCoach = 25;
+  static const int ultimateWarrior = 26;
+  static const int upperCuts = 27;
+}

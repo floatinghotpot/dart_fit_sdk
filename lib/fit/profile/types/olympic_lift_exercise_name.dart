@@ -1,0 +1,31 @@
+class OlympicLiftExerciseName {
+  static const int barbellHangPowerClean = 0;
+  static const int barbellHangSquatClean = 1;
+  static const int barbellPowerClean = 2;
+  static const int barbellPowerSnatch = 3;
+  static const int barbellSquatClean = 4;
+  static const int cleanAndJerk = 5;
+  static const int barbellHangPowerSnatch = 6;
+  static const int barbellHangPull = 7;
+  static const int barbellHighPull = 8;
+  static const int barbellSnatch = 9;
+  static const int barbellSplitJerk = 10;
+  static const int clean = 11;
+  static const int dumbbellClean = 12;
+  static const int dumbbellHangPull = 13;
+  static const int oneHandDumbbellSplitSnatch = 14;
+  static const int pushJerk = 15;
+  static const int singleArmDumbbellSnatch = 16;
+  static const int singleArmHangSnatch = 17;
+  static const int singleArmKettlebellSnatch = 18;
+  static const int splitJerk = 19;
+  static const int squatCleanAndJerk = 20;
+  static const int dumbbellHangSnatch = 21;
+  static const int dumbbellPowerCleanAndJerk = 22;
+  static const int dumbbellPowerCleanAndPushPress = 23;
+  static const int dumbbellPowerCleanAndStrictPress = 24;
+  static const int dumbbellSnatch = 25;
+  static const int medicineBallClean = 26;
+  static const int cleanAndPress = 27;
+  static const int snatch = 28;
+}

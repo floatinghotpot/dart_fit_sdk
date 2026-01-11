@@ -1,0 +1,37 @@
+class SuspensionExerciseName {
+  static const int chestFly = 0;
+  static const int chestPress = 1;
+  static const int crunch = 2;
+  static const int curl = 3;
+  static const int dip = 4;
+  static const int facePull = 5;
+  static const int gluteBridge = 6;
+  static const int hamstringCurl = 7;
+  static const int hipDrop = 8;
+  static const int invertedRow = 9;
+  static const int kneeDriveJump = 10;
+  static const int kneeToChest = 11;
+  static const int latPullover = 12;
+  static const int lunge = 13;
+  static const int mountainClimber = 14;
+  static const int pendulum = 15;
+  static const int pike = 16;
+  static const int plank = 17;
+  static const int powerPull = 18;
+  static const int pullUp = 19;
+  static const int pushUp = 20;
+  static const int reverseMountainClimber = 21;
+  static const int reversePlank = 22;
+  static const int rollout = 23;
+  static const int row = 24;
+  static const int sideLunge = 25;
+  static const int sidePlank = 26;
+  static const int singleLegDeadlift = 27;
+  static const int singleLegSquat = 28;
+  static const int sitUp = 29;
+  static const int split = 30;
+  static const int squat = 31;
+  static const int squatJump = 32;
+  static const int tricepPress = 33;
+  static const int yFly = 34;
+}

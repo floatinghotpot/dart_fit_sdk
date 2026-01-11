@@ -1,0 +1,37 @@
+class HipStabilityExerciseName {
+  static const int bandSideLyingLegRaise = 0;
+  static const int deadBug = 1;
+  static const int weightedDeadBug = 2;
+  static const int externalHipRaise = 3;
+  static const int weightedExternalHipRaise = 4;
+  static const int fireHydrantKicks = 5;
+  static const int weightedFireHydrantKicks = 6;
+  static const int hipCircles = 7;
+  static const int weightedHipCircles = 8;
+  static const int innerThighLift = 9;
+  static const int weightedInnerThighLift = 10;
+  static const int lateralWalksWithBandAtAnkles = 11;
+  static const int pretzelSideKick = 12;
+  static const int weightedPretzelSideKick = 13;
+  static const int proneHipInternalRotation = 14;
+  static const int weightedProneHipInternalRotation = 15;
+  static const int quadruped = 16;
+  static const int quadrupedHipExtension = 17;
+  static const int weightedQuadrupedHipExtension = 18;
+  static const int quadrupedWithLegLift = 19;
+  static const int weightedQuadrupedWithLegLift = 20;
+  static const int sideLyingLegRaise = 21;
+  static const int weightedSideLyingLegRaise = 22;
+  static const int slidingHipAdduction = 23;
+  static const int weightedSlidingHipAdduction = 24;
+  static const int standingAdduction = 25;
+  static const int weightedStandingAdduction = 26;
+  static const int standingCableHipAbduction = 27;
+  static const int standingHipAbduction = 28;
+  static const int weightedStandingHipAbduction = 29;
+  static const int standingRearLegRaise = 30;
+  static const int weightedStandingRearLegRaise = 31;
+  static const int supineHipInternalRotation = 32;
+  static const int weightedSupineHipInternalRotation = 33;
+  static const int lyingAbductionStretch = 34;
+}

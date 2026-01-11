@@ -1,0 +1,29 @@
+class BenchPressExerciseName {
+  static const int alternatingDumbbellChestPressOnSwissBall = 0;
+  static const int barbellBenchPress = 1;
+  static const int barbellBoardBenchPress = 2;
+  static const int barbellFloorPress = 3;
+  static const int closeGripBarbellBenchPress = 4;
+  static const int declineDumbbellBenchPress = 5;
+  static const int dumbbellBenchPress = 6;
+  static const int dumbbellFloorPress = 7;
+  static const int inclineBarbellBenchPress = 8;
+  static const int inclineDumbbellBenchPress = 9;
+  static const int inclineSmithMachineBenchPress = 10;
+  static const int isometricBarbellBenchPress = 11;
+  static const int kettlebellChestPress = 12;
+  static const int neutralGripDumbbellBenchPress = 13;
+  static const int neutralGripDumbbellInclineBenchPress = 14;
+  static const int oneArmFloorPress = 15;
+  static const int weightedOneArmFloorPress = 16;
+  static const int partialLockout = 17;
+  static const int reverseGripBarbellBenchPress = 18;
+  static const int reverseGripInclineBenchPress = 19;
+  static const int singleArmCableChestPress = 20;
+  static const int singleArmDumbbellBenchPress = 21;
+  static const int smithMachineBenchPress = 22;
+  static const int swissBallDumbbellChestPress = 23;
+  static const int tripleStopBarbellBenchPress = 24;
+  static const int wideGripBarbellBenchPress = 25;
+  static const int alternatingDumbbellChestPress = 26;
+}

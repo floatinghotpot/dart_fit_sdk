@@ -1,0 +1,54 @@
+class HipRaiseExerciseName {
+  static const int barbellHipThrustOnFloor = 0;
+  static const int barbellHipThrustWithBench = 1;
+  static const int bentKneeSwissBallReverseHipRaise = 2;
+  static const int weightedBentKneeSwissBallReverseHipRaise = 3;
+  static const int bridgeWithLegExtension = 4;
+  static const int weightedBridgeWithLegExtension = 5;
+  static const int clamBridge = 6;
+  static const int frontKickTabletop = 7;
+  static const int weightedFrontKickTabletop = 8;
+  static const int hipExtensionAndCross = 9;
+  static const int weightedHipExtensionAndCross = 10;
+  static const int hipRaise = 11;
+  static const int weightedHipRaise = 12;
+  static const int hipRaiseWithFeetOnSwissBall = 13;
+  static const int weightedHipRaiseWithFeetOnSwissBall = 14;
+  static const int hipRaiseWithHeadOnBosuBall = 15;
+  static const int weightedHipRaiseWithHeadOnBosuBall = 16;
+  static const int hipRaiseWithHeadOnSwissBall = 17;
+  static const int weightedHipRaiseWithHeadOnSwissBall = 18;
+  static const int hipRaiseWithKneeSqueeze = 19;
+  static const int weightedHipRaiseWithKneeSqueeze = 20;
+  static const int inclineRearLegExtension = 21;
+  static const int weightedInclineRearLegExtension = 22;
+  static const int kettlebellSwing = 23;
+  static const int marchingHipRaise = 24;
+  static const int weightedMarchingHipRaise = 25;
+  static const int marchingHipRaiseWithFeetOnASwissBall = 26;
+  static const int weightedMarchingHipRaiseWithFeetOnASwissBall = 27;
+  static const int reverseHipRaise = 28;
+  static const int weightedReverseHipRaise = 29;
+  static const int singleLegHipRaise = 30;
+  static const int weightedSingleLegHipRaise = 31;
+  static const int singleLegHipRaiseWithFootOnBench = 32;
+  static const int weightedSingleLegHipRaiseWithFootOnBench = 33;
+  static const int singleLegHipRaiseWithFootOnBosuBall = 34;
+  static const int weightedSingleLegHipRaiseWithFootOnBosuBall = 35;
+  static const int singleLegHipRaiseWithFootOnFoamRoller = 36;
+  static const int weightedSingleLegHipRaiseWithFootOnFoamRoller = 37;
+  static const int singleLegHipRaiseWithFootOnMedicineBall = 38;
+  static const int weightedSingleLegHipRaiseWithFootOnMedicineBall = 39;
+  static const int singleLegHipRaiseWithHeadOnBosuBall = 40;
+  static const int weightedSingleLegHipRaiseWithHeadOnBosuBall = 41;
+  static const int weightedClamBridge = 42;
+  static const int singleLegSwissBallHipRaiseAndLegCurl = 43;
+  static const int clams = 44;
+  /// Deprecated do not use
+  static const int innerThighCircles = 45;
+  /// Deprecated do not use
+  static const int innerThighSideLift = 46;
+  static const int legCircles = 47;
+  static const int legLift = 48;
+  static const int legLiftInExternalRotation = 49;
+}

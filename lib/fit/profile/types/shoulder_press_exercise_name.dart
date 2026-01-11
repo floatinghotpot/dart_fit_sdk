@@ -1,0 +1,33 @@
+class ShoulderPressExerciseName {
+  static const int alternatingDumbbellShoulderPress = 0;
+  static const int arnoldPress = 1;
+  static const int barbellFrontSquatToPushPress = 2;
+  static const int barbellPushPress = 3;
+  static const int barbellShoulderPress = 4;
+  static const int deadCurlPress = 5;
+  static const int dumbbellAlternatingShoulderPressAndTwist = 6;
+  static const int dumbbellHammerCurlToLungeToPress = 7;
+  static const int dumbbellPushPress = 8;
+  static const int floorInvertedShoulderPress = 9;
+  static const int weightedFloorInvertedShoulderPress = 10;
+  static const int invertedShoulderPress = 11;
+  static const int weightedInvertedShoulderPress = 12;
+  static const int oneArmPushPress = 13;
+  static const int overheadBarbellPress = 14;
+  static const int overheadDumbbellPress = 15;
+  static const int seatedBarbellShoulderPress = 16;
+  static const int seatedDumbbellShoulderPress = 17;
+  static const int singleArmDumbbellShoulderPress = 18;
+  static const int singleArmStepUpAndPress = 19;
+  static const int smithMachineOverheadPress = 20;
+  static const int splitStanceHammerCurlToPress = 21;
+  static const int swissBallDumbbellShoulderPress = 22;
+  static const int weightPlateFrontRaise = 23;
+  static const int dumbbellShoulderPress = 24;
+  static const int militaryPress = 25;
+  static const int strictPress = 27;
+  static const int dumbbellFrontRaise = 28;
+  static const int dumbbellCurlToOverheadPressWheelchair = 29;
+  static const int arnoldPressWheelchair = 30;
+  static const int overheadDumbbellPressWheelchair = 31;
+}

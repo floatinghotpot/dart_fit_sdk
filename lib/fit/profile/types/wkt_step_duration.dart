@@ -1,0 +1,33 @@
+class WktStepDuration {
+  static const int time = 0;
+  static const int distance = 1;
+  static const int hrLessThan = 2;
+  static const int hrGreaterThan = 3;
+  static const int calories = 4;
+  static const int open = 5;
+  static const int repeatUntilStepsCmplt = 6;
+  static const int repeatUntilTime = 7;
+  static const int repeatUntilDistance = 8;
+  static const int repeatUntilCalories = 9;
+  static const int repeatUntilHrLessThan = 10;
+  static const int repeatUntilHrGreaterThan = 11;
+  static const int repeatUntilPowerLessThan = 12;
+  static const int repeatUntilPowerGreaterThan = 13;
+  static const int powerLessThan = 14;
+  static const int powerGreaterThan = 15;
+  static const int trainingPeaksTss = 16;
+  static const int repeatUntilPowerLastLapLessThan = 17;
+  static const int repeatUntilMaxPowerLastLapLessThan = 18;
+  static const int power3sLessThan = 19;
+  static const int power10sLessThan = 20;
+  static const int power30sLessThan = 21;
+  static const int power3sGreaterThan = 22;
+  static const int power10sGreaterThan = 23;
+  static const int power30sGreaterThan = 24;
+  static const int powerLapLessThan = 25;
+  static const int powerLapGreaterThan = 26;
+  static const int repeatUntilTrainingPeaksTss = 27;
+  static const int repetitionTime = 28;
+  static const int reps = 29;
+  static const int timeOnly = 31;
+}

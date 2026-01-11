@@ -1,0 +1,56 @@
+# This file configures the static analysis results for your project (errors,
+# warnings, and lints).
+
+include: package:lints/recommended.yaml
+
+linter:
+  rules:
+    # Disable some overly strict rules for ported code
+    - avoid_print: false
+    - prefer_final_locals: false
+    - prefer_final_in_for_each: false
+    - prefer_expression_function_bodies: false
+    - sort_constructors_first: false
+    - always_put_control_body_on_new_line: false
+    - cascade_invocations: false
+    - avoid_positional_boolean_parameters: false
+    - unnecessary_getters_setters: false
+    
+    # Keep important rules enabled
+    - avoid_dynamic_calls
+    - avoid_empty_else
+    - avoid_relative_lib_imports
+    - avoid_returning_null_for_future
+    - cancel_subscriptions
+    - no_adjacent_strings_in_list
+    - throw_in_finally
+    - always_declare_return_types
+    - file_names
+    - only_throw_errors
+    - prefer_const_constructors
+    - prefer_const_declarations
+    - prefer_is_not_operator
+    - prefer_single_quotes
+    - unawaited_futures
+
+analyzer:
+  exclude:
+    - lib/fit/profile.dart
+    - lib/fit/fit_messages.dart
+  errors:
+    # Treat missing required parameters as errors
+    missing_required_param: error
+    # Treat missing returns as errors
+    missing_return: error
+    # Allow TODOs
+    todo: ignore
+    # Downgrade some infos to warnings
+    prefer_final_locals: ignore
+    prefer_final_in_for_each: ignore
+    prefer_expression_function_bodies: ignore
+    sort_constructors_first: ignore
+    always_put_control_body_on_new_line: ignore
+    cascade_invocations: ignore
+    avoid_positional_boolean_parameters: ignore
+    unnecessary_getters_setters: ignore
+    directives_ordering: ignore

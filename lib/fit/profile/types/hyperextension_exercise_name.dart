@@ -1,0 +1,43 @@
+class HyperextensionExerciseName {
+  static const int backExtensionWithOppositeArmAndLegReach = 0;
+  static const int weightedBackExtensionWithOppositeArmAndLegReach = 1;
+  static const int baseRotations = 2;
+  static const int weightedBaseRotations = 3;
+  static const int bentKneeReverseHyperextension = 4;
+  static const int weightedBentKneeReverseHyperextension = 5;
+  static const int hollowHoldAndRoll = 6;
+  static const int weightedHollowHoldAndRoll = 7;
+  static const int kicks = 8;
+  static const int weightedKicks = 9;
+  static const int kneeRaises = 10;
+  static const int weightedKneeRaises = 11;
+  static const int kneelingSuperman = 12;
+  static const int weightedKneelingSuperman = 13;
+  static const int latPullDownWithRow = 14;
+  static const int medicineBallDeadliftToReach = 15;
+  static const int oneArmOneLegRow = 16;
+  static const int oneArmRowWithBand = 17;
+  static const int overheadLungeWithMedicineBall = 18;
+  static const int plankKneeTucks = 19;
+  static const int weightedPlankKneeTucks = 20;
+  static const int sideStep = 21;
+  static const int weightedSideStep = 22;
+  static const int singleLegBackExtension = 23;
+  static const int weightedSingleLegBackExtension = 24;
+  static const int spineExtension = 25;
+  static const int weightedSpineExtension = 26;
+  static const int staticBackExtension = 27;
+  static const int weightedStaticBackExtension = 28;
+  static const int supermanFromFloor = 29;
+  static const int weightedSupermanFromFloor = 30;
+  static const int swissBallBackExtension = 31;
+  static const int weightedSwissBallBackExtension = 32;
+  static const int swissBallHyperextension = 33;
+  static const int weightedSwissBallHyperextension = 34;
+  static const int swissBallOppositeArmAndLegLift = 35;
+  static const int weightedSwissBallOppositeArmAndLegLift = 36;
+  static const int supermanOnSwissBall = 37;
+  static const int cobra = 38;
+  /// Deprecated do not use
+  static const int supineFloorBarre = 39;
+}

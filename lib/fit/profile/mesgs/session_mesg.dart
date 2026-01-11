@@ -1,0 +1,1635 @@
+import '../../defines.dart';
+import '../../mesg.dart';
+import '../../profile.dart';
+import '../types/mesg_num.dart';
+import '../types/types.dart';
+
+class SessionTotalCyclesSubfield {
+  static const int TotalStrides = 0;
+  static const int TotalStrokes = 1;
+  static const int active = Fit.subfieldIndexActiveSubfield;
+  static const int mainField = Fit.subfieldIndexMainField;
+}
+
+class SessionAvgCadenceSubfield {
+  static const int AvgRunningCadence = 0;
+  static const int active = Fit.subfieldIndexActiveSubfield;
+  static const int mainField = Fit.subfieldIndexMainField;
+}
+
+class SessionMaxCadenceSubfield {
+  static const int MaxRunningCadence = 0;
+  static const int active = Fit.subfieldIndexActiveSubfield;
+  static const int mainField = Fit.subfieldIndexMainField;
+}
+
+class SessionMesg extends Mesg {
+  static const int fieldMessageIndex = 254;
+  static const int fieldTimestamp = 253;
+  static const int fieldEvent = 0;
+  static const int fieldEventType = 1;
+  static const int fieldStartTime = 2;
+  static const int fieldStartPositionLat = 3;
+  static const int fieldStartPositionLong = 4;
+  static const int fieldSport = 5;
+  static const int fieldSubSport = 6;
+  static const int fieldTotalElapsedTime = 7;
+  static const int fieldTotalTimerTime = 8;
+  static const int fieldTotalDistance = 9;
+  static const int fieldTotalCycles = 10;
+  static const int fieldTotalCalories = 11;
+  static const int fieldTotalFatCalories = 13;
+  static const int fieldAvgSpeed = 14;
+  static const int fieldMaxSpeed = 15;
+  static const int fieldAvgHeartRate = 16;
+  static const int fieldMaxHeartRate = 17;
+  static const int fieldAvgCadence = 18;
+  static const int fieldMaxCadence = 19;
+  static const int fieldAvgPower = 20;
+  static const int fieldMaxPower = 21;
+  static const int fieldTotalAscent = 22;
+  static const int fieldTotalDescent = 23;
+  static const int fieldTotalTrainingEffect = 24;
+  static const int fieldFirstLapIndex = 25;
+  static const int fieldNumLaps = 26;
+  static const int fieldEventGroup = 27;
+  static const int fieldTrigger = 28;
+  static const int fieldNecLat = 29;
+  static const int fieldNecLong = 30;
+  static const int fieldSwcLat = 31;
+  static const int fieldSwcLong = 32;
+  static const int fieldNumLengths = 33;
+  static const int fieldNormalizedPower = 34;
+  static const int fieldTrainingStressScore = 35;
+  static const int fieldIntensityFactor = 36;
+  static const int fieldLeftRightBalance = 37;
+  static const int fieldEndPositionLat = 38;
+  static const int fieldEndPositionLong = 39;
+  static const int fieldAvgStrokeCount = 41;
+  static const int fieldAvgStrokeDistance = 42;
+  static const int fieldSwimStroke = 43;
+  static const int fieldPoolLength = 44;
+  static const int fieldThresholdPower = 45;
+  static const int fieldPoolLengthUnit = 46;
+  static const int fieldNumActiveLengths = 47;
+  static const int fieldTotalWork = 48;
+  static const int fieldAvgAltitude = 49;
+  static const int fieldMaxAltitude = 50;
+  static const int fieldGpsAccuracy = 51;
+  static const int fieldAvgGrade = 52;
+  static const int fieldAvgPosGrade = 53;
+  static const int fieldAvgNegGrade = 54;
+  static const int fieldMaxPosGrade = 55;
+  static const int fieldMaxNegGrade = 56;
+  static const int fieldAvgTemperature = 57;
+  static const int fieldMaxTemperature = 58;
+  static const int fieldTotalMovingTime = 59;
+  static const int fieldAvgPosVerticalSpeed = 60;
+  static const int fieldAvgNegVerticalSpeed = 61;
+  static const int fieldMaxPosVerticalSpeed = 62;
+  static const int fieldMaxNegVerticalSpeed = 63;
+  static const int fieldMinHeartRate = 64;
+  static const int fieldTimeInHrZone = 65;
+  static const int fieldTimeInSpeedZone = 66;
+  static const int fieldTimeInCadenceZone = 67;
+  static const int fieldTimeInPowerZone = 68;
+  static const int fieldAvgLapTime = 69;
+  static const int fieldBestLapIndex = 70;
+  static const int fieldMinAltitude = 71;
+  static const int fieldPlayerScore = 82;
+  static const int fieldOpponentScore = 83;
+  static const int fieldOpponentName = 84;
+  static const int fieldStrokeCount = 85;
+  static const int fieldZoneCount = 86;
+  static const int fieldMaxBallSpeed = 87;
+  static const int fieldAvgBallSpeed = 88;
+  static const int fieldAvgVerticalOscillation = 89;
+  static const int fieldAvgStanceTimePercent = 90;
+  static const int fieldAvgStanceTime = 91;
+  static const int fieldAvgFractionalCadence = 92;
+  static const int fieldMaxFractionalCadence = 93;
+  static const int fieldTotalFractionalCycles = 94;
+  static const int fieldAvgTotalHemoglobinConc = 95;
+  static const int fieldMinTotalHemoglobinConc = 96;
+  static const int fieldMaxTotalHemoglobinConc = 97;
+  static const int fieldAvgSaturatedHemoglobinPercent = 98;
+  static const int fieldMinSaturatedHemoglobinPercent = 99;
+  static const int fieldMaxSaturatedHemoglobinPercent = 100;
+  static const int fieldAvgLeftTorqueEffectiveness = 101;
+  static const int fieldAvgRightTorqueEffectiveness = 102;
+  static const int fieldAvgLeftPedalSmoothness = 103;
+  static const int fieldAvgRightPedalSmoothness = 104;
+  static const int fieldAvgCombinedPedalSmoothness = 105;
+  static const int fieldSportProfileName = 110;
+  static const int fieldSportIndex = 111;
+  static const int fieldTimeStanding = 112;
+  static const int fieldStandCount = 113;
+  static const int fieldAvgLeftPco = 114;
+  static const int fieldAvgRightPco = 115;
+  static const int fieldAvgLeftPowerPhase = 116;
+  static const int fieldAvgLeftPowerPhasePeak = 117;
+  static const int fieldAvgRightPowerPhase = 118;
+  static const int fieldAvgRightPowerPhasePeak = 119;
+  static const int fieldAvgPowerPosition = 120;
+  static const int fieldMaxPowerPosition = 121;
+  static const int fieldAvgCadencePosition = 122;
+  static const int fieldMaxCadencePosition = 123;
+  static const int fieldEnhancedAvgSpeed = 124;
+  static const int fieldEnhancedMaxSpeed = 125;
+  static const int fieldEnhancedAvgAltitude = 126;
+  static const int fieldEnhancedMinAltitude = 127;
+  static const int fieldEnhancedMaxAltitude = 128;
+  static const int fieldAvgLevMotorPower = 129;
+  static const int fieldMaxLevMotorPower = 130;
+  static const int fieldLevBatteryConsumption = 131;
+  static const int fieldAvgVerticalRatio = 132;
+  static const int fieldAvgStanceTimeBalance = 133;
+  static const int fieldAvgStepLength = 134;
+  static const int fieldTotalAnaerobicTrainingEffect = 137;
+  static const int fieldAvgVam = 139;
+  static const int fieldAvgDepth = 140;
+  static const int fieldMaxDepth = 141;
+  static const int fieldSurfaceInterval = 142;
+  static const int fieldStartCns = 143;
+  static const int fieldEndCns = 144;
+  static const int fieldStartN2 = 145;
+  static const int fieldEndN2 = 146;
+  static const int fieldAvgRespirationRate = 147;
+  static const int fieldMaxRespirationRate = 148;
+  static const int fieldMinRespirationRate = 149;
+  static const int fieldMinTemperature = 150;
+  static const int fieldO2Toxicity = 155;
+  static const int fieldDiveNumber = 156;
+  static const int fieldTrainingLoadPeak = 168;
+  static const int fieldEnhancedAvgRespirationRate = 169;
+  static const int fieldEnhancedMaxRespirationRate = 170;
+  static const int fieldEnhancedMinRespirationRate = 180;
+  static const int fieldTotalGrit = 181;
+  static const int fieldTotalFlow = 182;
+  static const int fieldJumpCount = 183;
+  static const int fieldAvgGrit = 186;
+  static const int fieldAvgFlow = 187;
+  static const int fieldWorkoutFeel = 192;
+  static const int fieldWorkoutRpe = 193;
+  static const int fieldAvgSpo2 = 194;
+  static const int fieldAvgStress = 195;
+  static const int fieldSdrrHrv = 197;
+  static const int fieldRmssdHrv = 198;
+  static const int fieldTotalFractionalAscent = 199;
+  static const int fieldTotalFractionalDescent = 200;
+  static const int fieldAvgCoreTemperature = 208;
+  static const int fieldMinCoreTemperature = 209;
+  static const int fieldMaxCoreTemperature = 210;
+  static const int fieldInvalid = Fit.fieldNumInvalid;
+
+  SessionMesg() : super.from(Profile.getMesg(MesgNum.session));
+  SessionMesg.fromMesg(Mesg mesg) : super.from(mesg);
+
+  int? getMessageIndex() {
+    var val = getFieldValue(
+      254,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  DateTime? getTimestamp() {
+    var val = getFieldValue(
+      253,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val == null
+        ? null
+        : DateTime.fromMillisecondsSinceEpoch(
+            (val as int) * 1000 + 631065600000,
+          );
+  }
+
+  int? getEvent() {
+    var val = getFieldValue(
+      0,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getEventType() {
+    var val = getFieldValue(
+      1,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  DateTime? getStartTime() {
+    var val = getFieldValue(
+      2,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val == null
+        ? null
+        : DateTime.fromMillisecondsSinceEpoch(
+            (val as int) * 1000 + 631065600000,
+          );
+  }
+
+  int? getStartPositionLat() {
+    var val = getFieldValue(
+      3,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getStartPositionLong() {
+    var val = getFieldValue(
+      4,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getSport() {
+    var val = getFieldValue(
+      5,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getSubSport() {
+    var val = getFieldValue(
+      6,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  double? getTotalElapsedTime() {
+    var val = getFieldValue(
+      7,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getTotalTimerTime() {
+    var val = getFieldValue(
+      8,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getTotalDistance() {
+    var val = getFieldValue(
+      9,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  int? getTotalCycles() {
+    var val = getFieldValue(
+      10,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getTotalStrides() {
+    var val = getFieldValue(
+      10,
+      index: 0,
+      subfieldInfo: SessionTotalCyclesSubfield.TotalStrides,
+    );
+    return val as int?;
+  }
+
+  int? getTotalStrokes() {
+    var val = getFieldValue(
+      10,
+      index: 0,
+      subfieldInfo: SessionTotalCyclesSubfield.TotalStrokes,
+    );
+    return val as int?;
+  }
+
+  int? getTotalCalories() {
+    var val = getFieldValue(
+      11,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getTotalFatCalories() {
+    var val = getFieldValue(
+      13,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  double? getAvgSpeed() {
+    var val = getFieldValue(
+      14,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getMaxSpeed() {
+    var val = getFieldValue(
+      15,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  int? getAvgHeartRate() {
+    var val = getFieldValue(
+      16,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getMaxHeartRate() {
+    var val = getFieldValue(
+      17,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getAvgCadence() {
+    var val = getFieldValue(
+      18,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getAvgRunningCadence() {
+    var val = getFieldValue(
+      18,
+      index: 0,
+      subfieldInfo: SessionAvgCadenceSubfield.AvgRunningCadence,
+    );
+    return val as int?;
+  }
+
+  int? getMaxCadence() {
+    var val = getFieldValue(
+      19,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getMaxRunningCadence() {
+    var val = getFieldValue(
+      19,
+      index: 0,
+      subfieldInfo: SessionMaxCadenceSubfield.MaxRunningCadence,
+    );
+    return val as int?;
+  }
+
+  int? getAvgPower() {
+    var val = getFieldValue(
+      20,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getMaxPower() {
+    var val = getFieldValue(
+      21,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getTotalAscent() {
+    var val = getFieldValue(
+      22,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getTotalDescent() {
+    var val = getFieldValue(
+      23,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  double? getTotalTrainingEffect() {
+    var val = getFieldValue(
+      24,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  int? getFirstLapIndex() {
+    var val = getFieldValue(
+      25,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getNumLaps() {
+    var val = getFieldValue(
+      26,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getEventGroup() {
+    var val = getFieldValue(
+      27,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getTrigger() {
+    var val = getFieldValue(
+      28,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getNecLat() {
+    var val = getFieldValue(
+      29,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getNecLong() {
+    var val = getFieldValue(
+      30,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getSwcLat() {
+    var val = getFieldValue(
+      31,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getSwcLong() {
+    var val = getFieldValue(
+      32,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getNumLengths() {
+    var val = getFieldValue(
+      33,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getNormalizedPower() {
+    var val = getFieldValue(
+      34,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  double? getTrainingStressScore() {
+    var val = getFieldValue(
+      35,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getIntensityFactor() {
+    var val = getFieldValue(
+      36,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  int? getLeftRightBalance() {
+    var val = getFieldValue(
+      37,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getEndPositionLat() {
+    var val = getFieldValue(
+      38,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getEndPositionLong() {
+    var val = getFieldValue(
+      39,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  double? getAvgStrokeCount() {
+    var val = getFieldValue(
+      41,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getAvgStrokeDistance() {
+    var val = getFieldValue(
+      42,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  int? getSwimStroke() {
+    var val = getFieldValue(
+      43,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  double? getPoolLength() {
+    var val = getFieldValue(
+      44,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  int? getThresholdPower() {
+    var val = getFieldValue(
+      45,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getPoolLengthUnit() {
+    var val = getFieldValue(
+      46,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getNumActiveLengths() {
+    var val = getFieldValue(
+      47,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getTotalWork() {
+    var val = getFieldValue(
+      48,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  double? getAvgAltitude() {
+    var val = getFieldValue(
+      49,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getMaxAltitude() {
+    var val = getFieldValue(
+      50,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  int? getGpsAccuracy() {
+    var val = getFieldValue(
+      51,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  double? getAvgGrade() {
+    var val = getFieldValue(
+      52,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getAvgPosGrade() {
+    var val = getFieldValue(
+      53,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getAvgNegGrade() {
+    var val = getFieldValue(
+      54,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getMaxPosGrade() {
+    var val = getFieldValue(
+      55,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getMaxNegGrade() {
+    var val = getFieldValue(
+      56,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  int? getAvgTemperature() {
+    var val = getFieldValue(
+      57,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getMaxTemperature() {
+    var val = getFieldValue(
+      58,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  double? getTotalMovingTime() {
+    var val = getFieldValue(
+      59,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getAvgPosVerticalSpeed() {
+    var val = getFieldValue(
+      60,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getAvgNegVerticalSpeed() {
+    var val = getFieldValue(
+      61,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getMaxPosVerticalSpeed() {
+    var val = getFieldValue(
+      62,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getMaxNegVerticalSpeed() {
+    var val = getFieldValue(
+      63,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  int? getMinHeartRate() {
+    var val = getFieldValue(
+      64,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  double? getTimeInHrZone() {
+    var val = getFieldValue(
+      65,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getTimeInSpeedZone() {
+    var val = getFieldValue(
+      66,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getTimeInCadenceZone() {
+    var val = getFieldValue(
+      67,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getTimeInPowerZone() {
+    var val = getFieldValue(
+      68,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getAvgLapTime() {
+    var val = getFieldValue(
+      69,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  int? getBestLapIndex() {
+    var val = getFieldValue(
+      70,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  double? getMinAltitude() {
+    var val = getFieldValue(
+      71,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  int? getPlayerScore() {
+    var val = getFieldValue(
+      82,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getOpponentScore() {
+    var val = getFieldValue(
+      83,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  String? getOpponentName() {
+    var val = getFieldValue(
+      84,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val?.toString();
+  }
+
+  int? getStrokeCount() {
+    var val = getFieldValue(
+      85,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getZoneCount() {
+    var val = getFieldValue(
+      86,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  double? getMaxBallSpeed() {
+    var val = getFieldValue(
+      87,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getAvgBallSpeed() {
+    var val = getFieldValue(
+      88,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getAvgVerticalOscillation() {
+    var val = getFieldValue(
+      89,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getAvgStanceTimePercent() {
+    var val = getFieldValue(
+      90,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getAvgStanceTime() {
+    var val = getFieldValue(
+      91,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getAvgFractionalCadence() {
+    var val = getFieldValue(
+      92,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getMaxFractionalCadence() {
+    var val = getFieldValue(
+      93,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getTotalFractionalCycles() {
+    var val = getFieldValue(
+      94,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getAvgTotalHemoglobinConc() {
+    var val = getFieldValue(
+      95,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getMinTotalHemoglobinConc() {
+    var val = getFieldValue(
+      96,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getMaxTotalHemoglobinConc() {
+    var val = getFieldValue(
+      97,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getAvgSaturatedHemoglobinPercent() {
+    var val = getFieldValue(
+      98,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getMinSaturatedHemoglobinPercent() {
+    var val = getFieldValue(
+      99,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getMaxSaturatedHemoglobinPercent() {
+    var val = getFieldValue(
+      100,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getAvgLeftTorqueEffectiveness() {
+    var val = getFieldValue(
+      101,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getAvgRightTorqueEffectiveness() {
+    var val = getFieldValue(
+      102,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getAvgLeftPedalSmoothness() {
+    var val = getFieldValue(
+      103,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getAvgRightPedalSmoothness() {
+    var val = getFieldValue(
+      104,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getAvgCombinedPedalSmoothness() {
+    var val = getFieldValue(
+      105,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  String? getSportProfileName() {
+    var val = getFieldValue(
+      110,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val?.toString();
+  }
+
+  int? getSportIndex() {
+    var val = getFieldValue(
+      111,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  double? getTimeStanding() {
+    var val = getFieldValue(
+      112,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  int? getStandCount() {
+    var val = getFieldValue(
+      113,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getAvgLeftPco() {
+    var val = getFieldValue(
+      114,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getAvgRightPco() {
+    var val = getFieldValue(
+      115,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  double? getAvgLeftPowerPhase() {
+    var val = getFieldValue(
+      116,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getAvgLeftPowerPhasePeak() {
+    var val = getFieldValue(
+      117,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getAvgRightPowerPhase() {
+    var val = getFieldValue(
+      118,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getAvgRightPowerPhasePeak() {
+    var val = getFieldValue(
+      119,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  int? getAvgPowerPosition() {
+    var val = getFieldValue(
+      120,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getMaxPowerPosition() {
+    var val = getFieldValue(
+      121,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getAvgCadencePosition() {
+    var val = getFieldValue(
+      122,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getMaxCadencePosition() {
+    var val = getFieldValue(
+      123,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  double? getEnhancedAvgSpeed() {
+    var val = getFieldValue(
+      124,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getEnhancedMaxSpeed() {
+    var val = getFieldValue(
+      125,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getEnhancedAvgAltitude() {
+    var val = getFieldValue(
+      126,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getEnhancedMinAltitude() {
+    var val = getFieldValue(
+      127,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getEnhancedMaxAltitude() {
+    var val = getFieldValue(
+      128,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  int? getAvgLevMotorPower() {
+    var val = getFieldValue(
+      129,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getMaxLevMotorPower() {
+    var val = getFieldValue(
+      130,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  double? getLevBatteryConsumption() {
+    var val = getFieldValue(
+      131,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getAvgVerticalRatio() {
+    var val = getFieldValue(
+      132,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getAvgStanceTimeBalance() {
+    var val = getFieldValue(
+      133,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getAvgStepLength() {
+    var val = getFieldValue(
+      134,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getTotalAnaerobicTrainingEffect() {
+    var val = getFieldValue(
+      137,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getAvgVam() {
+    var val = getFieldValue(
+      139,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getAvgDepth() {
+    var val = getFieldValue(
+      140,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getMaxDepth() {
+    var val = getFieldValue(
+      141,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  int? getSurfaceInterval() {
+    var val = getFieldValue(
+      142,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getStartCns() {
+    var val = getFieldValue(
+      143,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getEndCns() {
+    var val = getFieldValue(
+      144,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getStartN2() {
+    var val = getFieldValue(
+      145,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getEndN2() {
+    var val = getFieldValue(
+      146,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getAvgRespirationRate() {
+    var val = getFieldValue(
+      147,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getMaxRespirationRate() {
+    var val = getFieldValue(
+      148,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getMinRespirationRate() {
+    var val = getFieldValue(
+      149,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getMinTemperature() {
+    var val = getFieldValue(
+      150,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getO2Toxicity() {
+    var val = getFieldValue(
+      155,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getDiveNumber() {
+    var val = getFieldValue(
+      156,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  double? getTrainingLoadPeak() {
+    var val = getFieldValue(
+      168,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getEnhancedAvgRespirationRate() {
+    var val = getFieldValue(
+      169,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getEnhancedMaxRespirationRate() {
+    var val = getFieldValue(
+      170,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getEnhancedMinRespirationRate() {
+    var val = getFieldValue(
+      180,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getTotalGrit() {
+    var val = getFieldValue(
+      181,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getTotalFlow() {
+    var val = getFieldValue(
+      182,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  int? getJumpCount() {
+    var val = getFieldValue(
+      183,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  double? getAvgGrit() {
+    var val = getFieldValue(
+      186,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getAvgFlow() {
+    var val = getFieldValue(
+      187,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  int? getWorkoutFeel() {
+    var val = getFieldValue(
+      192,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getWorkoutRpe() {
+    var val = getFieldValue(
+      193,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getAvgSpo2() {
+    var val = getFieldValue(
+      194,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getAvgStress() {
+    var val = getFieldValue(
+      195,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getSdrrHrv() {
+    var val = getFieldValue(
+      197,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  int? getRmssdHrv() {
+    var val = getFieldValue(
+      198,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return val as int?;
+  }
+
+  double? getTotalFractionalAscent() {
+    var val = getFieldValue(
+      199,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getTotalFractionalDescent() {
+    var val = getFieldValue(
+      200,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getAvgCoreTemperature() {
+    var val = getFieldValue(
+      208,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getMinCoreTemperature() {
+    var val = getFieldValue(
+      209,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+
+  double? getMaxCoreTemperature() {
+    var val = getFieldValue(
+      210,
+      index: 0,
+      subfieldInfo: Fit.subfieldIndexMainField,
+    );
+    return (val as num?)?.toDouble();
+  }
+}
