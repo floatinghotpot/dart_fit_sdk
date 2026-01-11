@@ -229,8 +229,8 @@ fit_sdk/
 │   │   └── ...
 │   └── fit_sdk.dart      # Main library export
 ├── demo/                 # Example applications
-├── samples/              # Sample FIT files for testing
-└── docs/                 # Additional documentation
+├── sample/               # Sample FIT files for testing
+└── doc/                  # Additional documentation
 ```
 
 ## Differences from C# SDK
