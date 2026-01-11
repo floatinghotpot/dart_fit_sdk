@@ -15,7 +15,7 @@ class ExdDataFieldConfigurationMesg extends Mesg {
 
   ExdDataFieldConfigurationMesg()
     : super.from(Profile.getMesg(MesgNum.exdDataFieldConfiguration));
-  ExdDataFieldConfigurationMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  ExdDataFieldConfigurationMesg.fromMesg(super.mesg) : super.from();
 
   int? getScreenIndex() {
     var val = getFieldValue(

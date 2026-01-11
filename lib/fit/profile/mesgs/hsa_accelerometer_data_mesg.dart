@@ -16,7 +16,7 @@ class HsaAccelerometerDataMesg extends Mesg {
 
   HsaAccelerometerDataMesg()
     : super.from(Profile.getMesg(MesgNum.hsaAccelerometerData));
-  HsaAccelerometerDataMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  HsaAccelerometerDataMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

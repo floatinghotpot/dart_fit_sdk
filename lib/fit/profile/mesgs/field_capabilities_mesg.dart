@@ -14,7 +14,7 @@ class FieldCapabilitiesMesg extends Mesg {
 
   FieldCapabilitiesMesg()
     : super.from(Profile.getMesg(MesgNum.fieldCapabilities));
-  FieldCapabilitiesMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  FieldCapabilitiesMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
     var val = getFieldValue(

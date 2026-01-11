@@ -13,7 +13,7 @@ class DiveGasMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   DiveGasMesg() : super.from(Profile.getMesg(MesgNum.diveGas));
-  DiveGasMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  DiveGasMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
     var val = getFieldValue(

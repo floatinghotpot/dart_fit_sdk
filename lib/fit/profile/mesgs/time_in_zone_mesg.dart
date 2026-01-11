@@ -25,7 +25,7 @@ class TimeInZoneMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   TimeInZoneMesg() : super.from(Profile.getMesg(MesgNum.timeInZone));
-  TimeInZoneMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  TimeInZoneMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

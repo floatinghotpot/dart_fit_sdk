@@ -15,7 +15,7 @@ class SegmentPointMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   SegmentPointMesg() : super.from(Profile.getMesg(MesgNum.segmentPoint));
-  SegmentPointMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  SegmentPointMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
     var val = getFieldValue(

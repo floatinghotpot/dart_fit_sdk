@@ -15,7 +15,7 @@ class WorkoutSessionMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   WorkoutSessionMesg() : super.from(Profile.getMesg(MesgNum.workoutSession));
-  WorkoutSessionMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  WorkoutSessionMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
     var val = getFieldValue(

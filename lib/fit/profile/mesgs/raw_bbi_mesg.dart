@@ -14,7 +14,7 @@ class RawBbiMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   RawBbiMesg() : super.from(Profile.getMesg(MesgNum.rawBbi));
-  RawBbiMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  RawBbiMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

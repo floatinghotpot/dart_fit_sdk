@@ -22,7 +22,7 @@ class MesgCapabilitiesMesg extends Mesg {
 
   MesgCapabilitiesMesg()
     : super.from(Profile.getMesg(MesgNum.mesgCapabilities));
-  MesgCapabilitiesMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  MesgCapabilitiesMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
     var val = getFieldValue(

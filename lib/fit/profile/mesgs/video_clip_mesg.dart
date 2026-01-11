@@ -15,7 +15,7 @@ class VideoClipMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   VideoClipMesg() : super.from(Profile.getMesg(MesgNum.videoClip));
-  VideoClipMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  VideoClipMesg.fromMesg(super.mesg) : super.from();
 
   int? getClipNumber() {
     var val = getFieldValue(

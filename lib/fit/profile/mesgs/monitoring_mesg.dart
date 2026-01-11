@@ -44,7 +44,7 @@ class MonitoringMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   MonitoringMesg() : super.from(Profile.getMesg(MesgNum.monitoring));
-  MonitoringMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  MonitoringMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

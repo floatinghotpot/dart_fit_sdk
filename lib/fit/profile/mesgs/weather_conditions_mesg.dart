@@ -25,7 +25,7 @@ class WeatherConditionsMesg extends Mesg {
 
   WeatherConditionsMesg()
     : super.from(Profile.getMesg(MesgNum.weatherConditions));
-  WeatherConditionsMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  WeatherConditionsMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

@@ -13,7 +13,7 @@ class ExdScreenConfigurationMesg extends Mesg {
 
   ExdScreenConfigurationMesg()
     : super.from(Profile.getMesg(MesgNum.exdScreenConfiguration));
-  ExdScreenConfigurationMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  ExdScreenConfigurationMesg.fromMesg(super.mesg) : super.from();
 
   int? getScreenIndex() {
     var val = getFieldValue(

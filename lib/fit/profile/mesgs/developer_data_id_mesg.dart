@@ -13,7 +13,7 @@ class DeveloperDataIdMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   DeveloperDataIdMesg() : super.from(Profile.getMesg(MesgNum.developerDataId));
-  DeveloperDataIdMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  DeveloperDataIdMesg.fromMesg(super.mesg) : super.from();
 
   int? get developerId => getDeveloperId();
   int? get applicationId => getApplicationId();

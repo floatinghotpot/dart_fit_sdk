@@ -14,7 +14,7 @@ class MemoGlobMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   MemoGlobMesg() : super.from(Profile.getMesg(MesgNum.memoGlob));
-  MemoGlobMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  MemoGlobMesg.fromMesg(super.mesg) : super.from();
 
   int? getPartIndex() {
     var val = getFieldValue(

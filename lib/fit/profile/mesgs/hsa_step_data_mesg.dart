@@ -11,7 +11,7 @@ class HsaStepDataMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   HsaStepDataMesg() : super.from(Profile.getMesg(MesgNum.hsaStepData));
-  HsaStepDataMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  HsaStepDataMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

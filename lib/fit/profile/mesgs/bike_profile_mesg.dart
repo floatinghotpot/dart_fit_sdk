@@ -40,7 +40,7 @@ class BikeProfileMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   BikeProfileMesg() : super.from(Profile.getMesg(MesgNum.bikeProfile));
-  BikeProfileMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  BikeProfileMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
     var val = getFieldValue(

@@ -15,7 +15,7 @@ class FileCapabilitiesMesg extends Mesg {
 
   FileCapabilitiesMesg()
     : super.from(Profile.getMesg(MesgNum.fileCapabilities));
-  FileCapabilitiesMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  FileCapabilitiesMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
     var val = getFieldValue(

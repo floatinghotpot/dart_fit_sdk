@@ -16,7 +16,7 @@ class HsaGyroscopeDataMesg extends Mesg {
 
   HsaGyroscopeDataMesg()
     : super.from(Profile.getMesg(MesgNum.hsaGyroscopeData));
-  HsaGyroscopeDataMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  HsaGyroscopeDataMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

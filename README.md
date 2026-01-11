@@ -119,7 +119,7 @@ void main() async {
 
 ## Examples
 
-The `demo/` directory contains complete working examples:
+The `example/` directory contains complete working examples:
 
 - **`decode.dart`**: Demonstrates how to decode FIT files and display message data
 - **`encode.dart`**: Shows how to create FIT files with various message types
@@ -129,10 +129,10 @@ Run examples:
 
 ```bash
 # Decode a FIT file
-dart run demo/decode.dart samples/Activity.fit
+dart run example/decode.dart data/Activity.fit
 
 # Create a new FIT file
-dart run demo/encode.dart output.fit
+dart run example/encode.dart output.fit
 ```
 
 ## API Documentation
@@ -228,8 +228,8 @@ fit_sdk/
 │   │   ├── encode.dart   # FIT file encoder
 │   │   └── ...
 │   └── fit_sdk.dart      # Main library export
-├── demo/                 # Example applications
-├── sample/               # Sample FIT files for testing
+├── example/              # Example applications
+├── data/                 # Sample FIT files for testing
 └── doc/                  # Additional documentation
 ```
 
@@ -267,7 +267,7 @@ dart pub get
 dart test
 
 # Run examples
-dart run demo/decode.dart samples/Activity.fit
+dart run example/decode.dart data/Activity.fit
 ```
 
 ## License

@@ -21,7 +21,7 @@ class AccelerometerDataMesg extends Mesg {
 
   AccelerometerDataMesg()
     : super.from(Profile.getMesg(MesgNum.accelerometerData));
-  AccelerometerDataMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  AccelerometerDataMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

@@ -19,7 +19,7 @@ class BloodPressureMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   BloodPressureMesg() : super.from(Profile.getMesg(MesgNum.bloodPressure));
-  BloodPressureMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  BloodPressureMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

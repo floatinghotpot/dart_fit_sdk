@@ -10,7 +10,7 @@ class SleepLevelMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   SleepLevelMesg() : super.from(Profile.getMesg(MesgNum.sleepLevel));
-  SleepLevelMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  SleepLevelMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

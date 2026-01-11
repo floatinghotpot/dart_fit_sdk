@@ -45,7 +45,7 @@ class Decode {
         int calculatedCrc = Crc.calc16(data, data.length - 2);
         int fileCrc = data[data.length - 2] | (data[data.length - 1] << 8);
         if (calculatedCrc != fileCrc) {
-          throw FitException("FIT decode error: File CRC mismatch");
+          throw FitException('FIT decode error: File CRC mismatch');
         }
       }
     }
@@ -74,9 +74,8 @@ class Decode {
           newMesg.read(reader, def);
 
           // Add Timestamp Field
-          Mesg? recordMesg = Profile.getMesg(MesgNum.record);
-          Field? timestampProfileField =
-              recordMesg?.getFieldByName("timestamp");
+          Mesg recordMesg = Profile.getMesg(MesgNum.record);
+          Field? timestampProfileField = recordMesg.getFieldByName('timestamp');
           if (timestampProfileField != null) {
             Field timestampField = Field.fromOther(timestampProfileField);
             timestampField.setValue(_timestamp);
@@ -95,7 +94,7 @@ class Decode {
           Mesg newMesg = Mesg.fromDefinition(def);
           newMesg.read(reader, def);
 
-          Field? timestampField = newMesg.getFieldByName("timestamp");
+          Field? timestampField = newMesg.getFieldByName('timestamp');
           if (timestampField != null) {
             Object? val = timestampField.value;
             if (val is int) {

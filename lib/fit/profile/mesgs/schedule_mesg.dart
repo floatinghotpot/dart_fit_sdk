@@ -22,7 +22,7 @@ class ScheduleMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   ScheduleMesg() : super.from(Profile.getMesg(MesgNum.schedule));
-  ScheduleMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  ScheduleMesg.fromMesg(super.mesg) : super.from();
 
   int? getManufacturer() {
     var val = getFieldValue(

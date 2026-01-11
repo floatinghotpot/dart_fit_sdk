@@ -86,13 +86,11 @@ class MesgDefinition {
           }
         }
 
-        if (defn == null) {
-          defn = DeveloperFieldDefinition(
+        defn ??= DeveloperFieldDefinition(
             fieldNum: fNum,
             size: fSize,
             developerDataIndex: devIndex,
           );
-        }
 
         _developerFieldDefinitions.add(defn);
       }

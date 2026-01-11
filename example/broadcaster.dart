@@ -206,7 +206,7 @@ void main() async {
     exit(1);
   }
 
-  print('\n' + '=' * 60);
+  print('\n${'=' * 60}');
   print('\nSummary:');
   print('  File ID messages: $fileIdCount');
   print('  Session messages: $sessionCount');

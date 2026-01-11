@@ -12,7 +12,7 @@ class ExerciseTitleMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   ExerciseTitleMesg() : super.from(Profile.getMesg(MesgNum.exerciseTitle));
-  ExerciseTitleMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  ExerciseTitleMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
     var val = getFieldValue(

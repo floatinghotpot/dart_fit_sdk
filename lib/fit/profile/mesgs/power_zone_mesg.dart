@@ -11,7 +11,7 @@ class PowerZoneMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   PowerZoneMesg() : super.from(Profile.getMesg(MesgNum.powerZone));
-  PowerZoneMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  PowerZoneMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
     var val = getFieldValue(

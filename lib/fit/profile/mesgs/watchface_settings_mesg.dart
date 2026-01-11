@@ -19,7 +19,7 @@ class WatchfaceSettingsMesg extends Mesg {
 
   WatchfaceSettingsMesg()
     : super.from(Profile.getMesg(MesgNum.watchfaceSettings));
-  WatchfaceSettingsMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  WatchfaceSettingsMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
     var val = getFieldValue(

@@ -10,7 +10,7 @@ class FileCreatorMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   FileCreatorMesg() : super.from(Profile.getMesg(MesgNum.fileCreator));
-  FileCreatorMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  FileCreatorMesg.fromMesg(super.mesg) : super.from();
 
   int? getSoftwareVersion() {
     var val = getFieldValue(

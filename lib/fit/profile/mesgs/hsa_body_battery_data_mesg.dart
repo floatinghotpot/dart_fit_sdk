@@ -14,7 +14,7 @@ class HsaBodyBatteryDataMesg extends Mesg {
 
   HsaBodyBatteryDataMesg()
     : super.from(Profile.getMesg(MesgNum.hsaBodyBatteryData));
-  HsaBodyBatteryDataMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  HsaBodyBatteryDataMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

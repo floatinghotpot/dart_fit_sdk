@@ -9,7 +9,7 @@ class HrvMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   HrvMesg() : super.from(Profile.getMesg(MesgNum.hrv));
-  HrvMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  HrvMesg.fromMesg(super.mesg) : super.from();
 
   double? getTime() {
     var val = getFieldValue(

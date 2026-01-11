@@ -13,7 +13,7 @@ class TankSummaryMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   TankSummaryMesg() : super.from(Profile.getMesg(MesgNum.tankSummary));
-  TankSummaryMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  TankSummaryMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

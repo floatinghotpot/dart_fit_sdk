@@ -20,7 +20,6 @@ linter:
     - avoid_dynamic_calls
     - avoid_empty_else
     - avoid_relative_lib_imports
-    - avoid_returning_null_for_future
     - cancel_subscriptions
     - no_adjacent_strings_in_list
     - throw_in_finally
@@ -37,6 +36,8 @@ analyzer:
   exclude:
     - lib/fit/profile.dart
     - lib/fit/fit_messages.dart
+    - lib/fit/profile/mesgs/*.dart
+    - lib/fit/profile/types/*.dart
   errors:
     # Treat missing required parameters as errors
     missing_required_param: error

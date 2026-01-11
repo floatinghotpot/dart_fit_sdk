@@ -22,7 +22,7 @@ class WeightScaleMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   WeightScaleMesg() : super.from(Profile.getMesg(MesgNum.weightScale));
-  WeightScaleMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  WeightScaleMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

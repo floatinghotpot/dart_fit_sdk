@@ -12,7 +12,7 @@ class HsaConfigurationDataMesg extends Mesg {
 
   HsaConfigurationDataMesg()
     : super.from(Profile.getMesg(MesgNum.hsaConfigurationData));
-  HsaConfigurationDataMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  HsaConfigurationDataMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

@@ -12,7 +12,7 @@ class HsaSpo2DataMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   HsaSpo2DataMesg() : super.from(Profile.getMesg(MesgNum.hsaSpo2Data));
-  HsaSpo2DataMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  HsaSpo2DataMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

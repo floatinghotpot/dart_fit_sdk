@@ -10,7 +10,7 @@ class StressLevelMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   StressLevelMesg() : super.from(Profile.getMesg(MesgNum.stressLevel));
-  StressLevelMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  StressLevelMesg.fromMesg(super.mesg) : super.from();
 
   int? getStressLevelValue() {
     var val = getFieldValue(

@@ -15,7 +15,7 @@ class ClimbProMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   ClimbProMesg() : super.from(Profile.getMesg(MesgNum.climbPro));
-  ClimbProMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  ClimbProMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

@@ -12,7 +12,7 @@ class CapabilitiesMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   CapabilitiesMesg() : super.from(Profile.getMesg(MesgNum.capabilities));
-  CapabilitiesMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  CapabilitiesMesg.fromMesg(super.mesg) : super.from();
 
   int? getLanguages() {
     var val = getFieldValue(

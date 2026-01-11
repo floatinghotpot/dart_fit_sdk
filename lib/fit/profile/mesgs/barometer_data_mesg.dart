@@ -12,7 +12,7 @@ class BarometerDataMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   BarometerDataMesg() : super.from(Profile.getMesg(MesgNum.barometerData));
-  BarometerDataMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  BarometerDataMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

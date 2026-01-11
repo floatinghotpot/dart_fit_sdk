@@ -12,7 +12,7 @@ class CourseMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   CourseMesg() : super.from(Profile.getMesg(MesgNum.course));
-  CourseMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  CourseMesg.fromMesg(super.mesg) : super.from();
 
   int? getSport() {
     var val = getFieldValue(

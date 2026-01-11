@@ -183,7 +183,7 @@ class SessionMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   SessionMesg() : super.from(Profile.getMesg(MesgNum.session));
-  SessionMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  SessionMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
     var val = getFieldValue(

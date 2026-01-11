@@ -21,7 +21,7 @@ class GoalMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   GoalMesg() : super.from(Profile.getMesg(MesgNum.goal));
-  GoalMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  GoalMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
     var val = getFieldValue(

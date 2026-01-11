@@ -21,7 +21,7 @@ class TrainingFileMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   TrainingFileMesg() : super.from(Profile.getMesg(MesgNum.trainingFile));
-  TrainingFileMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  TrainingFileMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

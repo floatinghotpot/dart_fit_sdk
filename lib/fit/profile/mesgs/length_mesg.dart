@@ -30,7 +30,7 @@ class LengthMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   LengthMesg() : super.from(Profile.getMesg(MesgNum.length));
-  LengthMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  LengthMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
     var val = getFieldValue(

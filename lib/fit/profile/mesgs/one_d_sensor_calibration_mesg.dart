@@ -21,7 +21,7 @@ class OneDSensorCalibrationMesg extends Mesg {
 
   OneDSensorCalibrationMesg()
     : super.from(Profile.getMesg(MesgNum.oneDSensorCalibration));
-  OneDSensorCalibrationMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  OneDSensorCalibrationMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

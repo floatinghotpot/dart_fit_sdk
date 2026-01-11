@@ -27,7 +27,7 @@ class SplitMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   SplitMesg() : super.from(Profile.getMesg(MesgNum.split));
-  SplitMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  SplitMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
     var val = getFieldValue(

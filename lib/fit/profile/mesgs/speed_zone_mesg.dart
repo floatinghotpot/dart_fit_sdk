@@ -11,7 +11,7 @@ class SpeedZoneMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   SpeedZoneMesg() : super.from(Profile.getMesg(MesgNum.speedZone));
-  SpeedZoneMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  SpeedZoneMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
     var val = getFieldValue(

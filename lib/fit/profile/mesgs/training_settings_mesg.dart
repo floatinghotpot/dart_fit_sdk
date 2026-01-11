@@ -13,7 +13,7 @@ class TrainingSettingsMesg extends Mesg {
 
   TrainingSettingsMesg()
     : super.from(Profile.getMesg(MesgNum.trainingSettings));
-  TrainingSettingsMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  TrainingSettingsMesg.fromMesg(super.mesg) : super.from();
 
   double? getTargetDistance() {
     var val = getFieldValue(

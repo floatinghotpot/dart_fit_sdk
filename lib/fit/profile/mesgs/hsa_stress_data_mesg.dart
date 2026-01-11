@@ -11,7 +11,7 @@ class HsaStressDataMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   HsaStressDataMesg() : super.from(Profile.getMesg(MesgNum.hsaStressData));
-  HsaStressDataMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  HsaStressDataMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

@@ -16,7 +16,7 @@ class ActivityMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   ActivityMesg() : super.from(Profile.getMesg(MesgNum.activity));
-  ActivityMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  ActivityMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

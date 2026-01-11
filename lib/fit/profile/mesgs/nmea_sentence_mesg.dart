@@ -11,7 +11,7 @@ class NmeaSentenceMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   NmeaSentenceMesg() : super.from(Profile.getMesg(MesgNum.nmeaSentence));
-  NmeaSentenceMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  NmeaSentenceMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

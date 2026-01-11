@@ -22,7 +22,7 @@ class FileIdMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   FileIdMesg() : super.from(Profile.getMesg(MesgNum.fileId));
-  FileIdMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  FileIdMesg.fromMesg(super.mesg) : super.from();
 
   int? getType() {
     var val = getFieldValue(

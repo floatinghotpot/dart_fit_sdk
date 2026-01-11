@@ -10,7 +10,7 @@ class OhrSettingsMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   OhrSettingsMesg() : super.from(Profile.getMesg(MesgNum.ohrSettings));
-  OhrSettingsMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  OhrSettingsMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

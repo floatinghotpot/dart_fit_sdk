@@ -13,7 +13,7 @@ class AntChannelIdMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   AntChannelIdMesg() : super.from(Profile.getMesg(MesgNum.antChannelId));
-  AntChannelIdMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  AntChannelIdMesg.fromMesg(super.mesg) : super.from();
 
   int? getChannelNumber() {
     var val = getFieldValue(

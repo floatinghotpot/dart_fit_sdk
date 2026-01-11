@@ -15,7 +15,7 @@ class AadAccelFeaturesMesg extends Mesg {
 
   AadAccelFeaturesMesg()
     : super.from(Profile.getMesg(MesgNum.aadAccelFeatures));
-  AadAccelFeaturesMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  AadAccelFeaturesMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

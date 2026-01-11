@@ -11,7 +11,7 @@ class TankUpdateMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   TankUpdateMesg() : super.from(Profile.getMesg(MesgNum.tankUpdate));
-  TankUpdateMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  TankUpdateMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

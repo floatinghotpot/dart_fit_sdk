@@ -17,7 +17,7 @@ class SegmentIdMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   SegmentIdMesg() : super.from(Profile.getMesg(MesgNum.segmentId));
-  SegmentIdMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  SegmentIdMesg.fromMesg(super.mesg) : super.from();
 
   String? getName() {
     var val = getFieldValue(

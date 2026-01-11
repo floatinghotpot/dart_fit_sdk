@@ -12,7 +12,7 @@ class SleepDisruptionSeverityPeriodMesg extends Mesg {
 
   SleepDisruptionSeverityPeriodMesg()
     : super.from(Profile.getMesg(MesgNum.sleepDisruptionSeverityPeriod));
-  SleepDisruptionSeverityPeriodMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  SleepDisruptionSeverityPeriodMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
     var val = getFieldValue(

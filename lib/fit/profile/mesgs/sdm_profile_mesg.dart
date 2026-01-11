@@ -16,7 +16,7 @@ class SdmProfileMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   SdmProfileMesg() : super.from(Profile.getMesg(MesgNum.sdmProfile));
-  SdmProfileMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  SdmProfileMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
     var val = getFieldValue(

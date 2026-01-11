@@ -14,7 +14,7 @@ class DeviceAuxBatteryInfoMesg extends Mesg {
 
   DeviceAuxBatteryInfoMesg()
     : super.from(Profile.getMesg(MesgNum.deviceAuxBatteryInfo));
-  DeviceAuxBatteryInfoMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  DeviceAuxBatteryInfoMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

@@ -12,7 +12,7 @@ class HsaWristTemperatureDataMesg extends Mesg {
 
   HsaWristTemperatureDataMesg()
     : super.from(Profile.getMesg(MesgNum.hsaWristTemperatureData));
-  HsaWristTemperatureDataMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  HsaWristTemperatureDataMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

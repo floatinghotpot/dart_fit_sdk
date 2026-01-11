@@ -17,7 +17,7 @@ class ChronoShotSessionMesg extends Mesg {
 
   ChronoShotSessionMesg()
     : super.from(Profile.getMesg(MesgNum.chronoShotSession));
-  ChronoShotSessionMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  ChronoShotSessionMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

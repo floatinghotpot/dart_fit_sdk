@@ -16,7 +16,7 @@ class MaxMetDataMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   MaxMetDataMesg() : super.from(Profile.getMesg(MesgNum.maxMetData));
-  MaxMetDataMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  MaxMetDataMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getUpdateTime() {
     var val = getFieldValue(

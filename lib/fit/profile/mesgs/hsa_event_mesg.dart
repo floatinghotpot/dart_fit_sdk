@@ -10,7 +10,7 @@ class HsaEventMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   HsaEventMesg() : super.from(Profile.getMesg(MesgNum.hsaEvent));
-  HsaEventMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  HsaEventMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

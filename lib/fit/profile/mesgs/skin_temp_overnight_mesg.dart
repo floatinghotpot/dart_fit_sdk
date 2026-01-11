@@ -14,7 +14,7 @@ class SkinTempOvernightMesg extends Mesg {
 
   SkinTempOvernightMesg()
     : super.from(Profile.getMesg(MesgNum.skinTempOvernight));
-  SkinTempOvernightMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  SkinTempOvernightMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

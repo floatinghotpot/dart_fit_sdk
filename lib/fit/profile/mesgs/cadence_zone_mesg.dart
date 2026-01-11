@@ -11,7 +11,7 @@ class CadenceZoneMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   CadenceZoneMesg() : super.from(Profile.getMesg(MesgNum.cadenceZone));
-  CadenceZoneMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  CadenceZoneMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
     var val = getFieldValue(

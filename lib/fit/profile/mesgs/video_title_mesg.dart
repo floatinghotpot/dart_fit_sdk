@@ -11,7 +11,7 @@ class VideoTitleMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   VideoTitleMesg() : super.from(Profile.getMesg(MesgNum.videoTitle));
-  VideoTitleMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  VideoTitleMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
     var val = getFieldValue(

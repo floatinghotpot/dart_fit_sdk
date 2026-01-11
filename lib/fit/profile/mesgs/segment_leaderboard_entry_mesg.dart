@@ -16,7 +16,7 @@ class SegmentLeaderboardEntryMesg extends Mesg {
 
   SegmentLeaderboardEntryMesg()
     : super.from(Profile.getMesg(MesgNum.segmentLeaderboardEntry));
-  SegmentLeaderboardEntryMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  SegmentLeaderboardEntryMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
     var val = getFieldValue(

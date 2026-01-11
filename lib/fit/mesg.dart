@@ -22,7 +22,7 @@ class Mesg {
   int get localNum => _localNum;
   set localNum(int value) {
     if (value > Fit.localMesgNumMask) {
-      throw FitException("Mesg:localNum - Invalid Local message number $value");
+      throw FitException('Mesg:localNum - Invalid Local message number $value');
     }
     _localNum = value;
   }
@@ -69,18 +69,18 @@ class Mesg {
       bool shouldRead = true;
       Field? field = getField(fieldDef.num);
       if (field == null) {
-        Mesg? profileMesg = Profile.getMesg(num);
-        Field? profileField = profileMesg?.getField(fieldDef.num);
+        Mesg profileMesg = Profile.getMesg(num);
+        Field? profileField = profileMesg.getField(fieldDef.num);
         if (profileField != null) {
           field = Field.fromOther(profileField);
         } else {
           field = Field(
-            "unknown",
+            'unknown',
             fieldDef.num,
             fieldDef.type,
             1.0,
             0.0,
-            "",
+            '',
             false,
             ProfileType.uint8,
           );
@@ -205,18 +205,18 @@ class Mesg {
     for (var fieldDef in mesgDef.getFields()) {
       Field? field = getField(fieldDef.num);
       if (field == null) {
-        Field? profileField = Profile.getMesg(num)?.getField(fieldDef.num);
+        Field? profileField = Profile.getMesg(num).getField(fieldDef.num);
         if (profileField != null) {
           field = Field.fromOther(profileField);
           fields.add(field);
         } else {
           field = Field(
-            "unknown",
+            'unknown',
             fieldDef.num,
             fieldDef.type,
             1.0,
             0.0,
-            "",
+            '',
             false,
             ProfileType.uint8,
           );
@@ -335,7 +335,7 @@ class Mesg {
   }
 
   void setFields(Mesg mesg) {
-    if (mesg.num != this.num) return;
+    if (mesg.num != num) return;
     for (var field in mesg.fields) {
       setField(Field.fromOther(field));
     }
@@ -507,18 +507,18 @@ class Mesg {
 
     Field? field = getField(fieldNum);
     if (field == null) {
-      Mesg? profileMesg = Profile.getMesg(this.num);
-      Field? profileField = profileMesg?.getField(fieldNum);
+      Mesg profileMesg = Profile.getMesg(num);
+      Field? profileField = profileMesg.getField(fieldNum);
       if (profileField != null) {
         field = Field.fromOther(profileField);
       } else {
         field = Field(
-          "unknown",
+          'unknown',
           fieldNum,
           Fit.uint8,
           1.0,
           0.0,
-          "",
+          '',
           false,
           ProfileType.uint8,
         );
@@ -540,7 +540,7 @@ class Mesg {
 
     Field? field = getFieldByName(name, checkMesgSupportForSubFields: false);
     if (field == null) {
-      field = Profile.getMesg(this.num)?.getFieldByName(name);
+      field = Profile.getMesg(num).getFieldByName(name);
       if (field == null) return;
       setField(Field.fromOther(field));
     }
@@ -578,7 +578,7 @@ class Mesg {
       int offset = 0;
       for (var fC in componentList) {
         if (fC.fieldNum != Fit.fieldNumInvalid) {
-          Field? newField = Profile.getMesg(this.num)?.getField(fC.fieldNum);
+          Field? newField = Profile.getMesg(num).getField(fC.fieldNum);
           if (newField == null) continue;
 
           newField = Field.fromOther(newField);
@@ -591,7 +591,7 @@ class Mesg {
 
           if (fC.accumulate) {
             bitsValue = accumulator.accumulate(
-              this.num,
+              num,
               fC.fieldNum,
               bitsValue,
               fC.bits,

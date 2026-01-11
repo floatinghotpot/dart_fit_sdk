@@ -3,11 +3,11 @@ import 'dart:typed_data';
 enum ProtocolVersion { v10, v20 }
 
 extension ProtocolVersionExtension on ProtocolVersion {
-  int get major => s_versionMap[this]!.major;
-  int get minor => s_versionMap[this]!.minor;
+  int get major => versionMap[this]!.major;
+  int get minor => versionMap[this]!.minor;
   int get versionByte => (major << Fit.protocolVersionMajorShift) | minor;
 
-  static final Map<ProtocolVersion, ({int major, int minor})> s_versionMap = {
+  static final Map<ProtocolVersion, ({int major, int minor})> versionMap = {
     ProtocolVersion.v10: (major: 1, minor: 0),
     ProtocolVersion.v20: (major: 2, minor: 0),
   };
@@ -54,26 +54,26 @@ class Fit {
 
   static const int subfieldIndexMainField = subfieldIndexActiveSubfield + 1;
   static const int subfieldIndexActiveSubfield = 0xfffe;
-  static const String subfieldNameMainField = "";
+  static const String subfieldNameMainField = '';
 
   static final List<FitType> baseType = [
-    FitType(false, 0x00, "enum", 0xff, 1, false, false),
-    FitType(false, 0x01, "sint8", 0x7f, 1, true, true),
-    FitType(false, 0x02, "uint8", 0xff, 1, false, true),
-    FitType(true, 0x83, "sint16", 0x7fff, 2, true, true),
-    FitType(true, 0x84, "uint16", 0xffff, 2, false, true),
-    FitType(true, 0x85, "sint32", 0x7fffffff, 4, true, true),
-    FitType(true, 0x86, "uint32", 0xffffffff, 4, false, true),
-    FitType(false, 0x07, "string", 0x00, 1, false, false),
-    FitType(true, 0x88, "float32", _getFloat32Invalid(), 4, true, false),
-    FitType(true, 0x89, "float64", _getFloat64Invalid(), 8, true, false),
-    FitType(false, 0x0a, "uint8z", 0x00, 1, false, true),
-    FitType(true, 0x8b, "uint16z", 0x0000, 2, false, true),
-    FitType(true, 0x8c, "uint32z", 0x00000000, 4, false, true),
-    FitType(false, 0x0d, "byte", 0xff, 1, false, false),
-    FitType(true, 0x8e, "sint64", 0x7fffffffffffffff, 8, true, true),
-    FitType(true, 0x8f, "uint64", 0xffffffffffffffff, 8, false, true),
-    FitType(true, 0x90, "uint64z", 0x0000000000000000, 8, false, true),
+    FitType(false, 0x00, 'enum', 0xff, 1, false, false),
+    FitType(false, 0x01, 'sint8', 0x7f, 1, true, true),
+    FitType(false, 0x02, 'uint8', 0xff, 1, false, true),
+    FitType(true, 0x83, 'sint16', 0x7fff, 2, true, true),
+    FitType(true, 0x84, 'uint16', 0xffff, 2, false, true),
+    FitType(true, 0x85, 'sint32', 0x7fffffff, 4, true, true),
+    FitType(true, 0x86, 'uint32', 0xffffffff, 4, false, true),
+    FitType(false, 0x07, 'string', 0x00, 1, false, false),
+    FitType(true, 0x88, 'float32', _getFloat32Invalid(), 4, true, false),
+    FitType(true, 0x89, 'float64', _getFloat64Invalid(), 8, true, false),
+    FitType(false, 0x0a, 'uint8z', 0x00, 1, false, true),
+    FitType(true, 0x8b, 'uint16z', 0x0000, 2, false, true),
+    FitType(true, 0x8c, 'uint32z', 0x00000000, 4, false, true),
+    FitType(false, 0x0d, 'byte', 0xff, 1, false, false),
+    FitType(true, 0x8e, 'sint64', 0x7fffffffffffffff, 8, true, true),
+    FitType(true, 0x8f, 'uint64', 0xffffffffffffffff, 8, false, true),
+    FitType(true, 0x90, 'uint64z', 0x0000000000000000, 8, false, true),
   ];
 
   static double _getFloat32Invalid() {

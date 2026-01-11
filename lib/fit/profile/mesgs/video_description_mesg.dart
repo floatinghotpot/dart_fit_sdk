@@ -12,7 +12,7 @@ class VideoDescriptionMesg extends Mesg {
 
   VideoDescriptionMesg()
     : super.from(Profile.getMesg(MesgNum.videoDescription));
-  VideoDescriptionMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  VideoDescriptionMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
     var val = getFieldValue(

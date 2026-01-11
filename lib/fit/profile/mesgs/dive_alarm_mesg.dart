@@ -21,7 +21,7 @@ class DiveAlarmMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   DiveAlarmMesg() : super.from(Profile.getMesg(MesgNum.diveAlarm));
-  DiveAlarmMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  DiveAlarmMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
     var val = getFieldValue(

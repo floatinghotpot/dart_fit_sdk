@@ -13,7 +13,7 @@ class ZonesTargetMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   ZonesTargetMesg() : super.from(Profile.getMesg(MesgNum.zonesTarget));
-  ZonesTargetMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  ZonesTargetMesg.fromMesg(super.mesg) : super.from();
 
   int? getMaxHeartRate() {
     var val = getFieldValue(

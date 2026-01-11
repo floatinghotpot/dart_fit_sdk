@@ -22,7 +22,7 @@ class SleepAssessmentMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   SleepAssessmentMesg() : super.from(Profile.getMesg(MesgNum.sleepAssessment));
-  SleepAssessmentMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  SleepAssessmentMesg.fromMesg(super.mesg) : super.from();
 
   int? getCombinedAwakeScore() {
     var val = getFieldValue(

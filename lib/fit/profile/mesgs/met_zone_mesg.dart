@@ -12,7 +12,7 @@ class MetZoneMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   MetZoneMesg() : super.from(Profile.getMesg(MesgNum.metZone));
-  MetZoneMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  MetZoneMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
     var val = getFieldValue(

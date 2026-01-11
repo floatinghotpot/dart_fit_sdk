@@ -1,4 +1,3 @@
-import 'dart:io' hide File;
 import 'dart:io' as io show File;
 import 'package:fit_sdk/fit_sdk.dart';
 

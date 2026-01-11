@@ -13,7 +13,7 @@ class HrmProfileMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   HrmProfileMesg() : super.from(Profile.getMesg(MesgNum.hrmProfile));
-  HrmProfileMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  HrmProfileMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
     var val = getFieldValue(

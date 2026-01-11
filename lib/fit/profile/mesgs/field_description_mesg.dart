@@ -24,7 +24,7 @@ class FieldDescriptionMesg extends Mesg {
 
   FieldDescriptionMesg()
       : super.from(Profile.getMesg(MesgNum.fieldDescription));
-  FieldDescriptionMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  FieldDescriptionMesg.fromMesg(super.mesg) : super.from();
 
   int? get developerDataIndex => getDeveloperDataIndex();
   int? get fieldDefinitionNumber => getFieldDefinitionNumber();

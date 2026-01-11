@@ -37,7 +37,7 @@ class UserProfileMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   UserProfileMesg() : super.from(Profile.getMesg(MesgNum.userProfile));
-  UserProfileMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  UserProfileMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
     var val = getFieldValue(

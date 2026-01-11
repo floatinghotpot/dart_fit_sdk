@@ -8,14 +8,14 @@ import 'crc.dart';
 
 class Header {
   int _size = 0;
-  String _dataType = ".FIT";
+  String _dataType = '.FIT';
 
   int get size => _size;
   set size(int value) {
     if (value == Fit.headerWithCrcSize || value == Fit.headerWithoutCrcSize) {
       _size = value;
     } else {
-      throw FitException("Tried to set Header Size to $value");
+      throw FitException('Tried to set Header Size to $value');
     }
   }
 
@@ -29,7 +29,7 @@ class Header {
     protocolVersion = version.versionByte;
     profileVersion = Fit.profileVersion;
     dataSize = 0;
-    _dataType = ".FIT";
+    _dataType = '.FIT';
     updateCrc();
   }
 
@@ -38,7 +38,7 @@ class Header {
   }
 
   bool isValid() {
-    return _dataType == ".FIT";
+    return _dataType == '.FIT';
   }
 
   void read(EndianBinaryReader reader) {
@@ -55,7 +55,7 @@ class Header {
       }
     } catch (e) {
       throw FitException(
-        "Header:read() Failed at byte ${reader.position} - $e",
+        'Header:read() Failed at byte ${reader.position} - $e',
       );
     }
   }

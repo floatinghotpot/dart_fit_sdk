@@ -23,7 +23,7 @@ class ThreeDSensorCalibrationMesg extends Mesg {
 
   ThreeDSensorCalibrationMesg()
     : super.from(Profile.getMesg(MesgNum.threeDSensorCalibration));
-  ThreeDSensorCalibrationMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  ThreeDSensorCalibrationMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

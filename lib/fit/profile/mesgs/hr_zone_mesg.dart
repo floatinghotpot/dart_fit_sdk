@@ -11,7 +11,7 @@ class HrZoneMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   HrZoneMesg() : super.from(Profile.getMesg(MesgNum.hrZone));
-  HrZoneMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  HrZoneMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
     var val = getFieldValue(

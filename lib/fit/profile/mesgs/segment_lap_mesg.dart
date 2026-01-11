@@ -109,7 +109,7 @@ class SegmentLapMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   SegmentLapMesg() : super.from(Profile.getMesg(MesgNum.segmentLap));
-  SegmentLapMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  SegmentLapMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
     var val = getFieldValue(

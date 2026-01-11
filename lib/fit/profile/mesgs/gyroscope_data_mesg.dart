@@ -17,7 +17,7 @@ class GyroscopeDataMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   GyroscopeDataMesg() : super.from(Profile.getMesg(MesgNum.gyroscopeData));
-  GyroscopeDataMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  GyroscopeDataMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

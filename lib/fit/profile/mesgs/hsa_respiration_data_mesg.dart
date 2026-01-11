@@ -12,7 +12,7 @@ class HsaRespirationDataMesg extends Mesg {
 
   HsaRespirationDataMesg()
     : super.from(Profile.getMesg(MesgNum.hsaRespirationData));
-  HsaRespirationDataMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  HsaRespirationDataMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

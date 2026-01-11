@@ -31,7 +31,7 @@ void main(List<String> args) async {
           }
         }
 
-        String unitsStr = field.units != null ? ' ${field.units}' : '';
+        String unitsStr = field.units.isNotEmpty ? ' ${field.units}' : '';
         print('  ${field.name}: $valueStr$unitsStr');
       }
     }
@@ -59,7 +59,7 @@ void main(List<String> args) async {
       try {
         final bytes = await file.readAsBytes();
         decoder.read(bytes);
-        print('\n' + '=' * 60);
+        print('\n${'=' * 60}');
         print('\nFile decoded successfully!');
       } catch (e) {
         print('\nError decoding file: $e');
@@ -120,7 +120,7 @@ void main(List<String> args) async {
     // Decode the memory file
     try {
       decoder.read(fitBytes);
-      print('\n' + '=' * 60);
+      print('\n${'=' * 60}');
       print('\nDemo completed successfully!');
     } catch (e) {
       print('\nError decoding sample file: $e');

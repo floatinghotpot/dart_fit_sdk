@@ -18,7 +18,7 @@ class TotalsMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   TotalsMesg() : super.from(Profile.getMesg(MesgNum.totals));
-  TotalsMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  TotalsMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
     var val = getFieldValue(

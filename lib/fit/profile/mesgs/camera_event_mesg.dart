@@ -13,7 +13,7 @@ class CameraEventMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   CameraEventMesg() : super.from(Profile.getMesg(MesgNum.cameraEvent));
-  CameraEventMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  CameraEventMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

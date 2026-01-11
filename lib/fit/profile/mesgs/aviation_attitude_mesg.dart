@@ -21,7 +21,7 @@ class AviationAttitudeMesg extends Mesg {
 
   AviationAttitudeMesg()
     : super.from(Profile.getMesg(MesgNum.aviationAttitude));
-  AviationAttitudeMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  AviationAttitudeMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

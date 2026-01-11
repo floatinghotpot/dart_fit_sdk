@@ -16,7 +16,7 @@ class TimestampCorrelationMesg extends Mesg {
 
   TimestampCorrelationMesg()
     : super.from(Profile.getMesg(MesgNum.timestampCorrelation));
-  TimestampCorrelationMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  TimestampCorrelationMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

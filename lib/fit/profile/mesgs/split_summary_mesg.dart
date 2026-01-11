@@ -22,7 +22,7 @@ class SplitSummaryMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   SplitSummaryMesg() : super.from(Profile.getMesg(MesgNum.splitSummary));
-  SplitSummaryMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  SplitSummaryMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
     var val = getFieldValue(

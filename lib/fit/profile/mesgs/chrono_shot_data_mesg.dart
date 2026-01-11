@@ -11,7 +11,7 @@ class ChronoShotDataMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   ChronoShotDataMesg() : super.from(Profile.getMesg(MesgNum.chronoShotData));
-  ChronoShotDataMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  ChronoShotDataMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

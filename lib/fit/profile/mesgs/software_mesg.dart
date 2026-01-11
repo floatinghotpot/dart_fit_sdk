@@ -11,7 +11,7 @@ class SoftwareMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   SoftwareMesg() : super.from(Profile.getMesg(MesgNum.software));
-  SoftwareMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  SoftwareMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
     var val = getFieldValue(

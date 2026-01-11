@@ -18,7 +18,7 @@ class MagnetometerDataMesg extends Mesg {
 
   MagnetometerDataMesg()
     : super.from(Profile.getMesg(MesgNum.magnetometerData));
-  MagnetometerDataMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  MagnetometerDataMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

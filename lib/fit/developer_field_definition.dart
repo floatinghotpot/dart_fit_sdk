@@ -29,7 +29,7 @@ class DeveloperFieldDefinition {
       developerDataIndex = desc.developerDataIndex ?? 0 {
     if (desc.developerDataIndex == null || desc.fieldDefinitionNumber == null) {
       throw FitException(
-        "Description Message must have a valid developer data index and field definition number",
+        'Description Message must have a valid developer data index and field definition number',
       );
     }
   }

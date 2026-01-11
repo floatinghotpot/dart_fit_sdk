@@ -43,7 +43,7 @@ class DeviceInfoMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   DeviceInfoMesg() : super.from(Profile.getMesg(MesgNum.deviceInfo));
-  DeviceInfoMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  DeviceInfoMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

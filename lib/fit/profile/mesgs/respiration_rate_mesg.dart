@@ -10,7 +10,7 @@ class RespirationRateMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   RespirationRateMesg() : super.from(Profile.getMesg(MesgNum.respirationRate));
-  RespirationRateMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  RespirationRateMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

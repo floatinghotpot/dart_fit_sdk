@@ -17,7 +17,7 @@ class SlaveDeviceMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   SlaveDeviceMesg() : super.from(Profile.getMesg(MesgNum.slaveDevice));
-  SlaveDeviceMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  SlaveDeviceMesg.fromMesg(super.mesg) : super.from();
 
   int? getManufacturer() {
     var val = getFieldValue(

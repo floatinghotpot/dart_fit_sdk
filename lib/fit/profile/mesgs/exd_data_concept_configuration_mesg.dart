@@ -20,7 +20,7 @@ class ExdDataConceptConfigurationMesg extends Mesg {
 
   ExdDataConceptConfigurationMesg()
     : super.from(Profile.getMesg(MesgNum.exdDataConceptConfiguration));
-  ExdDataConceptConfigurationMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  ExdDataConceptConfigurationMesg.fromMesg(super.mesg) : super.from();
 
   int? getScreenIndex() {
     var val = getFieldValue(

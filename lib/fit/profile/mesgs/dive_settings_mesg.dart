@@ -50,7 +50,7 @@ class DiveSettingsMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   DiveSettingsMesg() : super.from(Profile.getMesg(MesgNum.diveSettings));
-  DiveSettingsMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  DiveSettingsMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

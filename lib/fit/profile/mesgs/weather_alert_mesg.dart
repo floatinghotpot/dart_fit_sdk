@@ -14,7 +14,7 @@ class WeatherAlertMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   WeatherAlertMesg() : super.from(Profile.getMesg(MesgNum.weatherAlert));
-  WeatherAlertMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  WeatherAlertMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

@@ -10,7 +10,7 @@ class HrvValueMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   HrvValueMesg() : super.from(Profile.getMesg(MesgNum.hrvValue));
-  HrvValueMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  HrvValueMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

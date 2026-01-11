@@ -17,7 +17,7 @@ class HrvStatusSummaryMesg extends Mesg {
 
   HrvStatusSummaryMesg()
     : super.from(Profile.getMesg(MesgNum.hrvStatusSummary));
-  HrvStatusSummaryMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  HrvStatusSummaryMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

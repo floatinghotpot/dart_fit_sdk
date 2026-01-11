@@ -11,7 +11,7 @@ class SleepDisruptionOvernightSeverityMesg extends Mesg {
 
   SleepDisruptionOvernightSeverityMesg()
     : super.from(Profile.getMesg(MesgNum.sleepDisruptionOvernightSeverity));
-  SleepDisruptionOvernightSeverityMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  SleepDisruptionOvernightSeverityMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

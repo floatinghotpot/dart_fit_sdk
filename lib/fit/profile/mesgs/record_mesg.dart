@@ -92,7 +92,7 @@ class RecordMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   RecordMesg() : super.from(Profile.getMesg(MesgNum.record));
-  RecordMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  RecordMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

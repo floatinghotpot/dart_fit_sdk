@@ -17,7 +17,7 @@ class GpsMetadataMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   GpsMetadataMesg() : super.from(Profile.getMesg(MesgNum.gpsMetadata));
-  GpsMetadataMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  GpsMetadataMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

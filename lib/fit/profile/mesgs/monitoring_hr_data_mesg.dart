@@ -12,7 +12,7 @@ class MonitoringHrDataMesg extends Mesg {
 
   MonitoringHrDataMesg()
     : super.from(Profile.getMesg(MesgNum.monitoringHrData));
-  MonitoringHrDataMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  MonitoringHrDataMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

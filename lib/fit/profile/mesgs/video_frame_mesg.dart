@@ -11,7 +11,7 @@ class VideoFrameMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   VideoFrameMesg() : super.from(Profile.getMesg(MesgNum.videoFrame));
-  VideoFrameMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  VideoFrameMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

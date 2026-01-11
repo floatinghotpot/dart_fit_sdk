@@ -11,7 +11,7 @@ class BeatIntervalsMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   BeatIntervalsMesg() : super.from(Profile.getMesg(MesgNum.beatIntervals));
-  BeatIntervalsMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  BeatIntervalsMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

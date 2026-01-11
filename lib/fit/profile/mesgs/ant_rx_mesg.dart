@@ -14,7 +14,7 @@ class AntRxMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   AntRxMesg() : super.from(Profile.getMesg(MesgNum.antRx));
-  AntRxMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  AntRxMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

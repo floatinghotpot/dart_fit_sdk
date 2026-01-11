@@ -31,7 +31,7 @@ class DiveSummaryMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   DiveSummaryMesg() : super.from(Profile.getMesg(MesgNum.diveSummary));
-  DiveSummaryMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  DiveSummaryMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

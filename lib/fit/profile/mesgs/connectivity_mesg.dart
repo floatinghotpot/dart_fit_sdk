@@ -21,7 +21,7 @@ class ConnectivityMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   ConnectivityMesg() : super.from(Profile.getMesg(MesgNum.connectivity));
-  ConnectivityMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  ConnectivityMesg.fromMesg(super.mesg) : super.from();
 
   bool? getBluetoothEnabled() {
     var val = getFieldValue(

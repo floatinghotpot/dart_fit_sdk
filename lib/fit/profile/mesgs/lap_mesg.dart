@@ -150,7 +150,7 @@ class LapMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   LapMesg() : super.from(Profile.getMesg(MesgNum.lap));
-  LapMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  LapMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
     var val = getFieldValue(

@@ -16,7 +16,7 @@ class CoursePointMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   CoursePointMesg() : super.from(Profile.getMesg(MesgNum.coursePoint));
-  CoursePointMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  CoursePointMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
     var val = getFieldValue(

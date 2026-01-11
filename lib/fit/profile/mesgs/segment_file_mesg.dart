@@ -17,7 +17,7 @@ class SegmentFileMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   SegmentFileMesg() : super.from(Profile.getMesg(MesgNum.segmentFile));
-  SegmentFileMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  SegmentFileMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
     var val = getFieldValue(

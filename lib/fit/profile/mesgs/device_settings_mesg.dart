@@ -32,7 +32,7 @@ class DeviceSettingsMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   DeviceSettingsMesg() : super.from(Profile.getMesg(MesgNum.deviceSettings));
-  DeviceSettingsMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  DeviceSettingsMesg.fromMesg(super.mesg) : super.from();
 
   int? getActiveTimeZone() {
     var val = getFieldValue(

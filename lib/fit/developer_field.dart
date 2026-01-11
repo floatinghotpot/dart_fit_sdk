@@ -65,9 +65,9 @@ class DeveloperField extends FieldBase {
 
   DeveloperField(this._definition);
 
-  DeveloperField.fromOther(DeveloperField other)
+  DeveloperField.fromOther(DeveloperField super.other)
     : _definition = other._definition,
-      super.fromOther(other);
+      super.fromOther();
 
   DeveloperField.fromDescription(
     FieldDescriptionMesg description,

@@ -13,7 +13,7 @@ class HsaHeartRateDataMesg extends Mesg {
 
   HsaHeartRateDataMesg()
     : super.from(Profile.getMesg(MesgNum.hsaHeartRateData));
-  HsaHeartRateDataMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  HsaHeartRateDataMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

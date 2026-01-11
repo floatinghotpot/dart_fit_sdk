@@ -19,7 +19,7 @@ class SetMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   SetMesg() : super.from(Profile.getMesg(MesgNum.set_));
-  SetMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  SetMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

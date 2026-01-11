@@ -17,7 +17,7 @@ class ObdiiDataMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   ObdiiDataMesg() : super.from(Profile.getMesg(MesgNum.obdiiData));
-  ObdiiDataMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  ObdiiDataMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(

@@ -61,7 +61,7 @@ class EventMesg extends Mesg {
   static const int fieldInvalid = Fit.fieldNumInvalid;
 
   EventMesg() : super.from(Profile.getMesg(MesgNum.event));
-  EventMesg.fromMesg(Mesg mesg) : super.from(mesg);
+  EventMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
     var val = getFieldValue(
