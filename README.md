@@ -27,7 +27,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  fit_sdk: ^0.1.0
+  fit_sdk: ^0.2.0
 ```
 
 Then run:

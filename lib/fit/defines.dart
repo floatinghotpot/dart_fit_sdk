@@ -71,9 +71,11 @@ class Fit {
     FitType(true, 0x8b, 'uint16z', 0x0000, 2, false, true),
     FitType(true, 0x8c, 'uint32z', 0x00000000, 4, false, true),
     FitType(false, 0x0d, 'byte', 0xff, 1, false, false),
-    FitType(true, 0x8e, 'sint64', 0x7fffffffffffffff, 8, true, true),
-    FitType(true, 0x8f, 'uint64', 0xffffffffffffffff, 8, false, true),
-    FitType(true, 0x90, 'uint64z', 0x0000000000000000, 8, false, true),
+    FitType(true, 0x8E, 'sint64', BigInt.parse('9223372036854775807'), 8, true, true),
+    FitType(true, 0x8F, 'uint64', BigInt.parse('18446744073709551615'), 8, false, true),
+    // FitType(true, 0x8e, 'sint64', 0x7fffffffffffffff, 8, true, true),
+    // FitType(true, 0x8f, 'uint64', 0xffffffffffffffff, 8, false, true),
+    FitType(true, 0x90, 'uint64z', BigInt.parse('0'), 8, false, true),
   ];
 
   static double _getFloat32Invalid() {
@@ -84,7 +86,10 @@ class Fit {
 
   static double _getFloat64Invalid() {
     var bd = ByteData(8);
-    bd.setUint64(0, 0xffffffffffffffff);
+    //bd.setUint64(0, 0xffffffffffffffff);
+    for (int i = 0; i < 8; i++) {
+      bd.setUint8(i, 0xff);
+    }
     return bd.getFloat64(0);
   }
 

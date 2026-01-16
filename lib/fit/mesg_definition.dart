@@ -17,20 +17,24 @@ class MesgDefinition {
   MesgDefinition();
 
   MesgDefinition.fromMesg(Mesg mesg)
-      : localMesgNum = mesg.localNum,
-        globalMesgNum = mesg.num,
-        isBigEndian = false {
+    : localMesgNum = mesg.localNum,
+      globalMesgNum = mesg.num,
+      isBigEndian = false {
     for (var field in mesg.fields) {
-      _fields.add(FieldDefinition.fromField(field));
+      if (field.getSize() > 0) {
+        _fields.add(FieldDefinition.fromField(field));
+      }
     }
     for (var devField in mesg.developerFields) {
-      _developerFieldDefinitions.add(
-        DeveloperFieldDefinition(
-          fieldNum: devField.num,
-          size: devField.getSize(),
-          developerDataIndex: devField.developerDataIndex,
-        ),
-      );
+      if (devField.getSize() > 0) {
+        _developerFieldDefinitions.add(
+          DeveloperFieldDefinition(
+            fieldNum: devField.num,
+            size: devField.getSize(),
+            developerDataIndex: devField.developerDataIndex,
+          ),
+        );
+      }
     }
   }
 
@@ -82,15 +86,18 @@ class MesgDefinition {
           var tuple = lookup.getMesgs(key);
           if (tuple != null) {
             defn = DeveloperFieldDefinition.fromDescription(
-                tuple.desc, tuple.devId, fSize);
+              tuple.desc,
+              tuple.devId,
+              fSize,
+            );
           }
         }
 
         defn ??= DeveloperFieldDefinition(
-            fieldNum: fNum,
-            size: fSize,
-            developerDataIndex: devIndex,
-          );
+          fieldNum: fNum,
+          size: fSize,
+          developerDataIndex: devIndex,
+        );
 
         _developerFieldDefinitions.add(defn);
       }

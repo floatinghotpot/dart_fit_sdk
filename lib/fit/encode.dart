@@ -32,11 +32,11 @@ class Encode {
     mesgDef.write(_writer);
   }
 
-  void writeMesg(Mesg mesg) {
+  void writeMesg(Mesg mesg, [MesgDefinition? def]) {
     if (!_validator.validateMesg(mesg)) {
       return;
     }
-    mesg.write(_writer);
+    mesg.write(_writer, def);
   }
 
   Uint8List close() {

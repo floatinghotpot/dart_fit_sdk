@@ -35,9 +35,9 @@ class Mesg {
   Mesg(this.name, this.num);
 
   Mesg.from(Mesg other)
-      : name = other.name,
-        num = other.num,
-        _localNum = other._localNum {
+    : name = other.name,
+      num = other.num,
+      _localNum = other._localNum {
     for (var field in other.fields) {
       if (field.values.isNotEmpty) {
         fields.add(Field.fromOther(field));
@@ -54,8 +54,8 @@ class Mesg {
   Mesg.fromMesgNum(int mesgNum) : this.from(Profile.getMesg(mesgNum));
 
   Mesg.fromDefinition(MesgDefinition def)
-      : name = Profile.getMesg(def.globalMesgNum).name,
-        num = def.globalMesgNum {
+    : name = Profile.getMesg(def.globalMesgNum).name,
+      num = def.globalMesgNum {
     localNum = def.localMesgNum;
     // Fields will be added during read
   }
@@ -190,6 +190,13 @@ class Mesg {
       case Fit.float64:
         value = reader.readFloat64();
         break;
+      case Fit.sint64:
+        value = reader.readSInt64();
+        break;
+      case Fit.uint64:
+      case Fit.uint64z:
+        value = reader.readUInt64();
+        break;
       default:
         return null;
     }
@@ -241,28 +248,38 @@ class Mesg {
   void _writeField(FieldBase field, int size, EndianBinaryWriter writer) {
     int baseTypeNum = field.type & Fit.baseTypeNumMask;
 
-    while (field.getSize() < size) {
-      if (baseTypeNum == Fit.string) {
-        int padAmount = size - field.getSize();
-        var value = field.getValue(field.getNumValues() - 1);
-        List<int> temp = [];
-        if (value is Uint8List) {
-          temp.addAll(value);
-        } else if (value is String) {
-          temp.addAll(utf8.encode(value));
+    // Strings are special because getSize() is complex
+    if (baseTypeNum == Fit.string) {
+      int currentSize = field.getSize();
+      if (currentSize < size) {
+        // We need to pad. For strings, we add null bytes to the last string or add a new empty string.
+        int padAmount = size - currentSize;
+        if (field.getNumValues() == 0) {
+          field.addValue(Uint8List(padAmount));
+        } else {
+          var lastVal = field.values.last;
+          List<int> bytes = [];
+          if (lastVal is String) {
+            bytes = utf8.encode(lastVal);
+          } else if (lastVal is List<int>) {
+            bytes = List<int>.from(lastVal);
+          }
+          bytes.addAll(Iterable.generate(padAmount, (_) => 0));
+          field.values[field.values.length - 1] = bytes;
         }
-        for (int i = 0; i < padAmount; i++) {
-          temp.add(Fit.baseType[baseTypeNum].invalidValue as int);
-        }
-        field.setValue(Uint8List.fromList(temp));
-      } else {
-        field.addValue(Fit.baseType[baseTypeNum].invalidValue);
       }
-    }
 
-    for (int i = 0; i < field.getNumValues(); i++) {
-      Object? value = field.values[i];
-      _writeRawValue(field.type, value, writer);
+      for (int i = 0; i < field.getNumValues(); i++) {
+        _writeRawValue(field.type, field.values[i], writer);
+      }
+    } else {
+      int baseTypeSize = Fit.baseType[baseTypeNum].size;
+      int numValues = size ~/ baseTypeSize;
+
+      for (int i = 0; i < numValues; i++) {
+        Object? value = i < field.getNumValues() ? field.values[i] : null;
+        _writeRawValue(field.type, value, writer);
+      }
     }
   }
 
@@ -299,6 +316,34 @@ class Mesg {
         break;
       case Fit.float64:
         writer.writeFloat64((val as dynamic).toDouble());
+        break;
+      case Fit.string:
+        if (val is String) {
+          writer.writeBytes(Uint8List.fromList(utf8.encode(val)));
+          writer.writeByte(0); // Null terminator
+        } else if (val is List<int>) {
+          writer.writeBytes(Uint8List.fromList(val));
+          if (val.isEmpty || val.last != 0) {
+            // Caution: ifgetSize already counted the null terminator,
+            // but it wasn't there, we might over-write.
+            // But usually List<int> for strings in FIT includes the null terminator.
+          }
+        }
+        break;
+      case Fit.sint64:
+        if (val is BigInt) {
+          writer.writeSInt64(val.toInt());
+        } else {
+          writer.writeSInt64(val as int);
+        }
+        break;
+      case Fit.uint64:
+      case Fit.uint64z:
+        if (val is BigInt) {
+          writer.writeUInt64(val.toInt());
+        } else {
+          writer.writeUInt64(val as int);
+        }
         break;
     }
   }
@@ -457,8 +502,9 @@ class Mesg {
     if (subfield == null || subfield.canMesgSupport(this)) {
       return field.getValue(
         index,
-        subfieldInfo:
-            subfieldIndex == Fit.subfieldIndexMainField ? null : subfieldIndex,
+        subfieldInfo: subfieldIndex == Fit.subfieldIndexMainField
+            ? null
+            : subfieldIndex,
       );
     }
     return null;
@@ -528,8 +574,9 @@ class Mesg {
     field.setValueAtIndex(
       index,
       value,
-      subfieldInfo:
-          subfieldIndex == Fit.subfieldIndexMainField ? null : subfieldIndex,
+      subfieldInfo: subfieldIndex == Fit.subfieldIndexMainField
+          ? null
+          : subfieldIndex,
     );
   }
 
