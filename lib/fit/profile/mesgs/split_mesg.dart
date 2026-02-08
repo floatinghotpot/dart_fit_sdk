@@ -30,7 +30,7 @@ class SplitMesg extends Mesg {
   SplitMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       254,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -39,7 +39,7 @@ class SplitMesg extends Mesg {
   }
 
   int? getSplitType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -48,7 +48,7 @@ class SplitMesg extends Mesg {
   }
 
   double? getTotalElapsedTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -57,7 +57,7 @@ class SplitMesg extends Mesg {
   }
 
   double? getTotalTimerTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -66,7 +66,7 @@ class SplitMesg extends Mesg {
   }
 
   double? getTotalDistance() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -75,7 +75,7 @@ class SplitMesg extends Mesg {
   }
 
   double? getAvgSpeed() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -84,7 +84,7 @@ class SplitMesg extends Mesg {
   }
 
   DateTime? getStartTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       9,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -97,7 +97,7 @@ class SplitMesg extends Mesg {
   }
 
   int? getTotalAscent() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       13,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -106,7 +106,7 @@ class SplitMesg extends Mesg {
   }
 
   int? getTotalDescent() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       14,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -115,7 +115,7 @@ class SplitMesg extends Mesg {
   }
 
   int? getStartPositionLat() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       21,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -124,7 +124,7 @@ class SplitMesg extends Mesg {
   }
 
   int? getStartPositionLong() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       22,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -133,7 +133,7 @@ class SplitMesg extends Mesg {
   }
 
   int? getEndPositionLat() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       23,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -142,7 +142,7 @@ class SplitMesg extends Mesg {
   }
 
   int? getEndPositionLong() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       24,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -151,7 +151,7 @@ class SplitMesg extends Mesg {
   }
 
   double? getMaxSpeed() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       25,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -160,7 +160,7 @@ class SplitMesg extends Mesg {
   }
 
   double? getAvgVertSpeed() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       26,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -169,7 +169,7 @@ class SplitMesg extends Mesg {
   }
 
   DateTime? getEndTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       27,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -182,7 +182,7 @@ class SplitMesg extends Mesg {
   }
 
   int? getTotalCalories() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       28,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -191,7 +191,7 @@ class SplitMesg extends Mesg {
   }
 
   double? getStartElevation() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       74,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -200,7 +200,7 @@ class SplitMesg extends Mesg {
   }
 
   double? getTotalMovingTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       110,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

@@ -23,7 +23,7 @@ class ExdDataConceptConfigurationMesg extends Mesg {
   ExdDataConceptConfigurationMesg.fromMesg(super.mesg) : super.from();
 
   int? getScreenIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -32,7 +32,7 @@ class ExdDataConceptConfigurationMesg extends Mesg {
   }
 
   int? getConceptField() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -41,7 +41,7 @@ class ExdDataConceptConfigurationMesg extends Mesg {
   }
 
   int? getFieldId() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -50,7 +50,7 @@ class ExdDataConceptConfigurationMesg extends Mesg {
   }
 
   int? getConceptIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -59,7 +59,7 @@ class ExdDataConceptConfigurationMesg extends Mesg {
   }
 
   int? getDataPage() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -68,7 +68,7 @@ class ExdDataConceptConfigurationMesg extends Mesg {
   }
 
   int? getConceptKey() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -77,7 +77,7 @@ class ExdDataConceptConfigurationMesg extends Mesg {
   }
 
   int? getScaling() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -86,7 +86,7 @@ class ExdDataConceptConfigurationMesg extends Mesg {
   }
 
   int? getDataUnits() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       8,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -95,7 +95,7 @@ class ExdDataConceptConfigurationMesg extends Mesg {
   }
 
   int? getQualifier() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       9,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -104,7 +104,7 @@ class ExdDataConceptConfigurationMesg extends Mesg {
   }
 
   int? getDescriptor() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       10,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -113,7 +113,7 @@ class ExdDataConceptConfigurationMesg extends Mesg {
   }
 
   bool? getIsSigned() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       11,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

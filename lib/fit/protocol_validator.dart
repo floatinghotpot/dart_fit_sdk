@@ -12,7 +12,7 @@ class V1Validator implements Validator {
   bool validateMesg(Mesg mesg) {
     // V1 doesn't support developer fields or 64-bit types
     for (var fld in mesg.fields) {
-      int typeNum = fld.type & Fit.baseTypeNumMask;
+      final int typeNum = fld.type & Fit.baseTypeNumMask;
       if (typeNum > Fit.byte) {
         return false;
       }
@@ -23,7 +23,7 @@ class V1Validator implements Validator {
   @override
   bool validateMesgDefinition(MesgDefinition defn) {
     for (var fld in defn.getFields()) {
-      int typeNum = fld.type & Fit.baseTypeNumMask;
+      final int typeNum = fld.type & Fit.baseTypeNumMask;
       if (typeNum > Fit.byte) {
         return false;
       }

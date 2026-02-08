@@ -13,7 +13,7 @@ class HrvValueMesg extends Mesg {
   HrvValueMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       253,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -26,7 +26,7 @@ class HrvValueMesg extends Mesg {
   }
 
   double? getValue() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

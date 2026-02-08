@@ -14,10 +14,10 @@ class SubfieldMap {
       refFieldValue = other.refFieldValue;
 
   bool canMesgSupport(Mesg mesg) {
-    Field? field = mesg.getField(refFieldNum);
+    final Field? field = mesg.getField(refFieldNum);
 
     if (field != null) {
-      Object? value = field.getValue(
+      final Object? value = field.getValue(
         0,
         subfieldInfo: Fit.subfieldIndexMainField,
       );

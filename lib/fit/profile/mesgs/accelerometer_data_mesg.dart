@@ -24,7 +24,7 @@ class AccelerometerDataMesg extends Mesg {
   AccelerometerDataMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       253,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -37,7 +37,7 @@ class AccelerometerDataMesg extends Mesg {
   }
 
   int? getTimestampMs() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -46,7 +46,7 @@ class AccelerometerDataMesg extends Mesg {
   }
 
   int? getSampleTimeOffset() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -55,7 +55,7 @@ class AccelerometerDataMesg extends Mesg {
   }
 
   int? getAccelX() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -64,7 +64,7 @@ class AccelerometerDataMesg extends Mesg {
   }
 
   int? getAccelY() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -73,7 +73,7 @@ class AccelerometerDataMesg extends Mesg {
   }
 
   int? getAccelZ() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -82,7 +82,7 @@ class AccelerometerDataMesg extends Mesg {
   }
 
   double? getCalibratedAccelX() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -91,7 +91,7 @@ class AccelerometerDataMesg extends Mesg {
   }
 
   double? getCalibratedAccelY() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -100,7 +100,7 @@ class AccelerometerDataMesg extends Mesg {
   }
 
   double? getCalibratedAccelZ() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       7,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -109,7 +109,7 @@ class AccelerometerDataMesg extends Mesg {
   }
 
   int? getCompressedCalibratedAccelX() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       8,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -118,7 +118,7 @@ class AccelerometerDataMesg extends Mesg {
   }
 
   int? getCompressedCalibratedAccelY() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       9,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -127,7 +127,7 @@ class AccelerometerDataMesg extends Mesg {
   }
 
   int? getCompressedCalibratedAccelZ() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       10,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

@@ -20,7 +20,7 @@ class GpsMetadataMesg extends Mesg {
   GpsMetadataMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       253,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -33,7 +33,7 @@ class GpsMetadataMesg extends Mesg {
   }
 
   int? getTimestampMs() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -42,7 +42,7 @@ class GpsMetadataMesg extends Mesg {
   }
 
   int? getPositionLat() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -51,7 +51,7 @@ class GpsMetadataMesg extends Mesg {
   }
 
   int? getPositionLong() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -60,7 +60,7 @@ class GpsMetadataMesg extends Mesg {
   }
 
   double? getEnhancedAltitude() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -69,7 +69,7 @@ class GpsMetadataMesg extends Mesg {
   }
 
   double? getEnhancedSpeed() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -78,7 +78,7 @@ class GpsMetadataMesg extends Mesg {
   }
 
   double? getHeading() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -87,7 +87,7 @@ class GpsMetadataMesg extends Mesg {
   }
 
   DateTime? getUtcTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -100,7 +100,7 @@ class GpsMetadataMesg extends Mesg {
   }
 
   double? getVelocity() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       7,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

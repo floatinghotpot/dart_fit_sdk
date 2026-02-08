@@ -14,7 +14,7 @@ class SpeedZoneMesg extends Mesg {
   SpeedZoneMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       254,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -23,7 +23,7 @@ class SpeedZoneMesg extends Mesg {
   }
 
   double? getHighValue() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -32,7 +32,7 @@ class SpeedZoneMesg extends Mesg {
   }
 
   String? getName() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

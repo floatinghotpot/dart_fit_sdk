@@ -46,7 +46,7 @@ class DeviceInfoMesg extends Mesg {
   DeviceInfoMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       253,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -59,7 +59,7 @@ class DeviceInfoMesg extends Mesg {
   }
 
   int? getDeviceIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -68,7 +68,7 @@ class DeviceInfoMesg extends Mesg {
   }
 
   int? getDeviceType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -77,7 +77,7 @@ class DeviceInfoMesg extends Mesg {
   }
 
   int? getBleDeviceType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: DeviceInfoDeviceTypeSubfield.BleDeviceType,
@@ -86,7 +86,7 @@ class DeviceInfoMesg extends Mesg {
   }
 
   int? getAntplusDeviceType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: DeviceInfoDeviceTypeSubfield.AntplusDeviceType,
@@ -95,7 +95,7 @@ class DeviceInfoMesg extends Mesg {
   }
 
   int? getAntDeviceType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: DeviceInfoDeviceTypeSubfield.AntDeviceType,
@@ -104,7 +104,7 @@ class DeviceInfoMesg extends Mesg {
   }
 
   int? getLocalDeviceType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: DeviceInfoDeviceTypeSubfield.LocalDeviceType,
@@ -113,7 +113,7 @@ class DeviceInfoMesg extends Mesg {
   }
 
   int? getManufacturer() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -122,7 +122,7 @@ class DeviceInfoMesg extends Mesg {
   }
 
   int? getSerialNumber() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -131,7 +131,7 @@ class DeviceInfoMesg extends Mesg {
   }
 
   int? getProduct() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -140,7 +140,7 @@ class DeviceInfoMesg extends Mesg {
   }
 
   int? getFaveroProduct() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: DeviceInfoProductSubfield.FaveroProduct,
@@ -149,7 +149,7 @@ class DeviceInfoMesg extends Mesg {
   }
 
   int? getGarminProduct() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: DeviceInfoProductSubfield.GarminProduct,
@@ -158,7 +158,7 @@ class DeviceInfoMesg extends Mesg {
   }
 
   double? getSoftwareVersion() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -167,7 +167,7 @@ class DeviceInfoMesg extends Mesg {
   }
 
   int? getHardwareVersion() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -176,7 +176,7 @@ class DeviceInfoMesg extends Mesg {
   }
 
   int? getCumOperatingTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       7,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -185,7 +185,7 @@ class DeviceInfoMesg extends Mesg {
   }
 
   double? getBatteryVoltage() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       10,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -194,7 +194,7 @@ class DeviceInfoMesg extends Mesg {
   }
 
   int? getBatteryStatus() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       11,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -203,7 +203,7 @@ class DeviceInfoMesg extends Mesg {
   }
 
   int? getSensorPosition() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       18,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -212,7 +212,7 @@ class DeviceInfoMesg extends Mesg {
   }
 
   String? getDescriptor() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       19,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -221,7 +221,7 @@ class DeviceInfoMesg extends Mesg {
   }
 
   int? getAntTransmissionType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       20,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -230,7 +230,7 @@ class DeviceInfoMesg extends Mesg {
   }
 
   int? getAntDeviceNumber() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       21,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -239,7 +239,7 @@ class DeviceInfoMesg extends Mesg {
   }
 
   int? getAntNetwork() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       22,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -248,7 +248,7 @@ class DeviceInfoMesg extends Mesg {
   }
 
   int? getSourceType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       25,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -257,7 +257,7 @@ class DeviceInfoMesg extends Mesg {
   }
 
   String? getProductName() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       27,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -266,7 +266,7 @@ class DeviceInfoMesg extends Mesg {
   }
 
   int? getBatteryLevel() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       32,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

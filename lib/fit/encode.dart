@@ -40,22 +40,23 @@ class Encode {
   }
 
   Uint8List close() {
-    Uint8List data = _writer.toBytes();
+    final Uint8List data = _writer.toBytes();
 
     // Update header
     _header.dataSize = data.length - Fit.headerWithCrcSize;
+    _header.updateCrc();
 
     // Create new writer for the final file
-    var finalWriter = EndianBinaryWriter();
+    final finalWriter = EndianBinaryWriter();
     _header.write(finalWriter);
 
     // Copy message data
-    Uint8List messageData = data.sublist(Fit.headerWithCrcSize);
+    final Uint8List messageData = data.sublist(Fit.headerWithCrcSize);
     finalWriter.writeBytes(messageData);
 
     // Calculate and write CRC
-    Uint8List allData = finalWriter.toBytes();
-    int crc = Crc.calc16(allData, allData.length);
+    final Uint8List allData = finalWriter.toBytes();
+    final int crc = Crc.calc16(allData, allData.length);
 
     finalWriter.writeUInt16(crc);
 

@@ -19,7 +19,7 @@ class SegmentLeaderboardEntryMesg extends Mesg {
   SegmentLeaderboardEntryMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       254,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -28,7 +28,7 @@ class SegmentLeaderboardEntryMesg extends Mesg {
   }
 
   String? getName() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -37,7 +37,7 @@ class SegmentLeaderboardEntryMesg extends Mesg {
   }
 
   int? getType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -46,7 +46,7 @@ class SegmentLeaderboardEntryMesg extends Mesg {
   }
 
   int? getGroupPrimaryKey() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -55,7 +55,7 @@ class SegmentLeaderboardEntryMesg extends Mesg {
   }
 
   int? getActivityId() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -64,7 +64,7 @@ class SegmentLeaderboardEntryMesg extends Mesg {
   }
 
   double? getSegmentTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -73,7 +73,7 @@ class SegmentLeaderboardEntryMesg extends Mesg {
   }
 
   String? getActivityIdString() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

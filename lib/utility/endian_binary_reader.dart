@@ -40,13 +40,13 @@ class EndianBinaryReader {
   }
 
   Uint8List readBytes(int count) {
-    var result = _data.sublist(_position, _position + count);
+    final result = _data.sublist(_position, _position + count);
     _position += count;
     return result;
   }
 
   int readInt16() {
-    int result = _byteData.getInt16(
+    final int result = _byteData.getInt16(
       _position,
       isBigEndian ? Endian.big : Endian.little,
     );
@@ -55,7 +55,7 @@ class EndianBinaryReader {
   }
 
   int readUInt16() {
-    int result = _byteData.getUint16(
+    final int result = _byteData.getUint16(
       _position,
       isBigEndian ? Endian.big : Endian.little,
     );
@@ -64,7 +64,7 @@ class EndianBinaryReader {
   }
 
   int readInt32() {
-    int result = _byteData.getInt32(
+    final int result = _byteData.getInt32(
       _position,
       isBigEndian ? Endian.big : Endian.little,
     );
@@ -73,7 +73,7 @@ class EndianBinaryReader {
   }
 
   int readUInt32() {
-    int result = _byteData.getUint32(
+    final int result = _byteData.getUint32(
       _position,
       isBigEndian ? Endian.big : Endian.little,
     );
@@ -82,7 +82,7 @@ class EndianBinaryReader {
   }
 
   int readSInt64() {
-    int result = _byteData.getInt64(
+    final int result = _byteData.getInt64(
       _position,
       isBigEndian ? Endian.big : Endian.little,
     );
@@ -91,7 +91,7 @@ class EndianBinaryReader {
   }
 
   int readUInt64() {
-    int result = _byteData.getUint64(
+    final int result = _byteData.getUint64(
       _position,
       isBigEndian ? Endian.big : Endian.little,
     );
@@ -100,7 +100,7 @@ class EndianBinaryReader {
   }
 
   double readFloat32() {
-    double result = _byteData.getFloat32(
+    final double result = _byteData.getFloat32(
       _position,
       isBigEndian ? Endian.big : Endian.little,
     );
@@ -109,7 +109,7 @@ class EndianBinaryReader {
   }
 
   double readFloat64() {
-    double result = _byteData.getFloat64(
+    final double result = _byteData.getFloat64(
       _position,
       isBigEndian ? Endian.big : Endian.little,
     );
@@ -119,11 +119,11 @@ class EndianBinaryReader {
 
   String readString() {
     // Read until null terminator or end of stream
-    int start = _position;
+    final int start = _position;
     while (_position < _data.length && _data[_position] != 0) {
       _position++;
     }
-    String result = utf8.decode(_data.sublist(start, _position));
+    final String result = utf8.decode(_data.sublist(start, _position));
     if (_position < _data.length && _data[_position] == 0) {
       _position++; // Skip null terminator
     }
@@ -131,7 +131,7 @@ class EndianBinaryReader {
   }
 
   int readSByte() {
-    int val = _data[_position++];
+    final int val = _data[_position++];
     return val > 127 ? val - 256 : val;
   }
 }

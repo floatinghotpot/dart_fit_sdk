@@ -16,7 +16,7 @@ class ZonesTargetMesg extends Mesg {
   ZonesTargetMesg.fromMesg(super.mesg) : super.from();
 
   int? getMaxHeartRate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -25,7 +25,7 @@ class ZonesTargetMesg extends Mesg {
   }
 
   int? getThresholdHeartRate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -34,7 +34,7 @@ class ZonesTargetMesg extends Mesg {
   }
 
   int? getFunctionalThresholdPower() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -43,7 +43,7 @@ class ZonesTargetMesg extends Mesg {
   }
 
   int? getHrCalcType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -52,7 +52,7 @@ class ZonesTargetMesg extends Mesg {
   }
 
   int? getPwrCalcType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       7,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

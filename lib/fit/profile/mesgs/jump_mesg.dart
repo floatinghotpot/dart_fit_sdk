@@ -21,7 +21,7 @@ class JumpMesg extends Mesg {
   JumpMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       253,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -34,7 +34,7 @@ class JumpMesg extends Mesg {
   }
 
   double? getDistance() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -43,7 +43,7 @@ class JumpMesg extends Mesg {
   }
 
   double? getHeight() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -52,7 +52,7 @@ class JumpMesg extends Mesg {
   }
 
   int? getRotations() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -61,7 +61,7 @@ class JumpMesg extends Mesg {
   }
 
   double? getHangTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -70,7 +70,7 @@ class JumpMesg extends Mesg {
   }
 
   double? getScore() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -79,7 +79,7 @@ class JumpMesg extends Mesg {
   }
 
   int? getPositionLat() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -88,7 +88,7 @@ class JumpMesg extends Mesg {
   }
 
   int? getPositionLong() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -97,7 +97,7 @@ class JumpMesg extends Mesg {
   }
 
   double? getSpeed() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       7,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -106,7 +106,7 @@ class JumpMesg extends Mesg {
   }
 
   double? getEnhancedSpeed() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       8,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

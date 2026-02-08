@@ -21,7 +21,7 @@ class MagnetometerDataMesg extends Mesg {
   MagnetometerDataMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       253,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -34,7 +34,7 @@ class MagnetometerDataMesg extends Mesg {
   }
 
   int? getTimestampMs() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -43,7 +43,7 @@ class MagnetometerDataMesg extends Mesg {
   }
 
   int? getSampleTimeOffset() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -52,7 +52,7 @@ class MagnetometerDataMesg extends Mesg {
   }
 
   int? getMagX() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -61,7 +61,7 @@ class MagnetometerDataMesg extends Mesg {
   }
 
   int? getMagY() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -70,7 +70,7 @@ class MagnetometerDataMesg extends Mesg {
   }
 
   int? getMagZ() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -79,7 +79,7 @@ class MagnetometerDataMesg extends Mesg {
   }
 
   double? getCalibratedMagX() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -88,7 +88,7 @@ class MagnetometerDataMesg extends Mesg {
   }
 
   double? getCalibratedMagY() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -97,7 +97,7 @@ class MagnetometerDataMesg extends Mesg {
   }
 
   double? getCalibratedMagZ() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       7,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

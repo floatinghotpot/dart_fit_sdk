@@ -14,7 +14,7 @@ class HrZoneMesg extends Mesg {
   HrZoneMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       254,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -23,7 +23,7 @@ class HrZoneMesg extends Mesg {
   }
 
   int? getHighBpm() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -32,7 +32,7 @@ class HrZoneMesg extends Mesg {
   }
 
   String? getName() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

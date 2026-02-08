@@ -7,7 +7,7 @@ class AccumulatedField {
   AccumulatedField(this.mesgNum, this.destFieldNum);
 
   int accumulate(int value, int bits) {
-    int mask = (1 << bits) - 1;
+    final int mask = (1 << bits) - 1;
 
     accumulatedValue += (value - lastValue) & mask;
     lastValue = value;

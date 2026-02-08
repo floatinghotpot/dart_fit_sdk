@@ -15,7 +15,7 @@ class Spo2DataMesg extends Mesg {
   Spo2DataMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       253,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -28,7 +28,7 @@ class Spo2DataMesg extends Mesg {
   }
 
   int? getReadingSpo2() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -37,7 +37,7 @@ class Spo2DataMesg extends Mesg {
   }
 
   int? getReadingConfidence() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -46,7 +46,7 @@ class Spo2DataMesg extends Mesg {
   }
 
   int? getMode() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

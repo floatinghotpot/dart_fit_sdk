@@ -14,7 +14,7 @@ class NmeaSentenceMesg extends Mesg {
   NmeaSentenceMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       253,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -27,7 +27,7 @@ class NmeaSentenceMesg extends Mesg {
   }
 
   int? getTimestampMs() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -36,7 +36,7 @@ class NmeaSentenceMesg extends Mesg {
   }
 
   String? getSentence() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

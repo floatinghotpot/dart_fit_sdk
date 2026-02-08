@@ -24,7 +24,7 @@ class OneDSensorCalibrationMesg extends Mesg {
   OneDSensorCalibrationMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       253,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -37,7 +37,7 @@ class OneDSensorCalibrationMesg extends Mesg {
   }
 
   int? getSensorType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -46,7 +46,7 @@ class OneDSensorCalibrationMesg extends Mesg {
   }
 
   int? getCalibrationFactor() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -55,7 +55,7 @@ class OneDSensorCalibrationMesg extends Mesg {
   }
 
   int? getBaroCalFactor() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo:
@@ -65,7 +65,7 @@ class OneDSensorCalibrationMesg extends Mesg {
   }
 
   int? getCalibrationDivisor() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -74,7 +74,7 @@ class OneDSensorCalibrationMesg extends Mesg {
   }
 
   int? getLevelShift() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -83,7 +83,7 @@ class OneDSensorCalibrationMesg extends Mesg {
   }
 
   int? getOffsetCal() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

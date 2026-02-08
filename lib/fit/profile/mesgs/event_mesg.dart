@@ -64,7 +64,7 @@ class EventMesg extends Mesg {
   EventMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       253,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -77,7 +77,7 @@ class EventMesg extends Mesg {
   }
 
   int? getEvent() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -86,7 +86,7 @@ class EventMesg extends Mesg {
   }
 
   int? getEventType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -95,7 +95,7 @@ class EventMesg extends Mesg {
   }
 
   int? getData16() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -104,7 +104,7 @@ class EventMesg extends Mesg {
   }
 
   int? getData() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -113,7 +113,7 @@ class EventMesg extends Mesg {
   }
 
   int? getTimerTrigger() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: EventDataSubfield.TimerTrigger,
@@ -122,7 +122,7 @@ class EventMesg extends Mesg {
   }
 
   int? getCoursePointIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: EventDataSubfield.CoursePointIndex,
@@ -131,7 +131,7 @@ class EventMesg extends Mesg {
   }
 
   double? getBatteryLevel() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: EventDataSubfield.BatteryLevel,
@@ -140,7 +140,7 @@ class EventMesg extends Mesg {
   }
 
   double? getVirtualPartnerSpeed() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: EventDataSubfield.VirtualPartnerSpeed,
@@ -149,7 +149,7 @@ class EventMesg extends Mesg {
   }
 
   int? getHrHighAlert() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: EventDataSubfield.HrHighAlert,
@@ -158,7 +158,7 @@ class EventMesg extends Mesg {
   }
 
   int? getHrLowAlert() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: EventDataSubfield.HrLowAlert,
@@ -167,7 +167,7 @@ class EventMesg extends Mesg {
   }
 
   double? getSpeedHighAlert() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: EventDataSubfield.SpeedHighAlert,
@@ -176,7 +176,7 @@ class EventMesg extends Mesg {
   }
 
   double? getSpeedLowAlert() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: EventDataSubfield.SpeedLowAlert,
@@ -185,7 +185,7 @@ class EventMesg extends Mesg {
   }
 
   int? getCadHighAlert() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: EventDataSubfield.CadHighAlert,
@@ -194,7 +194,7 @@ class EventMesg extends Mesg {
   }
 
   int? getCadLowAlert() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: EventDataSubfield.CadLowAlert,
@@ -203,7 +203,7 @@ class EventMesg extends Mesg {
   }
 
   int? getPowerHighAlert() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: EventDataSubfield.PowerHighAlert,
@@ -212,7 +212,7 @@ class EventMesg extends Mesg {
   }
 
   int? getPowerLowAlert() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: EventDataSubfield.PowerLowAlert,
@@ -221,7 +221,7 @@ class EventMesg extends Mesg {
   }
 
   double? getTimeDurationAlert() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: EventDataSubfield.TimeDurationAlert,
@@ -230,7 +230,7 @@ class EventMesg extends Mesg {
   }
 
   double? getDistanceDurationAlert() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: EventDataSubfield.DistanceDurationAlert,
@@ -239,7 +239,7 @@ class EventMesg extends Mesg {
   }
 
   int? getCalorieDurationAlert() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: EventDataSubfield.CalorieDurationAlert,
@@ -248,7 +248,7 @@ class EventMesg extends Mesg {
   }
 
   int? getFitnessEquipmentState() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: EventDataSubfield.FitnessEquipmentState,
@@ -257,7 +257,7 @@ class EventMesg extends Mesg {
   }
 
   double? getSportPoint() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: EventDataSubfield.SportPoint,
@@ -266,7 +266,7 @@ class EventMesg extends Mesg {
   }
 
   double? getGearChangeData() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: EventDataSubfield.GearChangeData,
@@ -275,7 +275,7 @@ class EventMesg extends Mesg {
   }
 
   int? getRiderPosition() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: EventDataSubfield.RiderPosition,
@@ -284,7 +284,7 @@ class EventMesg extends Mesg {
   }
 
   int? getCommTimeout() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: EventDataSubfield.CommTimeout,
@@ -293,7 +293,7 @@ class EventMesg extends Mesg {
   }
 
   int? getDiveAlert() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: EventDataSubfield.DiveAlert,
@@ -302,7 +302,7 @@ class EventMesg extends Mesg {
   }
 
   int? getAutoActivityDetectDuration() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: EventDataSubfield.AutoActivityDetectDuration,
@@ -311,7 +311,7 @@ class EventMesg extends Mesg {
   }
 
   double? getRadarThreatAlert() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: EventDataSubfield.RadarThreatAlert,
@@ -320,7 +320,7 @@ class EventMesg extends Mesg {
   }
 
   int? getEventGroup() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -329,7 +329,7 @@ class EventMesg extends Mesg {
   }
 
   int? getScore() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       7,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -338,7 +338,7 @@ class EventMesg extends Mesg {
   }
 
   int? getOpponentScore() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       8,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -347,7 +347,7 @@ class EventMesg extends Mesg {
   }
 
   int? getFrontGearNum() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       9,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -356,7 +356,7 @@ class EventMesg extends Mesg {
   }
 
   int? getFrontGear() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       10,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -365,7 +365,7 @@ class EventMesg extends Mesg {
   }
 
   int? getRearGearNum() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       11,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -374,7 +374,7 @@ class EventMesg extends Mesg {
   }
 
   int? getRearGear() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       12,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -383,7 +383,7 @@ class EventMesg extends Mesg {
   }
 
   int? getDeviceIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       13,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -392,7 +392,7 @@ class EventMesg extends Mesg {
   }
 
   int? getActivityType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       14,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -401,7 +401,7 @@ class EventMesg extends Mesg {
   }
 
   DateTime? getStartTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       15,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -414,7 +414,7 @@ class EventMesg extends Mesg {
   }
 
   int? getAutoActivityDetectStartTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       15,
       index: 0,
       subfieldInfo:
@@ -424,7 +424,7 @@ class EventMesg extends Mesg {
   }
 
   int? getRadarThreatLevelMax() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       21,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -433,7 +433,7 @@ class EventMesg extends Mesg {
   }
 
   int? getRadarThreatCount() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       22,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -442,7 +442,7 @@ class EventMesg extends Mesg {
   }
 
   double? getRadarThreatAvgApproachSpeed() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       23,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -451,7 +451,7 @@ class EventMesg extends Mesg {
   }
 
   double? getRadarThreatMaxApproachSpeed() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       24,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

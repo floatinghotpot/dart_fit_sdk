@@ -17,7 +17,7 @@ class AntRxMesg extends Mesg {
   AntRxMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       253,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -30,7 +30,7 @@ class AntRxMesg extends Mesg {
   }
 
   double? getFractionalTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -39,7 +39,7 @@ class AntRxMesg extends Mesg {
   }
 
   int? getMesgId() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -48,7 +48,7 @@ class AntRxMesg extends Mesg {
   }
 
   int? getMesgData() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -57,7 +57,7 @@ class AntRxMesg extends Mesg {
   }
 
   int? getChannelNumber() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -66,7 +66,7 @@ class AntRxMesg extends Mesg {
   }
 
   int? getData() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

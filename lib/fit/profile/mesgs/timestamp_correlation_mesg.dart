@@ -19,7 +19,7 @@ class TimestampCorrelationMesg extends Mesg {
   TimestampCorrelationMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       253,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -32,7 +32,7 @@ class TimestampCorrelationMesg extends Mesg {
   }
 
   double? getFractionalTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -41,7 +41,7 @@ class TimestampCorrelationMesg extends Mesg {
   }
 
   DateTime? getSystemTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -54,7 +54,7 @@ class TimestampCorrelationMesg extends Mesg {
   }
 
   double? getFractionalSystemTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -63,7 +63,7 @@ class TimestampCorrelationMesg extends Mesg {
   }
 
   int? getLocalTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -72,7 +72,7 @@ class TimestampCorrelationMesg extends Mesg {
   }
 
   int? getTimestampMs() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -81,7 +81,7 @@ class TimestampCorrelationMesg extends Mesg {
   }
 
   int? getSystemTimestampMs() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

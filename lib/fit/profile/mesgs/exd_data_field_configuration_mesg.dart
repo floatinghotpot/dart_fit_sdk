@@ -18,7 +18,7 @@ class ExdDataFieldConfigurationMesg extends Mesg {
   ExdDataFieldConfigurationMesg.fromMesg(super.mesg) : super.from();
 
   int? getScreenIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -27,7 +27,7 @@ class ExdDataFieldConfigurationMesg extends Mesg {
   }
 
   int? getConceptField() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -36,7 +36,7 @@ class ExdDataFieldConfigurationMesg extends Mesg {
   }
 
   int? getFieldId() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -45,7 +45,7 @@ class ExdDataFieldConfigurationMesg extends Mesg {
   }
 
   int? getConceptCount() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -54,7 +54,7 @@ class ExdDataFieldConfigurationMesg extends Mesg {
   }
 
   int? getDisplayType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -63,7 +63,7 @@ class ExdDataFieldConfigurationMesg extends Mesg {
   }
 
   String? getTitle() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

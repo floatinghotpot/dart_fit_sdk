@@ -17,7 +17,7 @@ class HsaBodyBatteryDataMesg extends Mesg {
   HsaBodyBatteryDataMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       253,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -30,7 +30,7 @@ class HsaBodyBatteryDataMesg extends Mesg {
   }
 
   int? getProcessingInterval() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -39,7 +39,7 @@ class HsaBodyBatteryDataMesg extends Mesg {
   }
 
   int? getLevel() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -48,7 +48,7 @@ class HsaBodyBatteryDataMesg extends Mesg {
   }
 
   int? getCharged() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -57,7 +57,7 @@ class HsaBodyBatteryDataMesg extends Mesg {
   }
 
   int? getUncharged() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

@@ -20,7 +20,7 @@ class HrvStatusSummaryMesg extends Mesg {
   HrvStatusSummaryMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       253,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -33,7 +33,7 @@ class HrvStatusSummaryMesg extends Mesg {
   }
 
   double? getWeeklyAverage() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -42,7 +42,7 @@ class HrvStatusSummaryMesg extends Mesg {
   }
 
   double? getLastNightAverage() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -51,7 +51,7 @@ class HrvStatusSummaryMesg extends Mesg {
   }
 
   double? getLastNight5MinHigh() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -60,7 +60,7 @@ class HrvStatusSummaryMesg extends Mesg {
   }
 
   double? getBaselineLowUpper() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -69,7 +69,7 @@ class HrvStatusSummaryMesg extends Mesg {
   }
 
   double? getBaselineBalancedLower() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -78,7 +78,7 @@ class HrvStatusSummaryMesg extends Mesg {
   }
 
   double? getBaselineBalancedUpper() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -87,7 +87,7 @@ class HrvStatusSummaryMesg extends Mesg {
   }
 
   int? getStatus() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

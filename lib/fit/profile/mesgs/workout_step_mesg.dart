@@ -104,7 +104,7 @@ class WorkoutStepMesg extends Mesg {
   WorkoutStepMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       254,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -113,7 +113,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   String? getWktStepName() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -122,7 +122,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getDurationType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -131,7 +131,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getDurationValue() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -140,7 +140,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   double? getDurationTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: WorkoutStepDurationValueSubfield.DurationTime,
@@ -149,7 +149,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   double? getDurationDistance() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: WorkoutStepDurationValueSubfield.DurationDistance,
@@ -158,7 +158,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getDurationHr() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: WorkoutStepDurationValueSubfield.DurationHr,
@@ -167,7 +167,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getDurationCalories() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: WorkoutStepDurationValueSubfield.DurationCalories,
@@ -176,7 +176,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getDurationStep() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: WorkoutStepDurationValueSubfield.DurationStep,
@@ -185,7 +185,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getDurationPower() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: WorkoutStepDurationValueSubfield.DurationPower,
@@ -194,7 +194,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getDurationReps() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: WorkoutStepDurationValueSubfield.DurationReps,
@@ -203,7 +203,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getTargetType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -212,7 +212,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getTargetValue() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -221,7 +221,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getTargetSpeedZone() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: WorkoutStepTargetValueSubfield.TargetSpeedZone,
@@ -230,7 +230,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getTargetHrZone() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: WorkoutStepTargetValueSubfield.TargetHrZone,
@@ -239,7 +239,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getTargetCadenceZone() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: WorkoutStepTargetValueSubfield.TargetCadenceZone,
@@ -248,7 +248,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getTargetPowerZone() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: WorkoutStepTargetValueSubfield.TargetPowerZone,
@@ -257,7 +257,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getRepeatSteps() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: WorkoutStepTargetValueSubfield.RepeatSteps,
@@ -266,7 +266,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   double? getRepeatTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: WorkoutStepTargetValueSubfield.RepeatTime,
@@ -275,7 +275,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   double? getRepeatDistance() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: WorkoutStepTargetValueSubfield.RepeatDistance,
@@ -284,7 +284,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getRepeatCalories() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: WorkoutStepTargetValueSubfield.RepeatCalories,
@@ -293,7 +293,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getRepeatHr() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: WorkoutStepTargetValueSubfield.RepeatHr,
@@ -302,7 +302,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getRepeatPower() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: WorkoutStepTargetValueSubfield.RepeatPower,
@@ -311,7 +311,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getTargetStrokeType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: WorkoutStepTargetValueSubfield.TargetStrokeType,
@@ -320,7 +320,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getCustomTargetValueLow() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -329,7 +329,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   double? getCustomTargetSpeedLow() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo:
@@ -339,7 +339,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getCustomTargetHeartRateLow() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo:
@@ -349,7 +349,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getCustomTargetCadenceLow() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo:
@@ -359,7 +359,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getCustomTargetPowerLow() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo:
@@ -369,7 +369,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getCustomTargetValueHigh() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -378,7 +378,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   double? getCustomTargetSpeedHigh() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo:
@@ -388,7 +388,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getCustomTargetHeartRateHigh() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo:
@@ -398,7 +398,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getCustomTargetCadenceHigh() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo:
@@ -408,7 +408,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getCustomTargetPowerHigh() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo:
@@ -418,7 +418,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getIntensity() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       7,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -427,7 +427,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   String? getNotes() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       8,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -436,7 +436,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getEquipment() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       9,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -445,7 +445,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getExerciseCategory() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       10,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -454,7 +454,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getExerciseName() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       11,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -463,7 +463,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   double? getExerciseWeight() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       12,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -472,7 +472,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getWeightDisplayUnit() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       13,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -481,7 +481,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getSecondaryTargetType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       19,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -490,7 +490,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getSecondaryTargetValue() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       20,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -499,7 +499,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getSecondaryTargetSpeedZone() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       20,
       index: 0,
       subfieldInfo:
@@ -509,7 +509,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getSecondaryTargetHrZone() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       20,
       index: 0,
       subfieldInfo:
@@ -519,7 +519,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getSecondaryTargetCadenceZone() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       20,
       index: 0,
       subfieldInfo:
@@ -529,7 +529,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getSecondaryTargetPowerZone() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       20,
       index: 0,
       subfieldInfo:
@@ -539,7 +539,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getSecondaryTargetStrokeType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       20,
       index: 0,
       subfieldInfo:
@@ -549,7 +549,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getSecondaryCustomTargetValueLow() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       21,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -558,7 +558,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   double? getSecondaryCustomTargetSpeedLow() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       21,
       index: 0,
       subfieldInfo: WorkoutStepSecondaryCustomTargetValueLowSubfield
@@ -568,7 +568,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getSecondaryCustomTargetHeartRateLow() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       21,
       index: 0,
       subfieldInfo: WorkoutStepSecondaryCustomTargetValueLowSubfield
@@ -578,7 +578,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getSecondaryCustomTargetCadenceLow() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       21,
       index: 0,
       subfieldInfo: WorkoutStepSecondaryCustomTargetValueLowSubfield
@@ -588,7 +588,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getSecondaryCustomTargetPowerLow() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       21,
       index: 0,
       subfieldInfo: WorkoutStepSecondaryCustomTargetValueLowSubfield
@@ -598,7 +598,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getSecondaryCustomTargetValueHigh() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       22,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -607,7 +607,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   double? getSecondaryCustomTargetSpeedHigh() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       22,
       index: 0,
       subfieldInfo: WorkoutStepSecondaryCustomTargetValueHighSubfield
@@ -617,7 +617,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getSecondaryCustomTargetHeartRateHigh() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       22,
       index: 0,
       subfieldInfo: WorkoutStepSecondaryCustomTargetValueHighSubfield
@@ -627,7 +627,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getSecondaryCustomTargetCadenceHigh() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       22,
       index: 0,
       subfieldInfo: WorkoutStepSecondaryCustomTargetValueHighSubfield
@@ -637,7 +637,7 @@ class WorkoutStepMesg extends Mesg {
   }
 
   int? getSecondaryCustomTargetPowerHigh() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       22,
       index: 0,
       subfieldInfo: WorkoutStepSecondaryCustomTargetValueHighSubfield

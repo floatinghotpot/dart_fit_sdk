@@ -22,11 +22,11 @@ class DeveloperField extends FieldBase {
 
   Uint8List? get appId {
     if (_definition.isDefined) {
-      var msg = _definition.developerIdMesg;
+      final msg = _definition.developerIdMesg;
       if (msg == null) return null;
 
-      int count = msg.numApplicationId;
-      Uint8List appId = Uint8List(count);
+      final int count = msg.numApplicationId;
+      final Uint8List appId = Uint8List(count);
       for (int i = 0; i < count; i++) {
         appId[i] = msg.getApplicationId(i) ?? 0xFF;
       }

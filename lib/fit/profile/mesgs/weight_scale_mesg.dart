@@ -25,7 +25,7 @@ class WeightScaleMesg extends Mesg {
   WeightScaleMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       253,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -38,7 +38,7 @@ class WeightScaleMesg extends Mesg {
   }
 
   double? getWeight() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -47,7 +47,7 @@ class WeightScaleMesg extends Mesg {
   }
 
   double? getPercentFat() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -56,7 +56,7 @@ class WeightScaleMesg extends Mesg {
   }
 
   double? getPercentHydration() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -65,7 +65,7 @@ class WeightScaleMesg extends Mesg {
   }
 
   double? getVisceralFatMass() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -74,7 +74,7 @@ class WeightScaleMesg extends Mesg {
   }
 
   double? getBoneMass() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -83,7 +83,7 @@ class WeightScaleMesg extends Mesg {
   }
 
   double? getMuscleMass() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -92,7 +92,7 @@ class WeightScaleMesg extends Mesg {
   }
 
   double? getBasalMet() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       7,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -101,7 +101,7 @@ class WeightScaleMesg extends Mesg {
   }
 
   int? getPhysiqueRating() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       8,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -110,7 +110,7 @@ class WeightScaleMesg extends Mesg {
   }
 
   double? getActiveMet() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       9,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -119,7 +119,7 @@ class WeightScaleMesg extends Mesg {
   }
 
   int? getMetabolicAge() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       10,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -128,7 +128,7 @@ class WeightScaleMesg extends Mesg {
   }
 
   int? getVisceralFatRating() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       11,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -137,7 +137,7 @@ class WeightScaleMesg extends Mesg {
   }
 
   int? getUserProfileIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       12,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -146,7 +146,7 @@ class WeightScaleMesg extends Mesg {
   }
 
   double? getBmi() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       13,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

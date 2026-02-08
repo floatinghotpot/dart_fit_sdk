@@ -25,7 +25,7 @@ class ScheduleMesg extends Mesg {
   ScheduleMesg.fromMesg(super.mesg) : super.from();
 
   int? getManufacturer() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -34,7 +34,7 @@ class ScheduleMesg extends Mesg {
   }
 
   int? getProduct() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -43,7 +43,7 @@ class ScheduleMesg extends Mesg {
   }
 
   int? getFaveroProduct() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: ScheduleProductSubfield.FaveroProduct,
@@ -52,7 +52,7 @@ class ScheduleMesg extends Mesg {
   }
 
   int? getGarminProduct() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: ScheduleProductSubfield.GarminProduct,
@@ -61,7 +61,7 @@ class ScheduleMesg extends Mesg {
   }
 
   int? getSerialNumber() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -70,7 +70,7 @@ class ScheduleMesg extends Mesg {
   }
 
   DateTime? getTimeCreated() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -83,7 +83,7 @@ class ScheduleMesg extends Mesg {
   }
 
   bool? getCompleted() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -92,7 +92,7 @@ class ScheduleMesg extends Mesg {
   }
 
   int? getType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -101,7 +101,7 @@ class ScheduleMesg extends Mesg {
   }
 
   int? getScheduledTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

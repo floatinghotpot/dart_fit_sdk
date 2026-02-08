@@ -25,7 +25,7 @@ class SleepAssessmentMesg extends Mesg {
   SleepAssessmentMesg.fromMesg(super.mesg) : super.from();
 
   int? getCombinedAwakeScore() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -34,7 +34,7 @@ class SleepAssessmentMesg extends Mesg {
   }
 
   int? getAwakeTimeScore() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -43,7 +43,7 @@ class SleepAssessmentMesg extends Mesg {
   }
 
   int? getAwakeningsCountScore() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -52,7 +52,7 @@ class SleepAssessmentMesg extends Mesg {
   }
 
   int? getDeepSleepScore() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -61,7 +61,7 @@ class SleepAssessmentMesg extends Mesg {
   }
 
   int? getSleepDurationScore() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -70,7 +70,7 @@ class SleepAssessmentMesg extends Mesg {
   }
 
   int? getLightSleepScore() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -79,7 +79,7 @@ class SleepAssessmentMesg extends Mesg {
   }
 
   int? getOverallSleepScore() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -88,7 +88,7 @@ class SleepAssessmentMesg extends Mesg {
   }
 
   int? getSleepQualityScore() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       7,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -97,7 +97,7 @@ class SleepAssessmentMesg extends Mesg {
   }
 
   int? getSleepRecoveryScore() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       8,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -106,7 +106,7 @@ class SleepAssessmentMesg extends Mesg {
   }
 
   int? getRemSleepScore() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       9,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -115,7 +115,7 @@ class SleepAssessmentMesg extends Mesg {
   }
 
   int? getSleepRestlessnessScore() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       10,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -124,7 +124,7 @@ class SleepAssessmentMesg extends Mesg {
   }
 
   int? getAwakeningsCount() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       11,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -133,7 +133,7 @@ class SleepAssessmentMesg extends Mesg {
   }
 
   int? getInterruptionsScore() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       14,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -142,7 +142,7 @@ class SleepAssessmentMesg extends Mesg {
   }
 
   double? getAverageStressDuringSleep() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       15,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

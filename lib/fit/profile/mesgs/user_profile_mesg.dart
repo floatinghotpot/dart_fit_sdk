@@ -40,7 +40,7 @@ class UserProfileMesg extends Mesg {
   UserProfileMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       254,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -49,7 +49,7 @@ class UserProfileMesg extends Mesg {
   }
 
   String? getFriendlyName() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -58,7 +58,7 @@ class UserProfileMesg extends Mesg {
   }
 
   int? getGender() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -67,7 +67,7 @@ class UserProfileMesg extends Mesg {
   }
 
   int? getAge() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -76,7 +76,7 @@ class UserProfileMesg extends Mesg {
   }
 
   double? getHeight() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -85,7 +85,7 @@ class UserProfileMesg extends Mesg {
   }
 
   double? getWeight() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -94,7 +94,7 @@ class UserProfileMesg extends Mesg {
   }
 
   int? getLanguage() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -103,7 +103,7 @@ class UserProfileMesg extends Mesg {
   }
 
   int? getElevSetting() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -112,7 +112,7 @@ class UserProfileMesg extends Mesg {
   }
 
   int? getWeightSetting() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       7,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -121,7 +121,7 @@ class UserProfileMesg extends Mesg {
   }
 
   int? getRestingHeartRate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       8,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -130,7 +130,7 @@ class UserProfileMesg extends Mesg {
   }
 
   int? getDefaultMaxRunningHeartRate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       9,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -139,7 +139,7 @@ class UserProfileMesg extends Mesg {
   }
 
   int? getDefaultMaxBikingHeartRate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       10,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -148,7 +148,7 @@ class UserProfileMesg extends Mesg {
   }
 
   int? getDefaultMaxHeartRate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       11,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -157,7 +157,7 @@ class UserProfileMesg extends Mesg {
   }
 
   int? getHrSetting() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       12,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -166,7 +166,7 @@ class UserProfileMesg extends Mesg {
   }
 
   int? getSpeedSetting() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       13,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -175,7 +175,7 @@ class UserProfileMesg extends Mesg {
   }
 
   int? getDistSetting() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       14,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -184,7 +184,7 @@ class UserProfileMesg extends Mesg {
   }
 
   int? getPowerSetting() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       16,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -193,7 +193,7 @@ class UserProfileMesg extends Mesg {
   }
 
   int? getActivityClass() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       17,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -202,7 +202,7 @@ class UserProfileMesg extends Mesg {
   }
 
   int? getPositionSetting() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       18,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -211,7 +211,7 @@ class UserProfileMesg extends Mesg {
   }
 
   int? getTemperatureSetting() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       21,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -220,7 +220,7 @@ class UserProfileMesg extends Mesg {
   }
 
   int? getLocalId() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       22,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -229,7 +229,7 @@ class UserProfileMesg extends Mesg {
   }
 
   int? getGlobalId() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       23,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -238,7 +238,7 @@ class UserProfileMesg extends Mesg {
   }
 
   int? getWakeTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       28,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -247,7 +247,7 @@ class UserProfileMesg extends Mesg {
   }
 
   int? getSleepTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       29,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -256,7 +256,7 @@ class UserProfileMesg extends Mesg {
   }
 
   int? getHeightSetting() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       30,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -265,7 +265,7 @@ class UserProfileMesg extends Mesg {
   }
 
   double? getUserRunningStepLength() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       31,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -274,7 +274,7 @@ class UserProfileMesg extends Mesg {
   }
 
   double? getUserWalkingStepLength() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       32,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -283,7 +283,7 @@ class UserProfileMesg extends Mesg {
   }
 
   int? getDepthSetting() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       47,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -292,7 +292,7 @@ class UserProfileMesg extends Mesg {
   }
 
   int? getDiveCount() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       49,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

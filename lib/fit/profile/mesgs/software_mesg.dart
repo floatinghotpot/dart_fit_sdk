@@ -14,7 +14,7 @@ class SoftwareMesg extends Mesg {
   SoftwareMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       254,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -23,7 +23,7 @@ class SoftwareMesg extends Mesg {
   }
 
   double? getVersion() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -32,7 +32,7 @@ class SoftwareMesg extends Mesg {
   }
 
   String? getPartNumber() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

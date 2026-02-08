@@ -24,7 +24,7 @@ class GoalMesg extends Mesg {
   GoalMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       254,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -33,7 +33,7 @@ class GoalMesg extends Mesg {
   }
 
   int? getSport() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -42,7 +42,7 @@ class GoalMesg extends Mesg {
   }
 
   int? getSubSport() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -51,7 +51,7 @@ class GoalMesg extends Mesg {
   }
 
   DateTime? getStartDate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -64,7 +64,7 @@ class GoalMesg extends Mesg {
   }
 
   DateTime? getEndDate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -77,7 +77,7 @@ class GoalMesg extends Mesg {
   }
 
   int? getType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -86,7 +86,7 @@ class GoalMesg extends Mesg {
   }
 
   int? getValue() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -95,7 +95,7 @@ class GoalMesg extends Mesg {
   }
 
   bool? getRepeat() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -104,7 +104,7 @@ class GoalMesg extends Mesg {
   }
 
   int? getTargetValue() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       7,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -113,7 +113,7 @@ class GoalMesg extends Mesg {
   }
 
   int? getRecurrence() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       8,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -122,7 +122,7 @@ class GoalMesg extends Mesg {
   }
 
   int? getRecurrenceValue() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       9,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -131,7 +131,7 @@ class GoalMesg extends Mesg {
   }
 
   bool? getEnabled() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       10,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -140,7 +140,7 @@ class GoalMesg extends Mesg {
   }
 
   int? getSource() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       11,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

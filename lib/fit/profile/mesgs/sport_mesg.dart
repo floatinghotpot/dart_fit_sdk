@@ -14,7 +14,7 @@ class SportMesg extends Mesg {
   SportMesg.fromMesg(super.mesg) : super.from();
 
   int? getSport() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -23,7 +23,7 @@ class SportMesg extends Mesg {
   }
 
   int? getSubSport() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -32,7 +32,7 @@ class SportMesg extends Mesg {
   }
 
   String? getName() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

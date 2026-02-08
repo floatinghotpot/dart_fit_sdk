@@ -21,7 +21,7 @@ class TotalsMesg extends Mesg {
   TotalsMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       254,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -30,7 +30,7 @@ class TotalsMesg extends Mesg {
   }
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       253,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -43,7 +43,7 @@ class TotalsMesg extends Mesg {
   }
 
   int? getTimerTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -52,7 +52,7 @@ class TotalsMesg extends Mesg {
   }
 
   int? getDistance() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -61,7 +61,7 @@ class TotalsMesg extends Mesg {
   }
 
   int? getCalories() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -70,7 +70,7 @@ class TotalsMesg extends Mesg {
   }
 
   int? getSport() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -79,7 +79,7 @@ class TotalsMesg extends Mesg {
   }
 
   int? getElapsedTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -88,7 +88,7 @@ class TotalsMesg extends Mesg {
   }
 
   int? getSessions() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -97,7 +97,7 @@ class TotalsMesg extends Mesg {
   }
 
   int? getActiveTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -106,7 +106,7 @@ class TotalsMesg extends Mesg {
   }
 
   int? getSportIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       9,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

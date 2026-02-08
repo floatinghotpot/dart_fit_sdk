@@ -24,7 +24,7 @@ class DiveApneaAlarmMesg extends Mesg {
   DiveApneaAlarmMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       254,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -33,7 +33,7 @@ class DiveApneaAlarmMesg extends Mesg {
   }
 
   double? getDepth() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -42,7 +42,7 @@ class DiveApneaAlarmMesg extends Mesg {
   }
 
   int? getTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -51,7 +51,7 @@ class DiveApneaAlarmMesg extends Mesg {
   }
 
   bool? getEnabled() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -60,7 +60,7 @@ class DiveApneaAlarmMesg extends Mesg {
   }
 
   int? getAlarmType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -69,7 +69,7 @@ class DiveApneaAlarmMesg extends Mesg {
   }
 
   int? getSound() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -78,7 +78,7 @@ class DiveApneaAlarmMesg extends Mesg {
   }
 
   int? getDiveTypes() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -87,7 +87,7 @@ class DiveApneaAlarmMesg extends Mesg {
   }
 
   int? getId() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -96,7 +96,7 @@ class DiveApneaAlarmMesg extends Mesg {
   }
 
   bool? getPopupEnabled() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       7,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -105,7 +105,7 @@ class DiveApneaAlarmMesg extends Mesg {
   }
 
   bool? getTriggerOnDescent() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       8,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -114,7 +114,7 @@ class DiveApneaAlarmMesg extends Mesg {
   }
 
   bool? getTriggerOnAscent() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       9,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -123,7 +123,7 @@ class DiveApneaAlarmMesg extends Mesg {
   }
 
   bool? getRepeating() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       10,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -132,7 +132,7 @@ class DiveApneaAlarmMesg extends Mesg {
   }
 
   double? getSpeed() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       11,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

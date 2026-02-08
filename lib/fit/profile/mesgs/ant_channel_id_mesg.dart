@@ -16,7 +16,7 @@ class AntChannelIdMesg extends Mesg {
   AntChannelIdMesg.fromMesg(super.mesg) : super.from();
 
   int? getChannelNumber() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -25,7 +25,7 @@ class AntChannelIdMesg extends Mesg {
   }
 
   int? getDeviceType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -34,7 +34,7 @@ class AntChannelIdMesg extends Mesg {
   }
 
   int? getDeviceNumber() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -43,7 +43,7 @@ class AntChannelIdMesg extends Mesg {
   }
 
   int? getTransmissionType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -52,7 +52,7 @@ class AntChannelIdMesg extends Mesg {
   }
 
   int? getDeviceIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

@@ -26,7 +26,7 @@ class ThreeDSensorCalibrationMesg extends Mesg {
   ThreeDSensorCalibrationMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       253,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -39,7 +39,7 @@ class ThreeDSensorCalibrationMesg extends Mesg {
   }
 
   int? getSensorType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -48,7 +48,7 @@ class ThreeDSensorCalibrationMesg extends Mesg {
   }
 
   int? getCalibrationFactor() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -57,7 +57,7 @@ class ThreeDSensorCalibrationMesg extends Mesg {
   }
 
   int? getAccelCalFactor() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo:
@@ -67,7 +67,7 @@ class ThreeDSensorCalibrationMesg extends Mesg {
   }
 
   int? getGyroCalFactor() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo:
@@ -77,7 +77,7 @@ class ThreeDSensorCalibrationMesg extends Mesg {
   }
 
   int? getCalibrationDivisor() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -86,7 +86,7 @@ class ThreeDSensorCalibrationMesg extends Mesg {
   }
 
   int? getLevelShift() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -95,7 +95,7 @@ class ThreeDSensorCalibrationMesg extends Mesg {
   }
 
   int? getOffsetCal() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -104,7 +104,7 @@ class ThreeDSensorCalibrationMesg extends Mesg {
   }
 
   double? getOrientationMatrix() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

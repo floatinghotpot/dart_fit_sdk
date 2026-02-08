@@ -14,7 +14,7 @@ class SleepDisruptionOvernightSeverityMesg extends Mesg {
   SleepDisruptionOvernightSeverityMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       253,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -27,7 +27,7 @@ class SleepDisruptionOvernightSeverityMesg extends Mesg {
   }
 
   int? getSeverity() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

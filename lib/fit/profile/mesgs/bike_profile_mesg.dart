@@ -43,7 +43,7 @@ class BikeProfileMesg extends Mesg {
   BikeProfileMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       254,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -52,7 +52,7 @@ class BikeProfileMesg extends Mesg {
   }
 
   String? getName() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -61,7 +61,7 @@ class BikeProfileMesg extends Mesg {
   }
 
   int? getSport() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -70,7 +70,7 @@ class BikeProfileMesg extends Mesg {
   }
 
   int? getSubSport() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -79,7 +79,7 @@ class BikeProfileMesg extends Mesg {
   }
 
   double? getOdometer() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -88,7 +88,7 @@ class BikeProfileMesg extends Mesg {
   }
 
   int? getBikeSpdAntId() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -97,7 +97,7 @@ class BikeProfileMesg extends Mesg {
   }
 
   int? getBikeCadAntId() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -106,7 +106,7 @@ class BikeProfileMesg extends Mesg {
   }
 
   int? getBikeSpdcadAntId() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -115,7 +115,7 @@ class BikeProfileMesg extends Mesg {
   }
 
   int? getBikePowerAntId() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       7,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -124,7 +124,7 @@ class BikeProfileMesg extends Mesg {
   }
 
   double? getCustomWheelsize() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       8,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -133,7 +133,7 @@ class BikeProfileMesg extends Mesg {
   }
 
   double? getAutoWheelsize() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       9,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -142,7 +142,7 @@ class BikeProfileMesg extends Mesg {
   }
 
   double? getBikeWeight() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       10,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -151,7 +151,7 @@ class BikeProfileMesg extends Mesg {
   }
 
   double? getPowerCalFactor() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       11,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -160,7 +160,7 @@ class BikeProfileMesg extends Mesg {
   }
 
   bool? getAutoWheelCal() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       12,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -169,7 +169,7 @@ class BikeProfileMesg extends Mesg {
   }
 
   bool? getAutoPowerZero() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       13,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -178,7 +178,7 @@ class BikeProfileMesg extends Mesg {
   }
 
   int? getId() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       14,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -187,7 +187,7 @@ class BikeProfileMesg extends Mesg {
   }
 
   bool? getSpdEnabled() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       15,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -196,7 +196,7 @@ class BikeProfileMesg extends Mesg {
   }
 
   bool? getCadEnabled() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       16,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -205,7 +205,7 @@ class BikeProfileMesg extends Mesg {
   }
 
   bool? getSpdcadEnabled() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       17,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -214,7 +214,7 @@ class BikeProfileMesg extends Mesg {
   }
 
   bool? getPowerEnabled() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       18,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -223,7 +223,7 @@ class BikeProfileMesg extends Mesg {
   }
 
   double? getCrankLength() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       19,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -232,7 +232,7 @@ class BikeProfileMesg extends Mesg {
   }
 
   bool? getEnabled() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       20,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -241,7 +241,7 @@ class BikeProfileMesg extends Mesg {
   }
 
   int? getBikeSpdAntIdTransType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       21,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -250,7 +250,7 @@ class BikeProfileMesg extends Mesg {
   }
 
   int? getBikeCadAntIdTransType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       22,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -259,7 +259,7 @@ class BikeProfileMesg extends Mesg {
   }
 
   int? getBikeSpdcadAntIdTransType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       23,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -268,7 +268,7 @@ class BikeProfileMesg extends Mesg {
   }
 
   int? getBikePowerAntIdTransType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       24,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -277,7 +277,7 @@ class BikeProfileMesg extends Mesg {
   }
 
   int? getOdometerRollover() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       37,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -286,7 +286,7 @@ class BikeProfileMesg extends Mesg {
   }
 
   int? getFrontGearNum() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       38,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -295,7 +295,7 @@ class BikeProfileMesg extends Mesg {
   }
 
   int? getFrontGear() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       39,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -304,7 +304,7 @@ class BikeProfileMesg extends Mesg {
   }
 
   int? getRearGearNum() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       40,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -313,7 +313,7 @@ class BikeProfileMesg extends Mesg {
   }
 
   int? getRearGear() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       41,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -322,7 +322,7 @@ class BikeProfileMesg extends Mesg {
   }
 
   bool? getShimanoDi2Enabled() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       44,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

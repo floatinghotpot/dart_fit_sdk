@@ -24,7 +24,7 @@ class ConnectivityMesg extends Mesg {
   ConnectivityMesg.fromMesg(super.mesg) : super.from();
 
   bool? getBluetoothEnabled() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -33,7 +33,7 @@ class ConnectivityMesg extends Mesg {
   }
 
   bool? getBluetoothLeEnabled() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -42,7 +42,7 @@ class ConnectivityMesg extends Mesg {
   }
 
   bool? getAntEnabled() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -51,7 +51,7 @@ class ConnectivityMesg extends Mesg {
   }
 
   String? getName() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -60,7 +60,7 @@ class ConnectivityMesg extends Mesg {
   }
 
   bool? getLiveTrackingEnabled() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -69,7 +69,7 @@ class ConnectivityMesg extends Mesg {
   }
 
   bool? getWeatherConditionsEnabled() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -78,7 +78,7 @@ class ConnectivityMesg extends Mesg {
   }
 
   bool? getWeatherAlertsEnabled() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -87,7 +87,7 @@ class ConnectivityMesg extends Mesg {
   }
 
   bool? getAutoActivityUploadEnabled() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       7,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -96,7 +96,7 @@ class ConnectivityMesg extends Mesg {
   }
 
   bool? getCourseDownloadEnabled() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       8,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -105,7 +105,7 @@ class ConnectivityMesg extends Mesg {
   }
 
   bool? getWorkoutDownloadEnabled() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       9,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -114,7 +114,7 @@ class ConnectivityMesg extends Mesg {
   }
 
   bool? getGpsEphemerisDownloadEnabled() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       10,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -123,7 +123,7 @@ class ConnectivityMesg extends Mesg {
   }
 
   bool? getIncidentDetectionEnabled() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       11,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -132,7 +132,7 @@ class ConnectivityMesg extends Mesg {
   }
 
   bool? getGrouptrackEnabled() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       12,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

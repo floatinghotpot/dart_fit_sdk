@@ -22,7 +22,7 @@ class WatchfaceSettingsMesg extends Mesg {
   WatchfaceSettingsMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       254,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -31,7 +31,7 @@ class WatchfaceSettingsMesg extends Mesg {
   }
 
   int? getMode() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -40,7 +40,7 @@ class WatchfaceSettingsMesg extends Mesg {
   }
 
   int? getLayout() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -49,7 +49,7 @@ class WatchfaceSettingsMesg extends Mesg {
   }
 
   int? getDigitalLayout() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: WatchfaceSettingsLayoutSubfield.DigitalLayout,
@@ -58,7 +58,7 @@ class WatchfaceSettingsMesg extends Mesg {
   }
 
   int? getAnalogLayout() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: WatchfaceSettingsLayoutSubfield.AnalogLayout,

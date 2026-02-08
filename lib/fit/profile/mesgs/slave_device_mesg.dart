@@ -20,7 +20,7 @@ class SlaveDeviceMesg extends Mesg {
   SlaveDeviceMesg.fromMesg(super.mesg) : super.from();
 
   int? getManufacturer() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -29,7 +29,7 @@ class SlaveDeviceMesg extends Mesg {
   }
 
   int? getProduct() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -38,7 +38,7 @@ class SlaveDeviceMesg extends Mesg {
   }
 
   int? getFaveroProduct() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: SlaveDeviceProductSubfield.FaveroProduct,
@@ -47,7 +47,7 @@ class SlaveDeviceMesg extends Mesg {
   }
 
   int? getGarminProduct() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: SlaveDeviceProductSubfield.GarminProduct,

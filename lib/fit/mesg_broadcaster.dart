@@ -25,14 +25,14 @@ class MesgBroadcaster {
       listener(sender, e);
     }
 
-    var listeners = _specificMesgListeners[e.mesg.num];
+    final listeners = _specificMesgListeners[e.mesg.num];
     if (listeners != null) {
       // We need to wrap the message in its specific type for some listeners
       // but standard MesgBroadcaster in C# just sends a MesgEventArgs
       // that might contain the typed message.
       // In C#, it does: RecordMesg recordMesg = new RecordMesg(e.mesg);
       // Let's create a helper to get the typed event args.
-      var typedArgs = _getTypedEventArgs(e.mesg);
+      final typedArgs = _getTypedEventArgs(e.mesg);
       for (var listener in listeners) {
         listener(sender, typedArgs);
       }

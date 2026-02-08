@@ -20,7 +20,7 @@ class WorkoutMesg extends Mesg {
   WorkoutMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       254,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -29,7 +29,7 @@ class WorkoutMesg extends Mesg {
   }
 
   int? getSport() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -38,7 +38,7 @@ class WorkoutMesg extends Mesg {
   }
 
   int? getCapabilities() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -47,7 +47,7 @@ class WorkoutMesg extends Mesg {
   }
 
   int? getNumValidSteps() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -56,7 +56,7 @@ class WorkoutMesg extends Mesg {
   }
 
   String? getWktName() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       8,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -65,7 +65,7 @@ class WorkoutMesg extends Mesg {
   }
 
   int? getSubSport() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       11,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -74,7 +74,7 @@ class WorkoutMesg extends Mesg {
   }
 
   double? getPoolLength() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       14,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -83,7 +83,7 @@ class WorkoutMesg extends Mesg {
   }
 
   int? getPoolLengthUnit() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       15,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -92,7 +92,7 @@ class WorkoutMesg extends Mesg {
   }
 
   String? getWktDescription() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       17,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

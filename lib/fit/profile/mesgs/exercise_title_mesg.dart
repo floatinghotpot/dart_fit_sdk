@@ -15,7 +15,7 @@ class ExerciseTitleMesg extends Mesg {
   ExerciseTitleMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       254,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -24,7 +24,7 @@ class ExerciseTitleMesg extends Mesg {
   }
 
   int? getExerciseCategory() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -33,7 +33,7 @@ class ExerciseTitleMesg extends Mesg {
   }
 
   int? getExerciseName() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -42,7 +42,7 @@ class ExerciseTitleMesg extends Mesg {
   }
 
   String? getWktStepName() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

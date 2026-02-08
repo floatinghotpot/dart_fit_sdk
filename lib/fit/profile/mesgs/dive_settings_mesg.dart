@@ -53,7 +53,7 @@ class DiveSettingsMesg extends Mesg {
   DiveSettingsMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       253,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -66,7 +66,7 @@ class DiveSettingsMesg extends Mesg {
   }
 
   int? getMessageIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       254,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -75,7 +75,7 @@ class DiveSettingsMesg extends Mesg {
   }
 
   String? getName() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -84,7 +84,7 @@ class DiveSettingsMesg extends Mesg {
   }
 
   int? getModel() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -93,7 +93,7 @@ class DiveSettingsMesg extends Mesg {
   }
 
   int? getGfLow() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -102,7 +102,7 @@ class DiveSettingsMesg extends Mesg {
   }
 
   int? getGfHigh() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -111,7 +111,7 @@ class DiveSettingsMesg extends Mesg {
   }
 
   int? getWaterType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -120,7 +120,7 @@ class DiveSettingsMesg extends Mesg {
   }
 
   double? getWaterDensity() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -129,7 +129,7 @@ class DiveSettingsMesg extends Mesg {
   }
 
   double? getPo2Warn() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -138,7 +138,7 @@ class DiveSettingsMesg extends Mesg {
   }
 
   double? getPo2Critical() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       7,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -147,7 +147,7 @@ class DiveSettingsMesg extends Mesg {
   }
 
   double? getPo2Deco() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       8,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -156,7 +156,7 @@ class DiveSettingsMesg extends Mesg {
   }
 
   bool? getSafetyStopEnabled() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       9,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -165,7 +165,7 @@ class DiveSettingsMesg extends Mesg {
   }
 
   double? getBottomDepth() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       10,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -174,7 +174,7 @@ class DiveSettingsMesg extends Mesg {
   }
 
   int? getBottomTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       11,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -183,7 +183,7 @@ class DiveSettingsMesg extends Mesg {
   }
 
   bool? getApneaCountdownEnabled() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       12,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -192,7 +192,7 @@ class DiveSettingsMesg extends Mesg {
   }
 
   int? getApneaCountdownTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       13,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -201,7 +201,7 @@ class DiveSettingsMesg extends Mesg {
   }
 
   int? getBacklightMode() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       14,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -210,7 +210,7 @@ class DiveSettingsMesg extends Mesg {
   }
 
   int? getBacklightBrightness() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       15,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -219,7 +219,7 @@ class DiveSettingsMesg extends Mesg {
   }
 
   int? getBacklightTimeout() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       16,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -228,7 +228,7 @@ class DiveSettingsMesg extends Mesg {
   }
 
   int? getRepeatDiveInterval() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       17,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -237,7 +237,7 @@ class DiveSettingsMesg extends Mesg {
   }
 
   int? getSafetyStopTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       18,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -246,7 +246,7 @@ class DiveSettingsMesg extends Mesg {
   }
 
   int? getHeartRateSourceType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       19,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -255,7 +255,7 @@ class DiveSettingsMesg extends Mesg {
   }
 
   int? getHeartRateSource() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       20,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -264,7 +264,7 @@ class DiveSettingsMesg extends Mesg {
   }
 
   int? getHeartRateAntplusDeviceType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       20,
       index: 0,
       subfieldInfo:
@@ -274,7 +274,7 @@ class DiveSettingsMesg extends Mesg {
   }
 
   int? getHeartRateLocalDeviceType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       20,
       index: 0,
       subfieldInfo:
@@ -284,7 +284,7 @@ class DiveSettingsMesg extends Mesg {
   }
 
   int? getTravelGas() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       21,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -293,7 +293,7 @@ class DiveSettingsMesg extends Mesg {
   }
 
   int? getCcrLowSetpointSwitchMode() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       22,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -302,7 +302,7 @@ class DiveSettingsMesg extends Mesg {
   }
 
   double? getCcrLowSetpoint() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       23,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -311,7 +311,7 @@ class DiveSettingsMesg extends Mesg {
   }
 
   double? getCcrLowSetpointDepth() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       24,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -320,7 +320,7 @@ class DiveSettingsMesg extends Mesg {
   }
 
   int? getCcrHighSetpointSwitchMode() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       25,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -329,7 +329,7 @@ class DiveSettingsMesg extends Mesg {
   }
 
   double? getCcrHighSetpoint() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       26,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -338,7 +338,7 @@ class DiveSettingsMesg extends Mesg {
   }
 
   double? getCcrHighSetpointDepth() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       27,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -347,7 +347,7 @@ class DiveSettingsMesg extends Mesg {
   }
 
   int? getGasConsumptionDisplay() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       29,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -356,7 +356,7 @@ class DiveSettingsMesg extends Mesg {
   }
 
   bool? getUpKeyEnabled() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       30,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -365,7 +365,7 @@ class DiveSettingsMesg extends Mesg {
   }
 
   int? getDiveSounds() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       35,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -374,7 +374,7 @@ class DiveSettingsMesg extends Mesg {
   }
 
   double? getLastStopMultiple() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       36,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -383,7 +383,7 @@ class DiveSettingsMesg extends Mesg {
   }
 
   int? getNoFlyTimeMode() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       37,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

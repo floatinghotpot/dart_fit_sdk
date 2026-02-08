@@ -16,7 +16,7 @@ class ExdScreenConfigurationMesg extends Mesg {
   ExdScreenConfigurationMesg.fromMesg(super.mesg) : super.from();
 
   int? getScreenIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -25,7 +25,7 @@ class ExdScreenConfigurationMesg extends Mesg {
   }
 
   int? getFieldCount() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -34,7 +34,7 @@ class ExdScreenConfigurationMesg extends Mesg {
   }
 
   int? getLayout() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -43,7 +43,7 @@ class ExdScreenConfigurationMesg extends Mesg {
   }
 
   bool? getScreenEnabled() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

@@ -17,7 +17,7 @@ class DeviceAuxBatteryInfoMesg extends Mesg {
   DeviceAuxBatteryInfoMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       253,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -30,7 +30,7 @@ class DeviceAuxBatteryInfoMesg extends Mesg {
   }
 
   int? getDeviceIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -39,7 +39,7 @@ class DeviceAuxBatteryInfoMesg extends Mesg {
   }
 
   double? getBatteryVoltage() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -48,7 +48,7 @@ class DeviceAuxBatteryInfoMesg extends Mesg {
   }
 
   int? getBatteryStatus() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -57,7 +57,7 @@ class DeviceAuxBatteryInfoMesg extends Mesg {
   }
 
   int? getBatteryIdentifier() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

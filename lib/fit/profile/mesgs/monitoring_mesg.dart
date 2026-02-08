@@ -47,7 +47,7 @@ class MonitoringMesg extends Mesg {
   MonitoringMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       253,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -60,7 +60,7 @@ class MonitoringMesg extends Mesg {
   }
 
   int? getDeviceIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -69,7 +69,7 @@ class MonitoringMesg extends Mesg {
   }
 
   int? getCalories() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -78,7 +78,7 @@ class MonitoringMesg extends Mesg {
   }
 
   double? getDistance() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -87,7 +87,7 @@ class MonitoringMesg extends Mesg {
   }
 
   double? getCycles() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -96,7 +96,7 @@ class MonitoringMesg extends Mesg {
   }
 
   int? getSteps() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: MonitoringCyclesSubfield.Steps,
@@ -105,7 +105,7 @@ class MonitoringMesg extends Mesg {
   }
 
   double? getStrokes() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: MonitoringCyclesSubfield.Strokes,
@@ -114,7 +114,7 @@ class MonitoringMesg extends Mesg {
   }
 
   double? getActiveTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -123,7 +123,7 @@ class MonitoringMesg extends Mesg {
   }
 
   int? getActivityType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -132,7 +132,7 @@ class MonitoringMesg extends Mesg {
   }
 
   int? getActivitySubtype() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -141,7 +141,7 @@ class MonitoringMesg extends Mesg {
   }
 
   int? getActivityLevel() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       7,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -150,7 +150,7 @@ class MonitoringMesg extends Mesg {
   }
 
   int? getDistance16() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       8,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -159,7 +159,7 @@ class MonitoringMesg extends Mesg {
   }
 
   int? getCycles16() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       9,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -168,7 +168,7 @@ class MonitoringMesg extends Mesg {
   }
 
   int? getActiveTime16() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       10,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -177,7 +177,7 @@ class MonitoringMesg extends Mesg {
   }
 
   int? getLocalTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       11,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -186,7 +186,7 @@ class MonitoringMesg extends Mesg {
   }
 
   double? getTemperature() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       12,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -195,7 +195,7 @@ class MonitoringMesg extends Mesg {
   }
 
   double? getTemperatureMin() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       14,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -204,7 +204,7 @@ class MonitoringMesg extends Mesg {
   }
 
   double? getTemperatureMax() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       15,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -213,7 +213,7 @@ class MonitoringMesg extends Mesg {
   }
 
   int? getActivityTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       16,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -222,7 +222,7 @@ class MonitoringMesg extends Mesg {
   }
 
   int? getActiveCalories() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       19,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -231,7 +231,7 @@ class MonitoringMesg extends Mesg {
   }
 
   int? getCurrentActivityTypeIntensity() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       24,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -240,7 +240,7 @@ class MonitoringMesg extends Mesg {
   }
 
   int? getTimestampMin8() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       25,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -249,7 +249,7 @@ class MonitoringMesg extends Mesg {
   }
 
   int? getTimestamp16() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       26,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -258,7 +258,7 @@ class MonitoringMesg extends Mesg {
   }
 
   int? getHeartRate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       27,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -267,7 +267,7 @@ class MonitoringMesg extends Mesg {
   }
 
   double? getIntensity() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       28,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -276,7 +276,7 @@ class MonitoringMesg extends Mesg {
   }
 
   int? getDurationMin() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       29,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -285,7 +285,7 @@ class MonitoringMesg extends Mesg {
   }
 
   int? getDuration() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       30,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -294,7 +294,7 @@ class MonitoringMesg extends Mesg {
   }
 
   double? getAscent() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       31,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -303,7 +303,7 @@ class MonitoringMesg extends Mesg {
   }
 
   double? getDescent() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       32,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -312,7 +312,7 @@ class MonitoringMesg extends Mesg {
   }
 
   int? getModerateActivityMinutes() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       33,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -321,7 +321,7 @@ class MonitoringMesg extends Mesg {
   }
 
   int? getVigorousActivityMinutes() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       34,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

@@ -35,7 +35,7 @@ class DeviceSettingsMesg extends Mesg {
   DeviceSettingsMesg.fromMesg(super.mesg) : super.from();
 
   int? getActiveTimeZone() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -44,7 +44,7 @@ class DeviceSettingsMesg extends Mesg {
   }
 
   int? getUtcOffset() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -53,7 +53,7 @@ class DeviceSettingsMesg extends Mesg {
   }
 
   int? getTimeOffset() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -62,7 +62,7 @@ class DeviceSettingsMesg extends Mesg {
   }
 
   int? getTimeMode() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -71,7 +71,7 @@ class DeviceSettingsMesg extends Mesg {
   }
 
   double? getTimeZoneOffset() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -80,7 +80,7 @@ class DeviceSettingsMesg extends Mesg {
   }
 
   int? getBacklightMode() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       12,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -89,7 +89,7 @@ class DeviceSettingsMesg extends Mesg {
   }
 
   bool? getActivityTrackerEnabled() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       36,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -98,7 +98,7 @@ class DeviceSettingsMesg extends Mesg {
   }
 
   DateTime? getClockTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       39,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -111,7 +111,7 @@ class DeviceSettingsMesg extends Mesg {
   }
 
   int? getPagesEnabled() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       40,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -120,7 +120,7 @@ class DeviceSettingsMesg extends Mesg {
   }
 
   bool? getMoveAlertEnabled() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       46,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -129,7 +129,7 @@ class DeviceSettingsMesg extends Mesg {
   }
 
   int? getDateMode() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       47,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -138,7 +138,7 @@ class DeviceSettingsMesg extends Mesg {
   }
 
   int? getDisplayOrientation() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       55,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -147,7 +147,7 @@ class DeviceSettingsMesg extends Mesg {
   }
 
   int? getMountingSide() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       56,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -156,7 +156,7 @@ class DeviceSettingsMesg extends Mesg {
   }
 
   int? getDefaultPage() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       57,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -165,7 +165,7 @@ class DeviceSettingsMesg extends Mesg {
   }
 
   int? getAutosyncMinSteps() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       58,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -174,7 +174,7 @@ class DeviceSettingsMesg extends Mesg {
   }
 
   int? getAutosyncMinTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       59,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -183,7 +183,7 @@ class DeviceSettingsMesg extends Mesg {
   }
 
   bool? getLactateThresholdAutodetectEnabled() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       80,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -192,7 +192,7 @@ class DeviceSettingsMesg extends Mesg {
   }
 
   bool? getBleAutoUploadEnabled() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       86,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -201,7 +201,7 @@ class DeviceSettingsMesg extends Mesg {
   }
 
   int? getAutoSyncFrequency() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       89,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -210,7 +210,7 @@ class DeviceSettingsMesg extends Mesg {
   }
 
   int? getAutoActivityDetect() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       90,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -219,7 +219,7 @@ class DeviceSettingsMesg extends Mesg {
   }
 
   int? getNumberOfScreens() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       94,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -228,7 +228,7 @@ class DeviceSettingsMesg extends Mesg {
   }
 
   int? getSmartNotificationDisplayOrientation() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       95,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -237,7 +237,7 @@ class DeviceSettingsMesg extends Mesg {
   }
 
   int? getTapInterface() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       134,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -246,7 +246,7 @@ class DeviceSettingsMesg extends Mesg {
   }
 
   int? getTapSensitivity() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       174,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

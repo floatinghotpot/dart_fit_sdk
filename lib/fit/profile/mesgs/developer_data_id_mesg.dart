@@ -23,7 +23,7 @@ class DeveloperDataIdMesg extends Mesg {
 
   int get numDeveloperId => getNumFieldValues(0);
   int? getDeveloperId([int index = 0]) {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: index,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -33,7 +33,7 @@ class DeveloperDataIdMesg extends Mesg {
 
   int get numApplicationId => getNumFieldValues(1);
   int? getApplicationId([int index = 0]) {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: index,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -43,7 +43,7 @@ class DeveloperDataIdMesg extends Mesg {
 
   int get numManufacturerId => getNumFieldValues(2);
   int? getManufacturerId([int index = 0]) {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: index,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -53,7 +53,7 @@ class DeveloperDataIdMesg extends Mesg {
 
   int get numDeveloperDataIndex => getNumFieldValues(3);
   int? getDeveloperDataIndex([int index = 0]) {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: index,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -63,7 +63,7 @@ class DeveloperDataIdMesg extends Mesg {
 
   int get numApplicationVersion => getNumFieldValues(4);
   int? getApplicationVersion([int index = 0]) {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: index,
       subfieldInfo: Fit.subfieldIndexMainField,

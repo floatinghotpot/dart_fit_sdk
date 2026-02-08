@@ -18,7 +18,7 @@ class AadAccelFeaturesMesg extends Mesg {
   AadAccelFeaturesMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       253,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -31,7 +31,7 @@ class AadAccelFeaturesMesg extends Mesg {
   }
 
   int? getTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -40,7 +40,7 @@ class AadAccelFeaturesMesg extends Mesg {
   }
 
   int? getEnergyTotal() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -49,7 +49,7 @@ class AadAccelFeaturesMesg extends Mesg {
   }
 
   int? getZeroCrossCnt() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -58,7 +58,7 @@ class AadAccelFeaturesMesg extends Mesg {
   }
 
   int? getInstance() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -67,7 +67,7 @@ class AadAccelFeaturesMesg extends Mesg {
   }
 
   double? getTimeAboveThreshold() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

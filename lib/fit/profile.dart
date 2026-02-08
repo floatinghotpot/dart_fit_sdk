@@ -229,7 +229,7 @@ class Profile {
   static final Map<int, Mesg> m_mesgLookup = {};
 
   static Mesg getMesg(int globalMesgNum) {
-    Mesg? mesg = lookupMesg(globalMesgNum);
+    final Mesg? mesg = lookupMesg(globalMesgNum);
 
     if (null != mesg) {
       return mesg;
@@ -239,7 +239,7 @@ class Profile {
   }
 
   static Field getField(int globalMesgNum, int fieldNum) {
-    Mesg? mesg = lookupMesg(globalMesgNum);
+    final Mesg? mesg = lookupMesg(globalMesgNum);
 
     if (null != mesg) {
       return mesg.getField(fieldNum) ??
@@ -259,7 +259,7 @@ class Profile {
   }
 
   static Field? getFieldByName(int globalMesgNum, String fieldName) {
-    Mesg? mesg = lookupMesg(globalMesgNum);
+    final Mesg? mesg = lookupMesg(globalMesgNum);
 
     if (null != mesg) {
       return mesg.getFieldByName(fieldName);
@@ -663,7 +663,7 @@ class Profile {
 
   static Mesg createFileIdMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("FileId", MesgNum.fileId);
+    final Mesg newMesg = Mesg("FileId", MesgNum.fileId);
     fieldIndex = 0;
     newMesg.setField(
       Field("Type", 0, 0, 1.0, 0.0, "", false, ProfileType.file),
@@ -722,7 +722,7 @@ class Profile {
 
   static Mesg createFileCreatorMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("FileCreator", MesgNum.fileCreator);
+    final Mesg newMesg = Mesg("FileCreator", MesgNum.fileCreator);
     fieldIndex = 0;
     newMesg.setField(
       Field("SoftwareVersion", 0, 132, 1.0, 0.0, "", false, ProfileType.uint16),
@@ -738,7 +738,10 @@ class Profile {
 
   static Mesg createTimestampCorrelationMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("TimestampCorrelation", MesgNum.timestampCorrelation);
+    final Mesg newMesg = Mesg(
+      "TimestampCorrelation",
+      MesgNum.timestampCorrelation,
+    );
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -819,7 +822,7 @@ class Profile {
 
   static Mesg createSoftwareMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("Software", MesgNum.software);
+    final Mesg newMesg = Mesg("Software", MesgNum.software);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -848,7 +851,7 @@ class Profile {
 
   static Mesg createSlaveDeviceMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("SlaveDevice", MesgNum.slaveDevice);
+    final Mesg newMesg = Mesg("SlaveDevice", MesgNum.slaveDevice);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -887,7 +890,7 @@ class Profile {
 
   static Mesg createCapabilitiesMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("Capabilities", MesgNum.capabilities);
+    final Mesg newMesg = Mesg("Capabilities", MesgNum.capabilities);
     fieldIndex = 0;
     newMesg.setField(
       Field("Languages", 0, 10, 1.0, 0.0, "", false, ProfileType.uint8z),
@@ -929,7 +932,7 @@ class Profile {
 
   static Mesg createFileCapabilitiesMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("FileCapabilities", MesgNum.fileCapabilities);
+    final Mesg newMesg = Mesg("FileCapabilities", MesgNum.fileCapabilities);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -970,7 +973,7 @@ class Profile {
 
   static Mesg createMesgCapabilitiesMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("MesgCapabilities", MesgNum.mesgCapabilities);
+    final Mesg newMesg = Mesg("MesgCapabilities", MesgNum.mesgCapabilities);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -1023,7 +1026,7 @@ class Profile {
 
   static Mesg createFieldCapabilitiesMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("FieldCapabilities", MesgNum.fieldCapabilities);
+    final Mesg newMesg = Mesg("FieldCapabilities", MesgNum.fieldCapabilities);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -1060,7 +1063,7 @@ class Profile {
 
   static Mesg createDeviceSettingsMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("DeviceSettings", MesgNum.deviceSettings);
+    final Mesg newMesg = Mesg("DeviceSettings", MesgNum.deviceSettings);
     fieldIndex = 0;
     newMesg.setField(
       Field("ActiveTimeZone", 0, 2, 1.0, 0.0, "", false, ProfileType.uint8),
@@ -1263,7 +1266,7 @@ class Profile {
 
   static Mesg createUserProfileMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("UserProfile", MesgNum.userProfile);
+    final Mesg newMesg = Mesg("UserProfile", MesgNum.userProfile);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -1558,7 +1561,7 @@ class Profile {
 
   static Mesg createHrmProfileMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("HrmProfile", MesgNum.hrmProfile);
+    final Mesg newMesg = Mesg("HrmProfile", MesgNum.hrmProfile);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -1604,7 +1607,7 @@ class Profile {
 
   static Mesg createSdmProfileMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("SdmProfile", MesgNum.sdmProfile);
+    final Mesg newMesg = Mesg("SdmProfile", MesgNum.sdmProfile);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -1662,7 +1665,7 @@ class Profile {
 
   static Mesg createBikeProfileMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("BikeProfile", MesgNum.bikeProfile);
+    final Mesg newMesg = Mesg("BikeProfile", MesgNum.bikeProfile);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -1879,7 +1882,7 @@ class Profile {
 
   static Mesg createConnectivityMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("Connectivity", MesgNum.connectivity);
+    final Mesg newMesg = Mesg("Connectivity", MesgNum.connectivity);
     fieldIndex = 0;
     newMesg.setField(
       Field("BluetoothEnabled", 0, 0, 1.0, 0.0, "", false, ProfileType.bool_),
@@ -2011,7 +2014,7 @@ class Profile {
 
   static Mesg createWatchfaceSettingsMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("WatchfaceSettings", MesgNum.watchfaceSettings);
+    final Mesg newMesg = Mesg("WatchfaceSettings", MesgNum.watchfaceSettings);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -2047,7 +2050,7 @@ class Profile {
 
   static Mesg createOhrSettingsMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("OhrSettings", MesgNum.ohrSettings);
+    final Mesg newMesg = Mesg("OhrSettings", MesgNum.ohrSettings);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -2063,7 +2066,7 @@ class Profile {
 
   static Mesg createTimeInZoneMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("TimeInZone", MesgNum.timeInZone);
+    final Mesg newMesg = Mesg("TimeInZone", MesgNum.timeInZone);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -2238,7 +2241,7 @@ class Profile {
 
   static Mesg createZonesTargetMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("ZonesTarget", MesgNum.zonesTarget);
+    final Mesg newMesg = Mesg("ZonesTarget", MesgNum.zonesTarget);
     fieldIndex = 0;
     newMesg.setField(
       Field("MaxHeartRate", 1, 2, 1.0, 0.0, "", false, ProfileType.uint8),
@@ -2275,7 +2278,7 @@ class Profile {
 
   static Mesg createSportMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("Sport", MesgNum.sport);
+    final Mesg newMesg = Mesg("Sport", MesgNum.sport);
     fieldIndex = 0;
     newMesg.setField(
       Field("Sport", 0, 0, 1.0, 0.0, "", false, ProfileType.sport),
@@ -2295,7 +2298,7 @@ class Profile {
 
   static Mesg createHrZoneMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("HrZone", MesgNum.hrZone);
+    final Mesg newMesg = Mesg("HrZone", MesgNum.hrZone);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -2324,7 +2327,7 @@ class Profile {
 
   static Mesg createSpeedZoneMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("SpeedZone", MesgNum.speedZone);
+    final Mesg newMesg = Mesg("SpeedZone", MesgNum.speedZone);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -2353,7 +2356,7 @@ class Profile {
 
   static Mesg createCadenceZoneMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("CadenceZone", MesgNum.cadenceZone);
+    final Mesg newMesg = Mesg("CadenceZone", MesgNum.cadenceZone);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -2382,7 +2385,7 @@ class Profile {
 
   static Mesg createPowerZoneMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("PowerZone", MesgNum.powerZone);
+    final Mesg newMesg = Mesg("PowerZone", MesgNum.powerZone);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -2411,7 +2414,7 @@ class Profile {
 
   static Mesg createMetZoneMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("MetZone", MesgNum.metZone);
+    final Mesg newMesg = Mesg("MetZone", MesgNum.metZone);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -2462,7 +2465,7 @@ class Profile {
 
   static Mesg createTrainingSettingsMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("TrainingSettings", MesgNum.trainingSettings);
+    final Mesg newMesg = Mesg("TrainingSettings", MesgNum.trainingSettings);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -2513,7 +2516,7 @@ class Profile {
 
   static Mesg createDiveSettingsMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("DiveSettings", MesgNum.diveSettings);
+    final Mesg newMesg = Mesg("DiveSettings", MesgNum.diveSettings);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "", false, ProfileType.dateTime),
@@ -2702,7 +2705,7 @@ class Profile {
       ),
     );
     fieldIndex++;
-    Field heartRateSourceField = Field(
+    final Field heartRateSourceField = Field(
       "HeartRateSource",
       20,
       2,
@@ -2860,7 +2863,7 @@ class Profile {
 
   static Mesg createDiveAlarmMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("DiveAlarm", MesgNum.diveAlarm);
+    final Mesg newMesg = Mesg("DiveAlarm", MesgNum.diveAlarm);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -2929,7 +2932,7 @@ class Profile {
 
   static Mesg createDiveApneaAlarmMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("DiveApneaAlarm", MesgNum.diveApneaAlarm);
+    final Mesg newMesg = Mesg("DiveApneaAlarm", MesgNum.diveApneaAlarm);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -2998,7 +3001,7 @@ class Profile {
 
   static Mesg createDiveGasMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("DiveGas", MesgNum.diveGas);
+    final Mesg newMesg = Mesg("DiveGas", MesgNum.diveGas);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -3053,7 +3056,7 @@ class Profile {
 
   static Mesg createGoalMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("Goal", MesgNum.goal);
+    final Mesg newMesg = Mesg("Goal", MesgNum.goal);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -3131,7 +3134,7 @@ class Profile {
 
   static Mesg createActivityMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("Activity", MesgNum.activity);
+    final Mesg newMesg = Mesg("Activity", MesgNum.activity);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "", false, ProfileType.dateTime),
@@ -3189,7 +3192,7 @@ class Profile {
 
   static Mesg createSessionMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("Session", MesgNum.session);
+    final Mesg newMesg = Mesg("Session", MesgNum.session);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -3293,7 +3296,7 @@ class Profile {
       ),
     );
     fieldIndex++;
-    Field totalCyclesField = Field(
+    final Field totalCyclesField = Field(
       "TotalCycles",
       10,
       134,
@@ -3346,7 +3349,7 @@ class Profile {
       ),
     );
     fieldIndex++;
-    Field avgSpeedField = Field(
+    final Field avgSpeedField = Field(
       "AvgSpeed",
       14,
       132,
@@ -3361,7 +3364,7 @@ class Profile {
     ); // enhanced_avg_speed
     newMesg.setField(avgSpeedField);
     fieldIndex++;
-    Field maxSpeedField = Field(
+    final Field maxSpeedField = Field(
       "MaxSpeed",
       15,
       132,
@@ -3384,7 +3387,7 @@ class Profile {
       Field("MaxHeartRate", 17, 2, 1.0, 0.0, "bpm", false, ProfileType.uint8),
     );
     fieldIndex++;
-    Field avgCadenceField = Field(
+    final Field avgCadenceField = Field(
       "AvgCadence",
       18,
       2,
@@ -3402,7 +3405,7 @@ class Profile {
     subfieldIndex++;
     newMesg.setField(avgCadenceField);
     fieldIndex++;
-    Field maxCadenceField = Field(
+    final Field maxCadenceField = Field(
       "MaxCadence",
       19,
       2,
@@ -3694,7 +3697,7 @@ class Profile {
       Field("TotalWork", 48, 134, 1.0, 0.0, "J", false, ProfileType.uint32),
     );
     fieldIndex++;
-    Field avgAltitudeField = Field(
+    final Field avgAltitudeField = Field(
       "AvgAltitude",
       49,
       132,
@@ -3709,7 +3712,7 @@ class Profile {
     ); // enhanced_avg_altitude
     newMesg.setField(avgAltitudeField);
     fieldIndex++;
-    Field maxAltitudeField = Field(
+    final Field maxAltitudeField = Field(
       "MaxAltitude",
       50,
       132,
@@ -3885,7 +3888,7 @@ class Profile {
       Field("BestLapIndex", 70, 132, 1.0, 0.0, "", false, ProfileType.uint16),
     );
     fieldIndex++;
-    Field minAltitudeField = Field(
+    final Field minAltitudeField = Field(
       "MinAltitude",
       71,
       132,
@@ -4537,7 +4540,7 @@ class Profile {
       Field("EndN2", 146, 132, 1.0, 0.0, "percent", false, ProfileType.uint16),
     );
     fieldIndex++;
-    Field avgRespirationRateField = Field(
+    final Field avgRespirationRateField = Field(
       "AvgRespirationRate",
       147,
       2,
@@ -4552,7 +4555,7 @@ class Profile {
     ); // enhanced_avg_respiration_rate
     newMesg.setField(avgRespirationRateField);
     fieldIndex++;
-    Field maxRespirationRateField = Field(
+    final Field maxRespirationRateField = Field(
       "MaxRespirationRate",
       148,
       2,
@@ -4567,7 +4570,7 @@ class Profile {
     ); // enhanced_max_respiration_rate
     newMesg.setField(maxRespirationRateField);
     fieldIndex++;
-    Field minRespirationRateField = Field(
+    final Field minRespirationRateField = Field(
       "MinRespirationRate",
       149,
       2,
@@ -4788,7 +4791,7 @@ class Profile {
 
   static Mesg createLapMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("Lap", MesgNum.lap);
+    final Mesg newMesg = Mesg("Lap", MesgNum.lap);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -4910,7 +4913,7 @@ class Profile {
       ),
     );
     fieldIndex++;
-    Field totalCyclesField = Field(
+    final Field totalCyclesField = Field(
       "TotalCycles",
       10,
       134,
@@ -4963,7 +4966,7 @@ class Profile {
       ),
     );
     fieldIndex++;
-    Field avgSpeedField = Field(
+    final Field avgSpeedField = Field(
       "AvgSpeed",
       13,
       132,
@@ -4978,7 +4981,7 @@ class Profile {
     ); // enhanced_avg_speed
     newMesg.setField(avgSpeedField);
     fieldIndex++;
-    Field maxSpeedField = Field(
+    final Field maxSpeedField = Field(
       "MaxSpeed",
       14,
       132,
@@ -5001,7 +5004,7 @@ class Profile {
       Field("MaxHeartRate", 16, 2, 1.0, 0.0, "bpm", false, ProfileType.uint8),
     );
     fieldIndex++;
-    Field avgCadenceField = Field(
+    final Field avgCadenceField = Field(
       "AvgCadence",
       17,
       2,
@@ -5019,7 +5022,7 @@ class Profile {
     subfieldIndex++;
     newMesg.setField(avgCadenceField);
     fieldIndex++;
-    Field maxCadenceField = Field(
+    final Field maxCadenceField = Field(
       "MaxCadence",
       18,
       2,
@@ -5159,7 +5162,7 @@ class Profile {
       Field("TotalWork", 41, 134, 1.0, 0.0, "J", false, ProfileType.uint32),
     );
     fieldIndex++;
-    Field avgAltitudeField = Field(
+    final Field avgAltitudeField = Field(
       "AvgAltitude",
       42,
       132,
@@ -5174,7 +5177,7 @@ class Profile {
     ); // enhanced_avg_altitude
     newMesg.setField(avgAltitudeField);
     fieldIndex++;
-    Field maxAltitudeField = Field(
+    final Field maxAltitudeField = Field(
       "MaxAltitude",
       43,
       132,
@@ -5342,7 +5345,7 @@ class Profile {
       Field("RepetitionNum", 61, 132, 1.0, 0.0, "", false, ProfileType.uint16),
     );
     fieldIndex++;
-    Field minAltitudeField = Field(
+    final Field minAltitudeField = Field(
       "MinAltitude",
       62,
       132,
@@ -5943,7 +5946,7 @@ class Profile {
       ),
     );
     fieldIndex++;
-    Field lapAvgRespirationRateField = Field(
+    final Field lapAvgRespirationRateField = Field(
       "AvgRespirationRate",
       147,
       2,
@@ -5958,7 +5961,7 @@ class Profile {
     ); // enhanced_avg_respiration_rate
     newMesg.setField(lapAvgRespirationRateField);
     fieldIndex++;
-    Field lapMaxRespirationRateField = Field(
+    final Field lapMaxRespirationRateField = Field(
       "MaxRespirationRate",
       148,
       2,
@@ -6082,7 +6085,7 @@ class Profile {
 
   static Mesg createLengthMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("Length", MesgNum.length);
+    final Mesg newMesg = Mesg("Length", MesgNum.length);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -6263,7 +6266,7 @@ class Profile {
       ),
     );
     fieldIndex++;
-    Field lengthAvgRespirationRateField = Field(
+    final Field lengthAvgRespirationRateField = Field(
       "AvgRespirationRate",
       24,
       2,
@@ -6278,7 +6281,7 @@ class Profile {
     ); // enhanced_avg_respiration_rate
     newMesg.setField(lengthAvgRespirationRateField);
     fieldIndex++;
-    Field lengthMaxRespirationRateField = Field(
+    final Field lengthMaxRespirationRateField = Field(
       "MaxRespirationRate",
       25,
       2,
@@ -6299,7 +6302,7 @@ class Profile {
 
   static Mesg createRecordMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("Record", MesgNum.record);
+    final Mesg newMesg = Mesg("Record", MesgNum.record);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -6331,7 +6334,7 @@ class Profile {
       ),
     );
     fieldIndex++;
-    Field altitudeField = Field(
+    final Field altitudeField = Field(
       "Altitude",
       2,
       132,
@@ -6358,7 +6361,7 @@ class Profile {
       Field("Distance", 5, 134, 100.0, 0.0, "m", true, ProfileType.uint32),
     );
     fieldIndex++;
-    Field speedField = Field(
+    final Field speedField = Field(
       "Speed",
       6,
       132,
@@ -6377,7 +6380,7 @@ class Profile {
       Field("Power", 7, 132, 1.0, 0.0, "watts", false, ProfileType.uint16),
     );
     fieldIndex++;
-    Field compressedSpeedDistanceField = Field(
+    final Field compressedSpeedDistanceField = Field(
       "CompressedSpeedDistance",
       8,
       13,
@@ -6428,7 +6431,7 @@ class Profile {
       Field("Speed1s", 17, 2, 16.0, 0.0, "m/s", false, ProfileType.uint8),
     );
     fieldIndex++;
-    Field cyclesField = Field(
+    final Field cyclesField = Field(
       "Cycles",
       18,
       2,
@@ -6456,7 +6459,7 @@ class Profile {
       ),
     );
     fieldIndex++;
-    Field compressedAccumulatedPowerField = Field(
+    final Field compressedAccumulatedPowerField = Field(
       "CompressedAccumulatedPower",
       28,
       132,
@@ -6946,7 +6949,7 @@ class Profile {
       Field("N2Load", 98, 132, 1.0, 0.0, "percent", false, ProfileType.uint16),
     );
     fieldIndex++;
-    Field respirationRateField = Field(
+    final Field respirationRateField = Field(
       "RespirationRate",
       99,
       2,
@@ -7126,7 +7129,7 @@ class Profile {
 
   static Mesg createEventMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("Event", MesgNum.event);
+    final Mesg newMesg = Mesg("Event", MesgNum.event);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -7140,7 +7143,7 @@ class Profile {
       Field("EventType", 1, 0, 1.0, 0.0, "", false, ProfileType.eventType),
     );
     fieldIndex++;
-    Field data16Field = Field(
+    final Field data16Field = Field(
       "Data16",
       2,
       132,
@@ -7153,7 +7156,7 @@ class Profile {
     data16Field.components.add(FieldComponent(3, false, 16, 1.0, 0.0)); // data
     newMesg.setField(data16Field);
     fieldIndex++;
-    Field dataField = Field(
+    final Field dataField = Field(
       "Data",
       3,
       134,
@@ -7222,7 +7225,13 @@ class Profile {
     dataField.subfields.add(Subfield("FitnessEquipmentState", 0, 1.0, 0.0, ""));
     dataField.subfields[subfieldIndex].addMap(0, 27);
     subfieldIndex++;
-    Subfield sportPointSubfield = Subfield("SportPoint", 134, 1.0, 0.0, "");
+    final Subfield sportPointSubfield = Subfield(
+      "SportPoint",
+      134,
+      1.0,
+      0.0,
+      "",
+    );
     sportPointSubfield.addMap(0, 33);
     sportPointSubfield.addComponent(
       FieldComponent(7, false, 16, 1.0, 0.0),
@@ -7232,7 +7241,7 @@ class Profile {
     ); // opponent_score
     dataField.subfields.add(sportPointSubfield);
     subfieldIndex++;
-    Subfield gearChangeDataSubfield = Subfield(
+    final Subfield gearChangeDataSubfield = Subfield(
       "GearChangeData",
       134,
       1.0,
@@ -7269,7 +7278,7 @@ class Profile {
     );
     dataField.subfields[subfieldIndex].addMap(0, 54);
     subfieldIndex++;
-    Subfield radarThreatAlertSubfield = Subfield(
+    final Subfield radarThreatAlertSubfield = Subfield(
       "RadarThreatAlert",
       134,
       1.0,
@@ -7338,7 +7347,7 @@ class Profile {
       ),
     );
     fieldIndex++;
-    Field startTimestampField = Field(
+    final Field startTimestampField = Field(
       "StartTimestamp",
       15,
       134,
@@ -7405,7 +7414,7 @@ class Profile {
 
   static Mesg createDeviceInfoMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("DeviceInfo", MesgNum.deviceInfo);
+    final Mesg newMesg = Mesg("DeviceInfo", MesgNum.deviceInfo);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -7415,7 +7424,7 @@ class Profile {
       Field("DeviceIndex", 0, 2, 1.0, 0.0, "", false, ProfileType.deviceIndex),
     );
     fieldIndex++;
-    Field deviceTypeField = Field(
+    final Field deviceTypeField = Field(
       "DeviceType",
       1,
       2,
@@ -7459,7 +7468,7 @@ class Profile {
       Field("SerialNumber", 3, 140, 1.0, 0.0, "", false, ProfileType.uint32z),
     );
     fieldIndex++;
-    Field productField = Field(
+    final Field productField = Field(
       "Product",
       4,
       132,
@@ -7602,7 +7611,10 @@ class Profile {
 
   static Mesg createDeviceAuxBatteryInfoMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("DeviceAuxBatteryInfo", MesgNum.deviceAuxBatteryInfo);
+    final Mesg newMesg = Mesg(
+      "DeviceAuxBatteryInfo",
+      MesgNum.deviceAuxBatteryInfo,
+    );
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "", false, ProfileType.dateTime),
@@ -7648,7 +7660,7 @@ class Profile {
 
   static Mesg createTrainingFileMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("TrainingFile", MesgNum.trainingFile);
+    final Mesg newMesg = Mesg("TrainingFile", MesgNum.trainingFile);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "", false, ProfileType.dateTime),
@@ -7671,7 +7683,7 @@ class Profile {
       ),
     );
     fieldIndex++;
-    Field productField = Field(
+    final Field productField = Field(
       "Product",
       2,
       132,
@@ -7707,7 +7719,7 @@ class Profile {
 
   static Mesg createWeatherConditionsMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("WeatherConditions", MesgNum.weatherConditions);
+    final Mesg newMesg = Mesg("WeatherConditions", MesgNum.weatherConditions);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "", false, ProfileType.dateTime),
@@ -7842,7 +7854,7 @@ class Profile {
 
   static Mesg createWeatherAlertMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("WeatherAlert", MesgNum.weatherAlert);
+    final Mesg newMesg = Mesg("WeatherAlert", MesgNum.weatherAlert);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "", false, ProfileType.dateTime),
@@ -7874,7 +7886,7 @@ class Profile {
 
   static Mesg createGpsMetadataMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("GpsMetadata", MesgNum.gpsMetadata);
+    final Mesg newMesg = Mesg("GpsMetadata", MesgNum.gpsMetadata);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -7963,7 +7975,7 @@ class Profile {
 
   static Mesg createCameraEventMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("CameraEvent", MesgNum.cameraEvent);
+    final Mesg newMesg = Mesg("CameraEvent", MesgNum.cameraEvent);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -8009,7 +8021,7 @@ class Profile {
 
   static Mesg createGyroscopeDataMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("GyroscopeData", MesgNum.gyroscopeData);
+    final Mesg newMesg = Mesg("GyroscopeData", MesgNum.gyroscopeData);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -8089,7 +8101,7 @@ class Profile {
 
   static Mesg createAccelerometerDataMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("AccelerometerData", MesgNum.accelerometerData);
+    final Mesg newMesg = Mesg("AccelerometerData", MesgNum.accelerometerData);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -8208,7 +8220,7 @@ class Profile {
 
   static Mesg createMagnetometerDataMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("MagnetometerData", MesgNum.magnetometerData);
+    final Mesg newMesg = Mesg("MagnetometerData", MesgNum.magnetometerData);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -8288,7 +8300,7 @@ class Profile {
 
   static Mesg createBarometerDataMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("BarometerData", MesgNum.barometerData);
+    final Mesg newMesg = Mesg("BarometerData", MesgNum.barometerData);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -8321,7 +8333,7 @@ class Profile {
 
   static Mesg createThreeDSensorCalibrationMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg(
+    final Mesg newMesg = Mesg(
       "ThreeDSensorCalibration",
       MesgNum.threeDSensorCalibration,
     );
@@ -8334,7 +8346,7 @@ class Profile {
       Field("SensorType", 0, 0, 1.0, 0.0, "", false, ProfileType.sensorType),
     );
     fieldIndex++;
-    Field calibrationFactorField = Field(
+    final Field calibrationFactorField = Field(
       "CalibrationFactor",
       1,
       134,
@@ -8397,7 +8409,10 @@ class Profile {
 
   static Mesg createOneDSensorCalibrationMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("OneDSensorCalibration", MesgNum.oneDSensorCalibration);
+    final Mesg newMesg = Mesg(
+      "OneDSensorCalibration",
+      MesgNum.oneDSensorCalibration,
+    );
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -8407,7 +8422,7 @@ class Profile {
       Field("SensorType", 0, 0, 1.0, 0.0, "", false, ProfileType.sensorType),
     );
     fieldIndex++;
-    Field calibrationFactorField = Field(
+    final Field calibrationFactorField = Field(
       "CalibrationFactor",
       1,
       134,
@@ -8452,7 +8467,7 @@ class Profile {
 
   static Mesg createVideoFrameMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("VideoFrame", MesgNum.videoFrame);
+    final Mesg newMesg = Mesg("VideoFrame", MesgNum.videoFrame);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -8472,7 +8487,7 @@ class Profile {
 
   static Mesg createObdiiDataMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("ObdiiData", MesgNum.obdiiData);
+    final Mesg newMesg = Mesg("ObdiiData", MesgNum.obdiiData);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -8534,7 +8549,7 @@ class Profile {
 
   static Mesg createNmeaSentenceMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("NmeaSentence", MesgNum.nmeaSentence);
+    final Mesg newMesg = Mesg("NmeaSentence", MesgNum.nmeaSentence);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -8554,7 +8569,7 @@ class Profile {
 
   static Mesg createAviationAttitudeMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("AviationAttitude", MesgNum.aviationAttitude);
+    final Mesg newMesg = Mesg("AviationAttitude", MesgNum.aviationAttitude);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -8682,7 +8697,7 @@ class Profile {
 
   static Mesg createVideoMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("Video", MesgNum.video);
+    final Mesg newMesg = Mesg("Video", MesgNum.video);
     fieldIndex = 0;
     newMesg.setField(
       Field("Url", 0, 7, 1.0, 0.0, "", false, ProfileType.string),
@@ -8702,7 +8717,7 @@ class Profile {
 
   static Mesg createVideoTitleMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("VideoTitle", MesgNum.videoTitle);
+    final Mesg newMesg = Mesg("VideoTitle", MesgNum.videoTitle);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -8731,7 +8746,7 @@ class Profile {
 
   static Mesg createVideoDescriptionMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("VideoDescription", MesgNum.videoDescription);
+    final Mesg newMesg = Mesg("VideoDescription", MesgNum.videoDescription);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -8760,7 +8775,7 @@ class Profile {
 
   static Mesg createVideoClipMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("VideoClip", MesgNum.videoClip);
+    final Mesg newMesg = Mesg("VideoClip", MesgNum.videoClip);
     fieldIndex = 0;
     newMesg.setField(
       Field("ClipNumber", 0, 132, 1.0, 0.0, "", false, ProfileType.uint16),
@@ -8814,7 +8829,7 @@ class Profile {
 
   static Mesg createSetMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("Set", MesgNum.set_);
+    final Mesg newMesg = Mesg("Set", MesgNum.set_);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 254, 134, 1.0, 0.0, "", false, ProfileType.dateTime),
@@ -8902,7 +8917,7 @@ class Profile {
 
   static Mesg createJumpMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("Jump", MesgNum.jump);
+    final Mesg newMesg = Mesg("Jump", MesgNum.jump);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -8954,7 +8969,7 @@ class Profile {
       ),
     );
     fieldIndex++;
-    Field speedField = Field(
+    final Field speedField = Field(
       "Speed",
       7,
       132,
@@ -8988,7 +9003,7 @@ class Profile {
 
   static Mesg createSplitMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("Split", MesgNum.split);
+    final Mesg newMesg = Mesg("Split", MesgNum.split);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -9180,7 +9195,7 @@ class Profile {
 
   static Mesg createSplitSummaryMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("SplitSummary", MesgNum.splitSummary);
+    final Mesg newMesg = Mesg("SplitSummary", MesgNum.splitSummary);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -9298,7 +9313,7 @@ class Profile {
 
   static Mesg createClimbProMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("ClimbPro", MesgNum.climbPro);
+    final Mesg newMesg = Mesg("ClimbPro", MesgNum.climbPro);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -9361,7 +9376,7 @@ class Profile {
 
   static Mesg createFieldDescriptionMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("FieldDescription", MesgNum.fieldDescription);
+    final Mesg newMesg = Mesg("FieldDescription", MesgNum.fieldDescription);
     fieldIndex = 0;
     newMesg.setField(
       Field("DeveloperDataIndex", 0, 2, 1.0, 0.0, "", false, ProfileType.uint8),
@@ -9452,7 +9467,7 @@ class Profile {
 
   static Mesg createDeveloperDataIdMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("DeveloperDataId", MesgNum.developerDataId);
+    final Mesg newMesg = Mesg("DeveloperDataId", MesgNum.developerDataId);
     fieldIndex = 0;
     newMesg.setField(
       Field("DeveloperId", 0, 13, 1.0, 0.0, "", false, ProfileType.byte),
@@ -9498,7 +9513,7 @@ class Profile {
 
   static Mesg createCourseMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("Course", MesgNum.course);
+    final Mesg newMesg = Mesg("Course", MesgNum.course);
     fieldIndex = 0;
     newMesg.setField(
       Field("Sport", 4, 0, 1.0, 0.0, "", false, ProfileType.sport),
@@ -9531,7 +9546,7 @@ class Profile {
 
   static Mesg createCoursePointMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("CoursePoint", MesgNum.coursePoint);
+    final Mesg newMesg = Mesg("CoursePoint", MesgNum.coursePoint);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -9598,7 +9613,7 @@ class Profile {
 
   static Mesg createSegmentIdMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("SegmentId", MesgNum.segmentId);
+    final Mesg newMesg = Mesg("SegmentId", MesgNum.segmentId);
     fieldIndex = 0;
     newMesg.setField(
       Field("Name", 0, 7, 1.0, 0.0, "", false, ProfileType.string),
@@ -9669,7 +9684,7 @@ class Profile {
 
   static Mesg createSegmentLeaderboardEntryMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg(
+    final Mesg newMesg = Mesg(
       "SegmentLeaderboardEntry",
       MesgNum.segmentLeaderboardEntry,
     );
@@ -9714,7 +9729,7 @@ class Profile {
 
   static Mesg createSegmentPointMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("SegmentPoint", MesgNum.segmentPoint);
+    final Mesg newMesg = Mesg("SegmentPoint", MesgNum.segmentPoint);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -9759,7 +9774,7 @@ class Profile {
       Field("Distance", 3, 134, 100.0, 0.0, "m", false, ProfileType.uint32),
     );
     fieldIndex++;
-    Field altitudeField = Field(
+    final Field altitudeField = Field(
       "Altitude",
       4,
       132,
@@ -9797,7 +9812,7 @@ class Profile {
 
   static Mesg createSegmentLapMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("SegmentLap", MesgNum.segmentLap);
+    final Mesg newMesg = Mesg("SegmentLap", MesgNum.segmentLap);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -9919,7 +9934,7 @@ class Profile {
       ),
     );
     fieldIndex++;
-    Field totalCyclesField = Field(
+    final Field totalCyclesField = Field(
       "TotalCycles",
       10,
       134,
@@ -10101,7 +10116,7 @@ class Profile {
       Field("TotalWork", 33, 134, 1.0, 0.0, "J", false, ProfileType.uint32),
     );
     fieldIndex++;
-    Field avgAltitudeField = Field(
+    final Field avgAltitudeField = Field(
       "AvgAltitude",
       34,
       132,
@@ -10116,7 +10131,7 @@ class Profile {
     ); // enhanced_avg_altitude
     newMesg.setField(avgAltitudeField);
     fieldIndex++;
-    Field maxAltitudeField = Field(
+    final Field maxAltitudeField = Field(
       "MaxAltitude",
       35,
       132,
@@ -10284,7 +10299,7 @@ class Profile {
       Field("RepetitionNum", 53, 132, 1.0, 0.0, "", false, ProfileType.uint16),
     );
     fieldIndex++;
-    Field minAltitudeField = Field(
+    final Field minAltitudeField = Field(
       "MinAltitude",
       54,
       132,
@@ -10700,7 +10715,7 @@ class Profile {
 
   static Mesg createSegmentFileMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("SegmentFile", MesgNum.segmentFile);
+    final Mesg newMesg = Mesg("SegmentFile", MesgNum.segmentFile);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -10798,7 +10813,7 @@ class Profile {
 
   static Mesg createWorkoutMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("Workout", MesgNum.workout);
+    final Mesg newMesg = Mesg("Workout", MesgNum.workout);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -10834,13 +10849,25 @@ class Profile {
       Field("NumValidSteps", 6, 132, 1.0, 0.0, "", false, ProfileType.uint16),
     );
     fieldIndex++;
+    newMesg.setField(
+      Field("WktName", 8, 7, 1.0, 0.0, "", false, ProfileType.string),
+    );
+    fieldIndex++;
+    newMesg.setField(
+      Field("SubSport", 11, 0, 1.0, 0.0, "", false, ProfileType.subSport),
+    );
+    fieldIndex++;
+    newMesg.setField(
+      Field("WktDescription", 17, 7, 1.0, 0.0, "", false, ProfileType.string),
+    );
+    fieldIndex++;
 
     return newMesg;
   }
 
   static Mesg createWorkoutSessionMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("WorkoutSession", MesgNum.workoutSession);
+    final Mesg newMesg = Mesg("WorkoutSession", MesgNum.workoutSession);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -10894,7 +10921,7 @@ class Profile {
 
   static Mesg createWorkoutStepMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("WorkoutStep", MesgNum.workoutStep);
+    final Mesg newMesg = Mesg("WorkoutStep", MesgNum.workoutStep);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -10926,7 +10953,7 @@ class Profile {
       ),
     );
     fieldIndex++;
-    Field durationValueField = Field(
+    final Field durationValueField = Field(
       "DurationValue",
       2,
       134,
@@ -10988,7 +11015,7 @@ class Profile {
       Field("TargetType", 3, 0, 1.0, 0.0, "", false, ProfileType.wktStepTarget),
     );
     fieldIndex++;
-    Field targetValueField = Field(
+    final Field targetValueField = Field(
       "TargetValue",
       4,
       134,
@@ -11054,7 +11081,7 @@ class Profile {
     subfieldIndex++;
     newMesg.setField(targetValueField);
     fieldIndex++;
-    Field customTargetValueLowField = Field(
+    final Field customTargetValueLowField = Field(
       "CustomTargetValueLow",
       5,
       134,
@@ -11087,7 +11114,7 @@ class Profile {
     subfieldIndex++;
     newMesg.setField(customTargetValueLowField);
     fieldIndex++;
-    Field customTargetValueHighField = Field(
+    final Field customTargetValueHighField = Field(
       "CustomTargetValueHigh",
       6,
       134,
@@ -11197,7 +11224,7 @@ class Profile {
       ),
     );
     fieldIndex++;
-    Field secondaryTargetValueField = Field(
+    final Field secondaryTargetValueField = Field(
       "SecondaryTargetValue",
       20,
       134,
@@ -11235,7 +11262,7 @@ class Profile {
     subfieldIndex++;
     newMesg.setField(secondaryTargetValueField);
     fieldIndex++;
-    Field secondaryCustomTargetValueLowField = Field(
+    final Field secondaryCustomTargetValueLowField = Field(
       "SecondaryCustomTargetValueLow",
       21,
       134,
@@ -11268,7 +11295,7 @@ class Profile {
     subfieldIndex++;
     newMesg.setField(secondaryCustomTargetValueLowField);
     fieldIndex++;
-    Field secondaryCustomTargetValueHighField = Field(
+    final Field secondaryCustomTargetValueHighField = Field(
       "SecondaryCustomTargetValueHigh",
       22,
       134,
@@ -11307,7 +11334,7 @@ class Profile {
 
   static Mesg createExerciseTitleMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("ExerciseTitle", MesgNum.exerciseTitle);
+    final Mesg newMesg = Mesg("ExerciseTitle", MesgNum.exerciseTitle);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -11349,7 +11376,7 @@ class Profile {
 
   static Mesg createScheduleMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("Schedule", MesgNum.schedule);
+    final Mesg newMesg = Mesg("Schedule", MesgNum.schedule);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -11364,7 +11391,7 @@ class Profile {
       ),
     );
     fieldIndex++;
-    Field productField = Field(
+    final Field productField = Field(
       "Product",
       1,
       132,
@@ -11421,7 +11448,7 @@ class Profile {
 
   static Mesg createTotalsMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("Totals", MesgNum.totals);
+    final Mesg newMesg = Mesg("Totals", MesgNum.totals);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -11478,7 +11505,7 @@ class Profile {
 
   static Mesg createWeightScaleMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("WeightScale", MesgNum.weightScale);
+    final Mesg newMesg = Mesg("WeightScale", MesgNum.weightScale);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -11587,7 +11614,7 @@ class Profile {
 
   static Mesg createBloodPressureMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("BloodPressure", MesgNum.bloodPressure);
+    final Mesg newMesg = Mesg("BloodPressure", MesgNum.bloodPressure);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -11702,7 +11729,7 @@ class Profile {
 
   static Mesg createMonitoringInfoMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("MonitoringInfo", MesgNum.monitoringInfo);
+    final Mesg newMesg = Mesg("MonitoringInfo", MesgNum.monitoringInfo);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -11779,7 +11806,7 @@ class Profile {
 
   static Mesg createMonitoringMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("Monitoring", MesgNum.monitoring);
+    final Mesg newMesg = Mesg("Monitoring", MesgNum.monitoring);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -11797,7 +11824,7 @@ class Profile {
       Field("Distance", 2, 134, 100.0, 0.0, "m", false, ProfileType.uint32),
     );
     fieldIndex++;
-    Field cyclesField = Field(
+    final Field cyclesField = Field(
       "Cycles",
       3,
       134,
@@ -11960,7 +11987,7 @@ class Profile {
       ),
     );
     fieldIndex++;
-    Field currentActivityTypeIntensityField = Field(
+    final Field currentActivityTypeIntensityField = Field(
       "CurrentActivityTypeIntensity",
       24,
       13,
@@ -12042,7 +12069,7 @@ class Profile {
 
   static Mesg createMonitoringHrDataMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("MonitoringHrData", MesgNum.monitoringHrData);
+    final Mesg newMesg = Mesg("MonitoringHrData", MesgNum.monitoringHrData);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -12080,7 +12107,7 @@ class Profile {
 
   static Mesg createSpo2DataMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("Spo2Data", MesgNum.spo2Data);
+    final Mesg newMesg = Mesg("Spo2Data", MesgNum.spo2Data);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -12104,7 +12131,7 @@ class Profile {
 
   static Mesg createHrMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("Hr", MesgNum.hr);
+    final Mesg newMesg = Mesg("Hr", MesgNum.hr);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "", false, ProfileType.dateTime),
@@ -12123,7 +12150,7 @@ class Profile {
       ),
     );
     fieldIndex++;
-    Field time256Field = Field(
+    final Field time256Field = Field(
       "Time256",
       1,
       2,
@@ -12155,7 +12182,7 @@ class Profile {
       ),
     );
     fieldIndex++;
-    Field eventTimestamp12Field = Field(
+    final Field eventTimestamp12Field = Field(
       "EventTimestamp12",
       10,
       13,
@@ -12203,7 +12230,7 @@ class Profile {
 
   static Mesg createStressLevelMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("StressLevel", MesgNum.stressLevel);
+    final Mesg newMesg = Mesg("StressLevel", MesgNum.stressLevel);
     fieldIndex = 0;
     newMesg.setField(
       Field(
@@ -12237,7 +12264,7 @@ class Profile {
 
   static Mesg createMaxMetDataMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("MaxMetData", MesgNum.maxMetData);
+    final Mesg newMesg = Mesg("MaxMetData", MesgNum.maxMetData);
     fieldIndex = 0;
     newMesg.setField(
       Field("UpdateTime", 0, 134, 1.0, 0.0, "", false, ProfileType.dateTime),
@@ -12313,7 +12340,7 @@ class Profile {
 
   static Mesg createHsaBodyBatteryDataMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("HsaBodyBatteryData", MesgNum.hsaBodyBatteryData);
+    final Mesg newMesg = Mesg("HsaBodyBatteryData", MesgNum.hsaBodyBatteryData);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -12350,7 +12377,7 @@ class Profile {
 
   static Mesg createHsaEventMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("HsaEvent", MesgNum.hsaEvent);
+    final Mesg newMesg = Mesg("HsaEvent", MesgNum.hsaEvent);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -12366,7 +12393,10 @@ class Profile {
 
   static Mesg createHsaAccelerometerDataMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("HsaAccelerometerData", MesgNum.hsaAccelerometerData);
+    final Mesg newMesg = Mesg(
+      "HsaAccelerometerData",
+      MesgNum.hsaAccelerometerData,
+    );
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -12411,7 +12441,7 @@ class Profile {
 
   static Mesg createHsaGyroscopeDataMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("HsaGyroscopeData", MesgNum.hsaGyroscopeData);
+    final Mesg newMesg = Mesg("HsaGyroscopeData", MesgNum.hsaGyroscopeData);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -12465,7 +12495,7 @@ class Profile {
 
   static Mesg createHsaStepDataMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("HsaStepData", MesgNum.hsaStepData);
+    final Mesg newMesg = Mesg("HsaStepData", MesgNum.hsaStepData);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -12494,7 +12524,7 @@ class Profile {
 
   static Mesg createHsaSpo2DataMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("HsaSpo2Data", MesgNum.hsaSpo2Data);
+    final Mesg newMesg = Mesg("HsaSpo2Data", MesgNum.hsaSpo2Data);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -12527,7 +12557,7 @@ class Profile {
 
   static Mesg createHsaStressDataMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("HsaStressData", MesgNum.hsaStressData);
+    final Mesg newMesg = Mesg("HsaStressData", MesgNum.hsaStressData);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "", false, ProfileType.dateTime),
@@ -12556,7 +12586,7 @@ class Profile {
 
   static Mesg createHsaRespirationDataMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("HsaRespirationData", MesgNum.hsaRespirationData);
+    final Mesg newMesg = Mesg("HsaRespirationData", MesgNum.hsaRespirationData);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -12594,7 +12624,7 @@ class Profile {
 
   static Mesg createHsaHeartRateDataMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("HsaHeartRateData", MesgNum.hsaHeartRateData);
+    final Mesg newMesg = Mesg("HsaHeartRateData", MesgNum.hsaHeartRateData);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -12627,7 +12657,10 @@ class Profile {
 
   static Mesg createHsaConfigurationDataMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("HsaConfigurationData", MesgNum.hsaConfigurationData);
+    final Mesg newMesg = Mesg(
+      "HsaConfigurationData",
+      MesgNum.hsaConfigurationData,
+    );
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -12647,7 +12680,7 @@ class Profile {
 
   static Mesg createHsaWristTemperatureDataMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg(
+    final Mesg newMesg = Mesg(
       "HsaWristTemperatureData",
       MesgNum.hsaWristTemperatureData,
     );
@@ -12679,7 +12712,7 @@ class Profile {
 
   static Mesg createMemoGlobMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("MemoGlob", MesgNum.memoGlob);
+    final Mesg newMesg = Mesg("MemoGlob", MesgNum.memoGlob);
     fieldIndex = 0;
     newMesg.setField(
       Field("PartIndex", 250, 134, 1.0, 0.0, "", false, ProfileType.uint32),
@@ -12720,7 +12753,7 @@ class Profile {
 
   static Mesg createSleepLevelMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("SleepLevel", MesgNum.sleepLevel);
+    final Mesg newMesg = Mesg("SleepLevel", MesgNum.sleepLevel);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -12736,7 +12769,7 @@ class Profile {
 
   static Mesg createAntChannelIdMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("AntChannelId", MesgNum.antChannelId);
+    final Mesg newMesg = Mesg("AntChannelId", MesgNum.antChannelId);
     fieldIndex = 0;
     newMesg.setField(
       Field("ChannelNumber", 0, 2, 1.0, 0.0, "", false, ProfileType.uint8),
@@ -12764,7 +12797,7 @@ class Profile {
 
   static Mesg createAntRxMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("AntRx", MesgNum.antRx);
+    final Mesg newMesg = Mesg("AntRx", MesgNum.antRx);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -12787,7 +12820,7 @@ class Profile {
       Field("MesgId", 1, 13, 1.0, 0.0, "", false, ProfileType.byte),
     );
     fieldIndex++;
-    Field mesgDataField = Field(
+    final Field mesgDataField = Field(
       "MesgData",
       2,
       13,
@@ -12824,7 +12857,7 @@ class Profile {
 
   static Mesg createAntTxMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("AntTx", MesgNum.antTx);
+    final Mesg newMesg = Mesg("AntTx", MesgNum.antTx);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -12847,7 +12880,7 @@ class Profile {
       Field("MesgId", 1, 13, 1.0, 0.0, "", false, ProfileType.byte),
     );
     fieldIndex++;
-    Field mesgDataField = Field(
+    final Field mesgDataField = Field(
       "MesgData",
       2,
       13,
@@ -12884,7 +12917,7 @@ class Profile {
 
   static Mesg createExdScreenConfigurationMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg(
+    final Mesg newMesg = Mesg(
       "ExdScreenConfiguration",
       MesgNum.exdScreenConfiguration,
     );
@@ -12911,7 +12944,7 @@ class Profile {
 
   static Mesg createExdDataFieldConfigurationMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg(
+    final Mesg newMesg = Mesg(
       "ExdDataFieldConfiguration",
       MesgNum.exdDataFieldConfiguration,
     );
@@ -12920,7 +12953,7 @@ class Profile {
       Field("ScreenIndex", 0, 2, 1.0, 0.0, "", false, ProfileType.uint8),
     );
     fieldIndex++;
-    Field conceptFieldField = Field(
+    final Field conceptFieldField = Field(
       "ConceptField",
       1,
       13,
@@ -12969,7 +13002,7 @@ class Profile {
 
   static Mesg createExdDataConceptConfigurationMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg(
+    final Mesg newMesg = Mesg(
       "ExdDataConceptConfiguration",
       MesgNum.exdDataConceptConfiguration,
     );
@@ -12978,7 +13011,7 @@ class Profile {
       Field("ScreenIndex", 0, 2, 1.0, 0.0, "", false, ProfileType.uint8),
     );
     fieldIndex++;
-    Field conceptFieldField = Field(
+    final Field conceptFieldField = Field(
       "ConceptField",
       1,
       13,
@@ -13047,7 +13080,7 @@ class Profile {
 
   static Mesg createDiveSummaryMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("DiveSummary", MesgNum.diveSummary);
+    final Mesg newMesg = Mesg("DiveSummary", MesgNum.diveSummary);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -13228,7 +13261,7 @@ class Profile {
 
   static Mesg createAadAccelFeaturesMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("AadAccelFeatures", MesgNum.aadAccelFeatures);
+    final Mesg newMesg = Mesg("AadAccelFeatures", MesgNum.aadAccelFeatures);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "", false, ProfileType.dateTime),
@@ -13269,7 +13302,7 @@ class Profile {
 
   static Mesg createHrvMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("Hrv", MesgNum.hrv);
+    final Mesg newMesg = Mesg("Hrv", MesgNum.hrv);
     fieldIndex = 0;
     newMesg.setField(
       Field("Time", 0, 132, 1000.0, 0.0, "s", false, ProfileType.uint16),
@@ -13281,7 +13314,7 @@ class Profile {
 
   static Mesg createBeatIntervalsMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("BeatIntervals", MesgNum.beatIntervals);
+    final Mesg newMesg = Mesg("BeatIntervals", MesgNum.beatIntervals);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "", false, ProfileType.dateTime),
@@ -13301,7 +13334,7 @@ class Profile {
 
   static Mesg createHrvStatusSummaryMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("HrvStatusSummary", MesgNum.hrvStatusSummary);
+    final Mesg newMesg = Mesg("HrvStatusSummary", MesgNum.hrvStatusSummary);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "", false, ProfileType.dateTime),
@@ -13395,7 +13428,7 @@ class Profile {
 
   static Mesg createHrvValueMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("HrvValue", MesgNum.hrvValue);
+    final Mesg newMesg = Mesg("HrvValue", MesgNum.hrvValue);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "", false, ProfileType.dateTime),
@@ -13411,7 +13444,7 @@ class Profile {
 
   static Mesg createRawBbiMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("RawBbi", MesgNum.rawBbi);
+    final Mesg newMesg = Mesg("RawBbi", MesgNum.rawBbi);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "", false, ProfileType.dateTime),
@@ -13421,7 +13454,7 @@ class Profile {
       Field("TimestampMs", 0, 132, 1.0, 0.0, "ms", false, ProfileType.uint16),
     );
     fieldIndex++;
-    Field dataField = Field(
+    final Field dataField = Field(
       "Data",
       1,
       132,
@@ -13496,7 +13529,7 @@ class Profile {
 
   static Mesg createRespirationRateMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("RespirationRate", MesgNum.respirationRate);
+    final Mesg newMesg = Mesg("RespirationRate", MesgNum.respirationRate);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "", false, ProfileType.dateTime),
@@ -13521,7 +13554,7 @@ class Profile {
 
   static Mesg createChronoShotSessionMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("ChronoShotSession", MesgNum.chronoShotSession);
+    final Mesg newMesg = Mesg("ChronoShotSession", MesgNum.chronoShotSession);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "", false, ProfileType.dateTime),
@@ -13579,7 +13612,7 @@ class Profile {
 
   static Mesg createChronoShotDataMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("ChronoShotData", MesgNum.chronoShotData);
+    final Mesg newMesg = Mesg("ChronoShotData", MesgNum.chronoShotData);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "", false, ProfileType.dateTime),
@@ -13599,7 +13632,7 @@ class Profile {
 
   static Mesg createTankUpdateMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("TankUpdate", MesgNum.tankUpdate);
+    final Mesg newMesg = Mesg("TankUpdate", MesgNum.tankUpdate);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -13619,7 +13652,7 @@ class Profile {
 
   static Mesg createTankSummaryMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("TankSummary", MesgNum.tankSummary);
+    final Mesg newMesg = Mesg("TankSummary", MesgNum.tankSummary);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "s", false, ProfileType.dateTime),
@@ -13665,7 +13698,7 @@ class Profile {
 
   static Mesg createSleepAssessmentMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("SleepAssessment", MesgNum.sleepAssessment);
+    final Mesg newMesg = Mesg("SleepAssessment", MesgNum.sleepAssessment);
     fieldIndex = 0;
     newMesg.setField(
       Field("CombinedAwakeScore", 0, 2, 1.0, 0.0, "", false, ProfileType.uint8),
@@ -13765,7 +13798,7 @@ class Profile {
 
   static Mesg createSleepDisruptionSeverityPeriodMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg(
+    final Mesg newMesg = Mesg(
       "SleepDisruptionSeverityPeriod",
       MesgNum.sleepDisruptionSeverityPeriod,
     );
@@ -13806,7 +13839,7 @@ class Profile {
 
   static Mesg createSleepDisruptionOvernightSeverityMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg(
+    final Mesg newMesg = Mesg(
       "SleepDisruptionOvernightSeverity",
       MesgNum.sleepDisruptionOvernightSeverity,
     );
@@ -13834,7 +13867,7 @@ class Profile {
 
   static Mesg createSkinTempOvernightMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("SkinTempOvernight", MesgNum.skinTempOvernight);
+    final Mesg newMesg = Mesg("SkinTempOvernight", MesgNum.skinTempOvernight);
     fieldIndex = 0;
     newMesg.setField(
       Field("Timestamp", 253, 134, 1.0, 0.0, "", false, ProfileType.dateTime),
@@ -13889,7 +13922,7 @@ class Profile {
 
   static Mesg createPadMesg() {
     int fieldIndex, subfieldIndex;
-    Mesg newMesg = Mesg("Pad", MesgNum.pad);
+    final Mesg newMesg = Mesg("Pad", MesgNum.pad);
     fieldIndex = 0;
 
     return newMesg;

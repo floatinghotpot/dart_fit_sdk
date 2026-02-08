@@ -51,39 +51,39 @@ class MesgDefinition {
       _developerFieldDefinitions;
 
   void read(EndianBinaryReader reader, {DeveloperDataLookup? lookup}) {
-    int headerByte = reader.readByte();
+    final int headerByte = reader.readByte();
     localMesgNum = headerByte & Fit.localMesgNumMask;
 
     // Skip reserved byte
     reader.readByte();
 
     isBigEndian = reader.readByte() == Fit.bigEndian;
-    bool originalEndian = reader.isBigEndian;
+    final bool originalEndian = reader.isBigEndian;
     reader.isBigEndian = isBigEndian;
 
     globalMesgNum = reader.readUInt16();
-    int numFields = reader.readByte();
+    final int numFields = reader.readByte();
 
     _fields.clear();
     for (int i = 0; i < numFields; i++) {
-      int fNum = reader.readByte();
-      int fSize = reader.readByte();
-      int fType = reader.readByte();
+      final int fNum = reader.readByte();
+      final int fSize = reader.readByte();
+      final int fType = reader.readByte();
       _fields.add(FieldDefinition(fNum, fSize, fType));
     }
 
     _developerFieldDefinitions.clear();
     if (headerByte & Fit.devDataMask == Fit.devDataMask) {
-      int numDevFields = reader.readByte();
+      final int numDevFields = reader.readByte();
       for (int i = 0; i < numDevFields; i++) {
-        int fNum = reader.readByte();
-        int fSize = reader.readByte();
-        int devIndex = reader.readByte();
+        final int fNum = reader.readByte();
+        final int fSize = reader.readByte();
+        final int devIndex = reader.readByte();
 
         DeveloperFieldDefinition? defn;
         if (lookup != null) {
-          var key = DeveloperDataKey(devIndex, fNum);
-          var tuple = lookup.getMesgs(key);
+          final key = DeveloperDataKey(devIndex, fNum);
+          final tuple = lookup.getMesgs(key);
           if (tuple != null) {
             defn = DeveloperFieldDefinition.fromDescription(
               tuple.desc,
@@ -115,7 +115,7 @@ class MesgDefinition {
     writer.writeByte(0); // Reserved
     writer.writeByte(isBigEndian ? Fit.bigEndian : Fit.littleEndian);
 
-    bool originalEndian = writer.isBigEndian;
+    final bool originalEndian = writer.isBigEndian;
     writer.isBigEndian = isBigEndian;
 
     writer.writeUInt16(globalMesgNum);

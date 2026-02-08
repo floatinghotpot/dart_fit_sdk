@@ -15,7 +15,7 @@ class HsaConfigurationDataMesg extends Mesg {
   HsaConfigurationDataMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       253,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -28,7 +28,7 @@ class HsaConfigurationDataMesg extends Mesg {
   }
 
   int? getData() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -37,7 +37,7 @@ class HsaConfigurationDataMesg extends Mesg {
   }
 
   int? getDataSize() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

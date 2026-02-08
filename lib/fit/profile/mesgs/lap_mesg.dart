@@ -153,7 +153,7 @@ class LapMesg extends Mesg {
   LapMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       254,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -162,7 +162,7 @@ class LapMesg extends Mesg {
   }
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       253,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -175,7 +175,7 @@ class LapMesg extends Mesg {
   }
 
   int? getEvent() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -184,7 +184,7 @@ class LapMesg extends Mesg {
   }
 
   int? getEventType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -193,7 +193,7 @@ class LapMesg extends Mesg {
   }
 
   DateTime? getStartTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -206,7 +206,7 @@ class LapMesg extends Mesg {
   }
 
   int? getStartPositionLat() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -215,7 +215,7 @@ class LapMesg extends Mesg {
   }
 
   int? getStartPositionLong() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -224,7 +224,7 @@ class LapMesg extends Mesg {
   }
 
   int? getEndPositionLat() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -233,7 +233,7 @@ class LapMesg extends Mesg {
   }
 
   int? getEndPositionLong() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -242,7 +242,7 @@ class LapMesg extends Mesg {
   }
 
   double? getTotalElapsedTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       7,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -251,7 +251,7 @@ class LapMesg extends Mesg {
   }
 
   double? getTotalTimerTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       8,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -260,7 +260,7 @@ class LapMesg extends Mesg {
   }
 
   double? getTotalDistance() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       9,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -269,7 +269,7 @@ class LapMesg extends Mesg {
   }
 
   int? getTotalCycles() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       10,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -278,7 +278,7 @@ class LapMesg extends Mesg {
   }
 
   int? getTotalStrides() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       10,
       index: 0,
       subfieldInfo: LapTotalCyclesSubfield.TotalStrides,
@@ -287,7 +287,7 @@ class LapMesg extends Mesg {
   }
 
   int? getTotalStrokes() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       10,
       index: 0,
       subfieldInfo: LapTotalCyclesSubfield.TotalStrokes,
@@ -296,7 +296,7 @@ class LapMesg extends Mesg {
   }
 
   int? getTotalCalories() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       11,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -305,7 +305,7 @@ class LapMesg extends Mesg {
   }
 
   int? getTotalFatCalories() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       12,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -314,7 +314,7 @@ class LapMesg extends Mesg {
   }
 
   double? getAvgSpeed() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       13,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -323,7 +323,7 @@ class LapMesg extends Mesg {
   }
 
   double? getMaxSpeed() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       14,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -332,7 +332,7 @@ class LapMesg extends Mesg {
   }
 
   int? getAvgHeartRate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       15,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -341,7 +341,7 @@ class LapMesg extends Mesg {
   }
 
   int? getMaxHeartRate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       16,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -350,7 +350,7 @@ class LapMesg extends Mesg {
   }
 
   int? getAvgCadence() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       17,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -359,7 +359,7 @@ class LapMesg extends Mesg {
   }
 
   int? getAvgRunningCadence() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       17,
       index: 0,
       subfieldInfo: LapAvgCadenceSubfield.AvgRunningCadence,
@@ -368,7 +368,7 @@ class LapMesg extends Mesg {
   }
 
   int? getMaxCadence() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       18,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -377,7 +377,7 @@ class LapMesg extends Mesg {
   }
 
   int? getMaxRunningCadence() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       18,
       index: 0,
       subfieldInfo: LapMaxCadenceSubfield.MaxRunningCadence,
@@ -386,7 +386,7 @@ class LapMesg extends Mesg {
   }
 
   int? getAvgPower() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       19,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -395,7 +395,7 @@ class LapMesg extends Mesg {
   }
 
   int? getMaxPower() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       20,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -404,7 +404,7 @@ class LapMesg extends Mesg {
   }
 
   int? getTotalAscent() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       21,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -413,7 +413,7 @@ class LapMesg extends Mesg {
   }
 
   int? getTotalDescent() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       22,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -422,7 +422,7 @@ class LapMesg extends Mesg {
   }
 
   int? getIntensity() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       23,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -431,7 +431,7 @@ class LapMesg extends Mesg {
   }
 
   int? getLapTrigger() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       24,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -440,7 +440,7 @@ class LapMesg extends Mesg {
   }
 
   int? getSport() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       25,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -449,7 +449,7 @@ class LapMesg extends Mesg {
   }
 
   int? getEventGroup() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       26,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -458,7 +458,7 @@ class LapMesg extends Mesg {
   }
 
   int? getNumLengths() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       32,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -467,7 +467,7 @@ class LapMesg extends Mesg {
   }
 
   int? getNormalizedPower() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       33,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -476,7 +476,7 @@ class LapMesg extends Mesg {
   }
 
   int? getLeftRightBalance() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       34,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -485,7 +485,7 @@ class LapMesg extends Mesg {
   }
 
   int? getFirstLengthIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       35,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -494,7 +494,7 @@ class LapMesg extends Mesg {
   }
 
   double? getAvgStrokeDistance() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       37,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -503,7 +503,7 @@ class LapMesg extends Mesg {
   }
 
   int? getSwimStroke() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       38,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -512,7 +512,7 @@ class LapMesg extends Mesg {
   }
 
   int? getSubSport() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       39,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -521,7 +521,7 @@ class LapMesg extends Mesg {
   }
 
   int? getNumActiveLengths() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       40,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -530,7 +530,7 @@ class LapMesg extends Mesg {
   }
 
   int? getTotalWork() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       41,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -539,7 +539,7 @@ class LapMesg extends Mesg {
   }
 
   double? getAvgAltitude() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       42,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -548,7 +548,7 @@ class LapMesg extends Mesg {
   }
 
   double? getMaxAltitude() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       43,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -557,7 +557,7 @@ class LapMesg extends Mesg {
   }
 
   int? getGpsAccuracy() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       44,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -566,7 +566,7 @@ class LapMesg extends Mesg {
   }
 
   double? getAvgGrade() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       45,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -575,7 +575,7 @@ class LapMesg extends Mesg {
   }
 
   double? getAvgPosGrade() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       46,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -584,7 +584,7 @@ class LapMesg extends Mesg {
   }
 
   double? getAvgNegGrade() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       47,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -593,7 +593,7 @@ class LapMesg extends Mesg {
   }
 
   double? getMaxPosGrade() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       48,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -602,7 +602,7 @@ class LapMesg extends Mesg {
   }
 
   double? getMaxNegGrade() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       49,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -611,7 +611,7 @@ class LapMesg extends Mesg {
   }
 
   int? getAvgTemperature() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       50,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -620,7 +620,7 @@ class LapMesg extends Mesg {
   }
 
   int? getMaxTemperature() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       51,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -629,7 +629,7 @@ class LapMesg extends Mesg {
   }
 
   double? getTotalMovingTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       52,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -638,7 +638,7 @@ class LapMesg extends Mesg {
   }
 
   double? getAvgPosVerticalSpeed() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       53,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -647,7 +647,7 @@ class LapMesg extends Mesg {
   }
 
   double? getAvgNegVerticalSpeed() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       54,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -656,7 +656,7 @@ class LapMesg extends Mesg {
   }
 
   double? getMaxPosVerticalSpeed() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       55,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -665,7 +665,7 @@ class LapMesg extends Mesg {
   }
 
   double? getMaxNegVerticalSpeed() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       56,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -674,7 +674,7 @@ class LapMesg extends Mesg {
   }
 
   double? getTimeInHrZone() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       57,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -683,7 +683,7 @@ class LapMesg extends Mesg {
   }
 
   double? getTimeInSpeedZone() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       58,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -692,7 +692,7 @@ class LapMesg extends Mesg {
   }
 
   double? getTimeInCadenceZone() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       59,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -701,7 +701,7 @@ class LapMesg extends Mesg {
   }
 
   double? getTimeInPowerZone() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       60,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -710,7 +710,7 @@ class LapMesg extends Mesg {
   }
 
   int? getRepetitionNum() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       61,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -719,7 +719,7 @@ class LapMesg extends Mesg {
   }
 
   double? getMinAltitude() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       62,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -728,7 +728,7 @@ class LapMesg extends Mesg {
   }
 
   int? getMinHeartRate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       63,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -737,7 +737,7 @@ class LapMesg extends Mesg {
   }
 
   int? getWktStepIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       71,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -746,7 +746,7 @@ class LapMesg extends Mesg {
   }
 
   int? getOpponentScore() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       74,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -755,7 +755,7 @@ class LapMesg extends Mesg {
   }
 
   int? getStrokeCount() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       75,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -764,7 +764,7 @@ class LapMesg extends Mesg {
   }
 
   int? getZoneCount() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       76,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -773,7 +773,7 @@ class LapMesg extends Mesg {
   }
 
   double? getAvgVerticalOscillation() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       77,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -782,7 +782,7 @@ class LapMesg extends Mesg {
   }
 
   double? getAvgStanceTimePercent() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       78,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -791,7 +791,7 @@ class LapMesg extends Mesg {
   }
 
   double? getAvgStanceTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       79,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -800,7 +800,7 @@ class LapMesg extends Mesg {
   }
 
   double? getAvgFractionalCadence() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       80,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -809,7 +809,7 @@ class LapMesg extends Mesg {
   }
 
   double? getMaxFractionalCadence() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       81,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -818,7 +818,7 @@ class LapMesg extends Mesg {
   }
 
   double? getTotalFractionalCycles() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       82,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -827,7 +827,7 @@ class LapMesg extends Mesg {
   }
 
   int? getPlayerScore() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       83,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -836,7 +836,7 @@ class LapMesg extends Mesg {
   }
 
   double? getAvgTotalHemoglobinConc() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       84,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -845,7 +845,7 @@ class LapMesg extends Mesg {
   }
 
   double? getMinTotalHemoglobinConc() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       85,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -854,7 +854,7 @@ class LapMesg extends Mesg {
   }
 
   double? getMaxTotalHemoglobinConc() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       86,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -863,7 +863,7 @@ class LapMesg extends Mesg {
   }
 
   double? getAvgSaturatedHemoglobinPercent() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       87,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -872,7 +872,7 @@ class LapMesg extends Mesg {
   }
 
   double? getMinSaturatedHemoglobinPercent() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       88,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -881,7 +881,7 @@ class LapMesg extends Mesg {
   }
 
   double? getMaxSaturatedHemoglobinPercent() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       89,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -890,7 +890,7 @@ class LapMesg extends Mesg {
   }
 
   double? getAvgLeftTorqueEffectiveness() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       91,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -899,7 +899,7 @@ class LapMesg extends Mesg {
   }
 
   double? getAvgRightTorqueEffectiveness() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       92,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -908,7 +908,7 @@ class LapMesg extends Mesg {
   }
 
   double? getAvgLeftPedalSmoothness() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       93,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -917,7 +917,7 @@ class LapMesg extends Mesg {
   }
 
   double? getAvgRightPedalSmoothness() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       94,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -926,7 +926,7 @@ class LapMesg extends Mesg {
   }
 
   double? getAvgCombinedPedalSmoothness() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       95,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -935,7 +935,7 @@ class LapMesg extends Mesg {
   }
 
   double? getTimeStanding() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       98,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -944,7 +944,7 @@ class LapMesg extends Mesg {
   }
 
   int? getStandCount() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       99,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -953,7 +953,7 @@ class LapMesg extends Mesg {
   }
 
   int? getAvgLeftPco() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       100,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -962,7 +962,7 @@ class LapMesg extends Mesg {
   }
 
   int? getAvgRightPco() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       101,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -971,7 +971,7 @@ class LapMesg extends Mesg {
   }
 
   double? getAvgLeftPowerPhase() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       102,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -980,7 +980,7 @@ class LapMesg extends Mesg {
   }
 
   double? getAvgLeftPowerPhasePeak() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       103,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -989,7 +989,7 @@ class LapMesg extends Mesg {
   }
 
   double? getAvgRightPowerPhase() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       104,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -998,7 +998,7 @@ class LapMesg extends Mesg {
   }
 
   double? getAvgRightPowerPhasePeak() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       105,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1007,7 +1007,7 @@ class LapMesg extends Mesg {
   }
 
   int? getAvgPowerPosition() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       106,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1016,7 +1016,7 @@ class LapMesg extends Mesg {
   }
 
   int? getMaxPowerPosition() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       107,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1025,7 +1025,7 @@ class LapMesg extends Mesg {
   }
 
   int? getAvgCadencePosition() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       108,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1034,7 +1034,7 @@ class LapMesg extends Mesg {
   }
 
   int? getMaxCadencePosition() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       109,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1043,7 +1043,7 @@ class LapMesg extends Mesg {
   }
 
   double? getEnhancedAvgSpeed() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       110,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1052,7 +1052,7 @@ class LapMesg extends Mesg {
   }
 
   double? getEnhancedMaxSpeed() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       111,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1061,7 +1061,7 @@ class LapMesg extends Mesg {
   }
 
   double? getEnhancedAvgAltitude() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       112,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1070,7 +1070,7 @@ class LapMesg extends Mesg {
   }
 
   double? getEnhancedMinAltitude() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       113,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1079,7 +1079,7 @@ class LapMesg extends Mesg {
   }
 
   double? getEnhancedMaxAltitude() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       114,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1088,7 +1088,7 @@ class LapMesg extends Mesg {
   }
 
   int? getAvgLevMotorPower() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       115,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1097,7 +1097,7 @@ class LapMesg extends Mesg {
   }
 
   int? getMaxLevMotorPower() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       116,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1106,7 +1106,7 @@ class LapMesg extends Mesg {
   }
 
   double? getLevBatteryConsumption() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       117,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1115,7 +1115,7 @@ class LapMesg extends Mesg {
   }
 
   double? getAvgVerticalRatio() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       118,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1124,7 +1124,7 @@ class LapMesg extends Mesg {
   }
 
   double? getAvgStanceTimeBalance() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       119,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1133,7 +1133,7 @@ class LapMesg extends Mesg {
   }
 
   double? getAvgStepLength() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       120,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1142,7 +1142,7 @@ class LapMesg extends Mesg {
   }
 
   double? getAvgVam() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       121,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1151,7 +1151,7 @@ class LapMesg extends Mesg {
   }
 
   double? getAvgDepth() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       122,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1160,7 +1160,7 @@ class LapMesg extends Mesg {
   }
 
   double? getMaxDepth() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       123,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1169,7 +1169,7 @@ class LapMesg extends Mesg {
   }
 
   int? getMinTemperature() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       124,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1178,7 +1178,7 @@ class LapMesg extends Mesg {
   }
 
   double? getEnhancedAvgRespirationRate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       136,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1187,7 +1187,7 @@ class LapMesg extends Mesg {
   }
 
   double? getEnhancedMaxRespirationRate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       137,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1196,7 +1196,7 @@ class LapMesg extends Mesg {
   }
 
   int? getAvgRespirationRate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       147,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1205,7 +1205,7 @@ class LapMesg extends Mesg {
   }
 
   int? getMaxRespirationRate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       148,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1214,7 +1214,7 @@ class LapMesg extends Mesg {
   }
 
   double? getTotalGrit() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       149,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1223,7 +1223,7 @@ class LapMesg extends Mesg {
   }
 
   double? getTotalFlow() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       150,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1232,7 +1232,7 @@ class LapMesg extends Mesg {
   }
 
   int? getJumpCount() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       151,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1241,7 +1241,7 @@ class LapMesg extends Mesg {
   }
 
   double? getAvgGrit() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       153,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1250,7 +1250,7 @@ class LapMesg extends Mesg {
   }
 
   double? getAvgFlow() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       154,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1259,7 +1259,7 @@ class LapMesg extends Mesg {
   }
 
   double? getTotalFractionalAscent() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       156,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1268,7 +1268,7 @@ class LapMesg extends Mesg {
   }
 
   double? getTotalFractionalDescent() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       157,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1277,7 +1277,7 @@ class LapMesg extends Mesg {
   }
 
   double? getAvgCoreTemperature() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       158,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1286,7 +1286,7 @@ class LapMesg extends Mesg {
   }
 
   double? getMinCoreTemperature() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       159,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1295,7 +1295,7 @@ class LapMesg extends Mesg {
   }
 
   double? getMaxCoreTemperature() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       160,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

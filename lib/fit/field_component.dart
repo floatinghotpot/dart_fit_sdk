@@ -29,7 +29,7 @@ class FieldComponent {
       lastValue = other.lastValue;
 
   int accumulateValue(int value) {
-    int mask = (1 << bits) - 1;
+    final int mask = (1 << bits) - 1;
 
     accumulatedValue += (value - lastValue) & mask;
     lastValue = value;

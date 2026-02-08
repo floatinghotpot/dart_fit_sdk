@@ -18,7 +18,7 @@ class VideoClipMesg extends Mesg {
   VideoClipMesg.fromMesg(super.mesg) : super.from();
 
   int? getClipNumber() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -27,7 +27,7 @@ class VideoClipMesg extends Mesg {
   }
 
   DateTime? getStartTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -40,7 +40,7 @@ class VideoClipMesg extends Mesg {
   }
 
   int? getStartTimestampMs() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -49,7 +49,7 @@ class VideoClipMesg extends Mesg {
   }
 
   DateTime? getEndTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -62,7 +62,7 @@ class VideoClipMesg extends Mesg {
   }
 
   int? getEndTimestampMs() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -71,7 +71,7 @@ class VideoClipMesg extends Mesg {
   }
 
   int? getClipStart() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -80,7 +80,7 @@ class VideoClipMesg extends Mesg {
   }
 
   int? getClipEnd() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       7,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

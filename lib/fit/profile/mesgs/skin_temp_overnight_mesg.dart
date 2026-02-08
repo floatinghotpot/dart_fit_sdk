@@ -17,7 +17,7 @@ class SkinTempOvernightMesg extends Mesg {
   SkinTempOvernightMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       253,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -30,7 +30,7 @@ class SkinTempOvernightMesg extends Mesg {
   }
 
   int? getLocalTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -39,7 +39,7 @@ class SkinTempOvernightMesg extends Mesg {
   }
 
   double? getAverageDeviation() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -48,7 +48,7 @@ class SkinTempOvernightMesg extends Mesg {
   }
 
   double? getAverage7DayDeviation() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -57,7 +57,7 @@ class SkinTempOvernightMesg extends Mesg {
   }
 
   double? getNightlyValue() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

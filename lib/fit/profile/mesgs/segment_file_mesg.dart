@@ -20,7 +20,7 @@ class SegmentFileMesg extends Mesg {
   SegmentFileMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       254,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -29,7 +29,7 @@ class SegmentFileMesg extends Mesg {
   }
 
   String? getFileUuid() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -38,7 +38,7 @@ class SegmentFileMesg extends Mesg {
   }
 
   bool? getEnabled() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -47,7 +47,7 @@ class SegmentFileMesg extends Mesg {
   }
 
   int? getUserProfilePrimaryKey() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -56,7 +56,7 @@ class SegmentFileMesg extends Mesg {
   }
 
   int? getLeaderType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       7,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -65,7 +65,7 @@ class SegmentFileMesg extends Mesg {
   }
 
   int? getLeaderGroupPrimaryKey() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       8,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -74,7 +74,7 @@ class SegmentFileMesg extends Mesg {
   }
 
   int? getLeaderActivityId() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       9,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -83,7 +83,7 @@ class SegmentFileMesg extends Mesg {
   }
 
   String? getLeaderActivityIdString() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       10,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -92,7 +92,7 @@ class SegmentFileMesg extends Mesg {
   }
 
   int? getDefaultRaceLeader() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       11,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

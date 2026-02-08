@@ -18,7 +18,7 @@ class FileCapabilitiesMesg extends Mesg {
   FileCapabilitiesMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       254,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -27,7 +27,7 @@ class FileCapabilitiesMesg extends Mesg {
   }
 
   int? getType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -36,7 +36,7 @@ class FileCapabilitiesMesg extends Mesg {
   }
 
   int? getFlags() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -45,7 +45,7 @@ class FileCapabilitiesMesg extends Mesg {
   }
 
   String? getDirectory() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -54,7 +54,7 @@ class FileCapabilitiesMesg extends Mesg {
   }
 
   int? getMaxCount() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -63,7 +63,7 @@ class FileCapabilitiesMesg extends Mesg {
   }
 
   int? getMaxSize() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

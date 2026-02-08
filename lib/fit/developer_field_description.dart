@@ -10,8 +10,8 @@ class DeveloperFieldDescription {
       _developerDataId.applicationVersion ?? 0xFFFFFFFF;
 
   Uint8List get applicationId {
-    int count = _developerDataId.numApplicationId;
-    Uint8List appId = Uint8List(count);
+    final int count = _developerDataId.numApplicationId;
+    final Uint8List appId = Uint8List(count);
     for (int i = 0; i < count; i++) {
       appId[i] = _developerDataId.getApplicationId(i) ?? 0xFF;
     }

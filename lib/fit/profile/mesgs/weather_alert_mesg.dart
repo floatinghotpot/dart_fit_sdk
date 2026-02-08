@@ -17,7 +17,7 @@ class WeatherAlertMesg extends Mesg {
   WeatherAlertMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       253,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -30,7 +30,7 @@ class WeatherAlertMesg extends Mesg {
   }
 
   String? getReportId() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -39,7 +39,7 @@ class WeatherAlertMesg extends Mesg {
   }
 
   DateTime? getIssueTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -52,7 +52,7 @@ class WeatherAlertMesg extends Mesg {
   }
 
   DateTime? getExpireTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -65,7 +65,7 @@ class WeatherAlertMesg extends Mesg {
   }
 
   int? getSeverity() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -74,7 +74,7 @@ class WeatherAlertMesg extends Mesg {
   }
 
   int? getType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

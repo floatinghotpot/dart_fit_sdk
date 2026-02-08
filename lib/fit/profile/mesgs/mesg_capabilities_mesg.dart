@@ -25,7 +25,7 @@ class MesgCapabilitiesMesg extends Mesg {
   MesgCapabilitiesMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       254,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -34,7 +34,7 @@ class MesgCapabilitiesMesg extends Mesg {
   }
 
   int? getFile() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -43,7 +43,7 @@ class MesgCapabilitiesMesg extends Mesg {
   }
 
   int? getMesgNum() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -52,7 +52,7 @@ class MesgCapabilitiesMesg extends Mesg {
   }
 
   int? getCountType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -61,7 +61,7 @@ class MesgCapabilitiesMesg extends Mesg {
   }
 
   int? getCount() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -70,7 +70,7 @@ class MesgCapabilitiesMesg extends Mesg {
   }
 
   int? getNumPerFile() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: MesgCapabilitiesCountSubfield.NumPerFile,
@@ -79,7 +79,7 @@ class MesgCapabilitiesMesg extends Mesg {
   }
 
   int? getMaxPerFile() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: MesgCapabilitiesCountSubfield.MaxPerFile,
@@ -88,7 +88,7 @@ class MesgCapabilitiesMesg extends Mesg {
   }
 
   int? getMaxPerFileType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: MesgCapabilitiesCountSubfield.MaxPerFileType,

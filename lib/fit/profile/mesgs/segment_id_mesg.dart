@@ -20,7 +20,7 @@ class SegmentIdMesg extends Mesg {
   SegmentIdMesg.fromMesg(super.mesg) : super.from();
 
   String? getName() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -29,7 +29,7 @@ class SegmentIdMesg extends Mesg {
   }
 
   String? getUuid() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -38,7 +38,7 @@ class SegmentIdMesg extends Mesg {
   }
 
   int? getSport() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -47,7 +47,7 @@ class SegmentIdMesg extends Mesg {
   }
 
   bool? getEnabled() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -56,7 +56,7 @@ class SegmentIdMesg extends Mesg {
   }
 
   int? getUserProfilePrimaryKey() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -65,7 +65,7 @@ class SegmentIdMesg extends Mesg {
   }
 
   int? getDeviceId() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -74,7 +74,7 @@ class SegmentIdMesg extends Mesg {
   }
 
   int? getDefaultRaceLeader() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -83,7 +83,7 @@ class SegmentIdMesg extends Mesg {
   }
 
   int? getDeleteStatus() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       7,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -92,7 +92,7 @@ class SegmentIdMesg extends Mesg {
   }
 
   int? getSelectionType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       8,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

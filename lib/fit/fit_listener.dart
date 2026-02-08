@@ -7,7 +7,7 @@ class FitListener {
   final FitMessages fitMessages = FitMessages();
 
   void onMesg(Object sender, MesgEventArgs e) {
-    var mesg = e.mesg;
+    final mesg = e.mesg;
     switch (mesg.num) {
       case MesgNum.fileId:
         fitMessages.fileIdMesgs.add(FileIdMesg.fromMesg(mesg));

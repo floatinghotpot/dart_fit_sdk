@@ -54,7 +54,7 @@ class FieldDescriptionMesg extends Mesg {
   }
 
   int? getDeveloperDataIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -63,7 +63,7 @@ class FieldDescriptionMesg extends Mesg {
   }
 
   int? getFieldDefinitionNumber() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -72,7 +72,7 @@ class FieldDescriptionMesg extends Mesg {
   }
 
   int? getFitBaseTypeId() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -81,7 +81,7 @@ class FieldDescriptionMesg extends Mesg {
   }
 
   String? getFieldName() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -90,7 +90,7 @@ class FieldDescriptionMesg extends Mesg {
   }
 
   int? getArray() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -99,7 +99,7 @@ class FieldDescriptionMesg extends Mesg {
   }
 
   String? getComponents() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -108,7 +108,7 @@ class FieldDescriptionMesg extends Mesg {
   }
 
   int? getScale() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -117,7 +117,7 @@ class FieldDescriptionMesg extends Mesg {
   }
 
   int? getOffset() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       7,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -126,7 +126,7 @@ class FieldDescriptionMesg extends Mesg {
   }
 
   String? getUnits() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       8,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -135,7 +135,7 @@ class FieldDescriptionMesg extends Mesg {
   }
 
   String? getBits() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       9,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -144,7 +144,7 @@ class FieldDescriptionMesg extends Mesg {
   }
 
   String? getAccumulate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       10,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -153,7 +153,7 @@ class FieldDescriptionMesg extends Mesg {
   }
 
   int? getFitBaseUnitId() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       13,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -162,7 +162,7 @@ class FieldDescriptionMesg extends Mesg {
   }
 
   int? getNativeMesgNum() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       14,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -171,7 +171,7 @@ class FieldDescriptionMesg extends Mesg {
   }
 
   int? getNativeFieldNum() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       15,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

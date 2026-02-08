@@ -19,7 +19,7 @@ class CoursePointMesg extends Mesg {
   CoursePointMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       254,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -28,7 +28,7 @@ class CoursePointMesg extends Mesg {
   }
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -41,7 +41,7 @@ class CoursePointMesg extends Mesg {
   }
 
   int? getPositionLat() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -50,7 +50,7 @@ class CoursePointMesg extends Mesg {
   }
 
   int? getPositionLong() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -59,7 +59,7 @@ class CoursePointMesg extends Mesg {
   }
 
   double? getDistance() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -68,7 +68,7 @@ class CoursePointMesg extends Mesg {
   }
 
   int? getType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -77,7 +77,7 @@ class CoursePointMesg extends Mesg {
   }
 
   String? getName() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -86,7 +86,7 @@ class CoursePointMesg extends Mesg {
   }
 
   bool? getFavorite() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       8,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

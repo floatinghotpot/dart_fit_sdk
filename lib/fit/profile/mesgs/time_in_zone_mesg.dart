@@ -28,7 +28,7 @@ class TimeInZoneMesg extends Mesg {
   TimeInZoneMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       253,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -41,7 +41,7 @@ class TimeInZoneMesg extends Mesg {
   }
 
   int? getReferenceMesg() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -50,7 +50,7 @@ class TimeInZoneMesg extends Mesg {
   }
 
   int? getReferenceIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -59,7 +59,7 @@ class TimeInZoneMesg extends Mesg {
   }
 
   double? getTimeInHrZone() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -68,7 +68,7 @@ class TimeInZoneMesg extends Mesg {
   }
 
   double? getTimeInSpeedZone() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -77,7 +77,7 @@ class TimeInZoneMesg extends Mesg {
   }
 
   double? getTimeInCadenceZone() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -86,7 +86,7 @@ class TimeInZoneMesg extends Mesg {
   }
 
   double? getTimeInPowerZone() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -95,7 +95,7 @@ class TimeInZoneMesg extends Mesg {
   }
 
   int? getHrZoneHighBoundary() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -104,7 +104,7 @@ class TimeInZoneMesg extends Mesg {
   }
 
   double? getSpeedZoneHighBoundary() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       7,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -113,7 +113,7 @@ class TimeInZoneMesg extends Mesg {
   }
 
   int? getCadenceZoneHighBondary() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       8,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -122,7 +122,7 @@ class TimeInZoneMesg extends Mesg {
   }
 
   int? getPowerZoneHighBoundary() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       9,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -131,7 +131,7 @@ class TimeInZoneMesg extends Mesg {
   }
 
   int? getHrCalcType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       10,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -140,7 +140,7 @@ class TimeInZoneMesg extends Mesg {
   }
 
   int? getMaxHeartRate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       11,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -149,7 +149,7 @@ class TimeInZoneMesg extends Mesg {
   }
 
   int? getRestingHeartRate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       12,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -158,7 +158,7 @@ class TimeInZoneMesg extends Mesg {
   }
 
   int? getThresholdHeartRate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       13,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -167,7 +167,7 @@ class TimeInZoneMesg extends Mesg {
   }
 
   int? getPwrCalcType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       14,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -176,7 +176,7 @@ class TimeInZoneMesg extends Mesg {
   }
 
   int? getFunctionalThresholdPower() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       15,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

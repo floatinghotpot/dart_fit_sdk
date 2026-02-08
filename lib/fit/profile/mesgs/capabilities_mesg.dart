@@ -15,7 +15,7 @@ class CapabilitiesMesg extends Mesg {
   CapabilitiesMesg.fromMesg(super.mesg) : super.from();
 
   int? getLanguages() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -24,7 +24,7 @@ class CapabilitiesMesg extends Mesg {
   }
 
   int? getSports() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -33,7 +33,7 @@ class CapabilitiesMesg extends Mesg {
   }
 
   int? getWorkoutsSupported() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       21,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -42,7 +42,7 @@ class CapabilitiesMesg extends Mesg {
   }
 
   int? getConnectivitySupported() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       23,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

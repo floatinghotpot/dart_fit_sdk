@@ -186,7 +186,7 @@ class SessionMesg extends Mesg {
   SessionMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       254,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -195,7 +195,7 @@ class SessionMesg extends Mesg {
   }
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       253,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -208,7 +208,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getEvent() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -217,7 +217,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getEventType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -226,7 +226,7 @@ class SessionMesg extends Mesg {
   }
 
   DateTime? getStartTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -239,7 +239,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getStartPositionLat() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -248,7 +248,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getStartPositionLong() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -257,7 +257,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getSport() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -266,7 +266,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getSubSport() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -275,7 +275,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getTotalElapsedTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       7,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -284,7 +284,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getTotalTimerTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       8,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -293,7 +293,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getTotalDistance() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       9,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -302,7 +302,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getTotalCycles() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       10,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -311,7 +311,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getTotalStrides() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       10,
       index: 0,
       subfieldInfo: SessionTotalCyclesSubfield.TotalStrides,
@@ -320,7 +320,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getTotalStrokes() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       10,
       index: 0,
       subfieldInfo: SessionTotalCyclesSubfield.TotalStrokes,
@@ -329,7 +329,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getTotalCalories() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       11,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -338,7 +338,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getTotalFatCalories() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       13,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -347,7 +347,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getAvgSpeed() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       14,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -356,7 +356,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getMaxSpeed() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       15,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -365,7 +365,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getAvgHeartRate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       16,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -374,7 +374,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getMaxHeartRate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       17,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -383,7 +383,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getAvgCadence() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       18,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -392,7 +392,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getAvgRunningCadence() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       18,
       index: 0,
       subfieldInfo: SessionAvgCadenceSubfield.AvgRunningCadence,
@@ -401,7 +401,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getMaxCadence() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       19,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -410,7 +410,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getMaxRunningCadence() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       19,
       index: 0,
       subfieldInfo: SessionMaxCadenceSubfield.MaxRunningCadence,
@@ -419,7 +419,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getAvgPower() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       20,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -428,7 +428,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getMaxPower() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       21,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -437,7 +437,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getTotalAscent() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       22,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -446,7 +446,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getTotalDescent() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       23,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -455,7 +455,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getTotalTrainingEffect() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       24,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -464,7 +464,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getFirstLapIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       25,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -473,7 +473,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getNumLaps() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       26,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -482,7 +482,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getEventGroup() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       27,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -491,7 +491,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getTrigger() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       28,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -500,7 +500,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getNecLat() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       29,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -509,7 +509,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getNecLong() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       30,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -518,7 +518,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getSwcLat() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       31,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -527,7 +527,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getSwcLong() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       32,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -536,7 +536,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getNumLengths() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       33,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -545,7 +545,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getNormalizedPower() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       34,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -554,7 +554,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getTrainingStressScore() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       35,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -563,7 +563,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getIntensityFactor() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       36,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -572,7 +572,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getLeftRightBalance() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       37,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -581,7 +581,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getEndPositionLat() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       38,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -590,7 +590,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getEndPositionLong() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       39,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -599,7 +599,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getAvgStrokeCount() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       41,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -608,7 +608,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getAvgStrokeDistance() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       42,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -617,7 +617,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getSwimStroke() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       43,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -626,7 +626,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getPoolLength() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       44,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -635,7 +635,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getThresholdPower() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       45,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -644,7 +644,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getPoolLengthUnit() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       46,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -653,7 +653,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getNumActiveLengths() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       47,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -662,7 +662,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getTotalWork() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       48,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -671,7 +671,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getAvgAltitude() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       49,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -680,7 +680,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getMaxAltitude() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       50,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -689,7 +689,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getGpsAccuracy() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       51,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -698,7 +698,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getAvgGrade() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       52,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -707,7 +707,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getAvgPosGrade() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       53,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -716,7 +716,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getAvgNegGrade() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       54,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -725,7 +725,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getMaxPosGrade() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       55,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -734,7 +734,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getMaxNegGrade() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       56,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -743,7 +743,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getAvgTemperature() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       57,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -752,7 +752,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getMaxTemperature() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       58,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -761,7 +761,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getTotalMovingTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       59,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -770,7 +770,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getAvgPosVerticalSpeed() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       60,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -779,7 +779,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getAvgNegVerticalSpeed() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       61,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -788,7 +788,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getMaxPosVerticalSpeed() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       62,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -797,7 +797,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getMaxNegVerticalSpeed() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       63,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -806,7 +806,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getMinHeartRate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       64,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -815,7 +815,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getTimeInHrZone() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       65,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -824,7 +824,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getTimeInSpeedZone() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       66,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -833,7 +833,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getTimeInCadenceZone() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       67,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -842,7 +842,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getTimeInPowerZone() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       68,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -851,7 +851,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getAvgLapTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       69,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -860,7 +860,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getBestLapIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       70,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -869,7 +869,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getMinAltitude() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       71,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -878,7 +878,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getPlayerScore() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       82,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -887,7 +887,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getOpponentScore() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       83,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -896,7 +896,7 @@ class SessionMesg extends Mesg {
   }
 
   String? getOpponentName() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       84,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -905,7 +905,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getStrokeCount() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       85,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -914,7 +914,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getZoneCount() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       86,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -923,7 +923,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getMaxBallSpeed() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       87,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -932,7 +932,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getAvgBallSpeed() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       88,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -941,7 +941,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getAvgVerticalOscillation() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       89,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -950,7 +950,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getAvgStanceTimePercent() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       90,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -959,7 +959,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getAvgStanceTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       91,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -968,7 +968,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getAvgFractionalCadence() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       92,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -977,7 +977,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getMaxFractionalCadence() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       93,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -986,7 +986,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getTotalFractionalCycles() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       94,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -995,7 +995,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getAvgTotalHemoglobinConc() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       95,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1004,7 +1004,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getMinTotalHemoglobinConc() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       96,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1013,7 +1013,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getMaxTotalHemoglobinConc() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       97,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1022,7 +1022,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getAvgSaturatedHemoglobinPercent() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       98,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1031,7 +1031,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getMinSaturatedHemoglobinPercent() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       99,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1040,7 +1040,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getMaxSaturatedHemoglobinPercent() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       100,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1049,7 +1049,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getAvgLeftTorqueEffectiveness() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       101,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1058,7 +1058,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getAvgRightTorqueEffectiveness() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       102,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1067,7 +1067,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getAvgLeftPedalSmoothness() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       103,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1076,7 +1076,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getAvgRightPedalSmoothness() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       104,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1085,7 +1085,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getAvgCombinedPedalSmoothness() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       105,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1094,7 +1094,7 @@ class SessionMesg extends Mesg {
   }
 
   String? getSportProfileName() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       110,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1103,7 +1103,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getSportIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       111,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1112,7 +1112,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getTimeStanding() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       112,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1121,7 +1121,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getStandCount() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       113,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1130,7 +1130,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getAvgLeftPco() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       114,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1139,7 +1139,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getAvgRightPco() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       115,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1148,7 +1148,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getAvgLeftPowerPhase() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       116,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1157,7 +1157,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getAvgLeftPowerPhasePeak() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       117,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1166,7 +1166,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getAvgRightPowerPhase() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       118,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1175,7 +1175,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getAvgRightPowerPhasePeak() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       119,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1184,7 +1184,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getAvgPowerPosition() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       120,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1193,7 +1193,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getMaxPowerPosition() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       121,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1202,7 +1202,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getAvgCadencePosition() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       122,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1211,7 +1211,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getMaxCadencePosition() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       123,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1220,7 +1220,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getEnhancedAvgSpeed() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       124,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1229,7 +1229,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getEnhancedMaxSpeed() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       125,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1238,7 +1238,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getEnhancedAvgAltitude() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       126,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1247,7 +1247,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getEnhancedMinAltitude() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       127,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1256,7 +1256,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getEnhancedMaxAltitude() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       128,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1265,7 +1265,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getAvgLevMotorPower() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       129,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1274,7 +1274,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getMaxLevMotorPower() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       130,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1283,7 +1283,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getLevBatteryConsumption() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       131,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1292,7 +1292,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getAvgVerticalRatio() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       132,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1301,7 +1301,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getAvgStanceTimeBalance() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       133,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1310,7 +1310,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getAvgStepLength() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       134,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1319,7 +1319,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getTotalAnaerobicTrainingEffect() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       137,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1328,7 +1328,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getAvgVam() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       139,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1337,7 +1337,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getAvgDepth() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       140,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1346,7 +1346,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getMaxDepth() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       141,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1355,7 +1355,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getSurfaceInterval() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       142,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1364,7 +1364,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getStartCns() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       143,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1373,7 +1373,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getEndCns() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       144,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1382,7 +1382,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getStartN2() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       145,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1391,7 +1391,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getEndN2() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       146,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1400,7 +1400,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getAvgRespirationRate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       147,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1409,7 +1409,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getMaxRespirationRate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       148,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1418,7 +1418,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getMinRespirationRate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       149,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1427,7 +1427,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getMinTemperature() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       150,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1436,7 +1436,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getO2Toxicity() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       155,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1445,7 +1445,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getDiveNumber() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       156,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1454,7 +1454,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getTrainingLoadPeak() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       168,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1463,7 +1463,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getEnhancedAvgRespirationRate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       169,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1472,7 +1472,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getEnhancedMaxRespirationRate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       170,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1481,7 +1481,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getEnhancedMinRespirationRate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       180,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1490,7 +1490,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getTotalGrit() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       181,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1499,7 +1499,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getTotalFlow() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       182,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1508,7 +1508,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getJumpCount() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       183,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1517,7 +1517,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getAvgGrit() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       186,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1526,7 +1526,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getAvgFlow() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       187,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1535,7 +1535,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getWorkoutFeel() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       192,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1544,7 +1544,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getWorkoutRpe() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       193,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1553,7 +1553,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getAvgSpo2() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       194,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1562,7 +1562,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getAvgStress() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       195,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1571,7 +1571,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getSdrrHrv() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       197,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1580,7 +1580,7 @@ class SessionMesg extends Mesg {
   }
 
   int? getRmssdHrv() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       198,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1589,7 +1589,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getTotalFractionalAscent() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       199,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1598,7 +1598,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getTotalFractionalDescent() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       200,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1607,7 +1607,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getAvgCoreTemperature() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       208,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1616,7 +1616,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getMinCoreTemperature() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       209,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -1625,7 +1625,7 @@ class SessionMesg extends Mesg {
   }
 
   double? getMaxCoreTemperature() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       210,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

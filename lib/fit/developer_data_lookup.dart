@@ -12,8 +12,8 @@ class DeveloperDataLookup {
   ({DeveloperDataIdMesg devId, FieldDescriptionMesg desc})? getMesgs(
     DeveloperDataKey key,
   ) {
-    var devIdMesg = _developerDataIdMesgs[key.developerDataIndex];
-    var descriptionMesg = _fieldDescriptionMesgs[key];
+    final devIdMesg = _developerDataIdMesgs[key.developerDataIndex];
+    final descriptionMesg = _fieldDescriptionMesgs[key];
 
     if (devIdMesg != null && descriptionMesg != null) {
       return (devId: devIdMesg, desc: descriptionMesg);
@@ -23,7 +23,7 @@ class DeveloperDataLookup {
   }
 
   void addIdMesg(DeveloperDataIdMesg mesg) {
-    int? index = mesg.developerDataIndex;
+    final int? index = mesg.developerDataIndex;
     if (index == null) return;
 
     _developerDataIdMesgs[index] = mesg;
@@ -37,16 +37,16 @@ class DeveloperDataLookup {
   DeveloperFieldDescription? addDescriptionMesg(FieldDescriptionMesg mesg) {
     DeveloperFieldDescription? desc;
 
-    int? developerDataIndex = mesg.developerDataIndex;
-    int? fieldDefinitionNumber = mesg.fieldDefinitionNumber;
+    final int? developerDataIndex = mesg.developerDataIndex;
+    final int? fieldDefinitionNumber = mesg.fieldDefinitionNumber;
 
     if (developerDataIndex != null && fieldDefinitionNumber != null) {
-      var key = DeveloperDataKey(developerDataIndex, fieldDefinitionNumber);
+      final key = DeveloperDataKey(developerDataIndex, fieldDefinitionNumber);
 
       _fieldDescriptionMesgs[key] = mesg;
 
       // Build a Description of the pairing we just created
-      var pair = getMesgs(key);
+      final pair = getMesgs(key);
       if (pair != null) {
         desc = DeveloperFieldDescription(pair.devId, pair.desc);
       }

@@ -24,7 +24,7 @@ class TrainingFileMesg extends Mesg {
   TrainingFileMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       253,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -37,7 +37,7 @@ class TrainingFileMesg extends Mesg {
   }
 
   int? getType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -46,7 +46,7 @@ class TrainingFileMesg extends Mesg {
   }
 
   int? getManufacturer() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -55,7 +55,7 @@ class TrainingFileMesg extends Mesg {
   }
 
   int? getProduct() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -64,7 +64,7 @@ class TrainingFileMesg extends Mesg {
   }
 
   int? getFaveroProduct() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: TrainingFileProductSubfield.FaveroProduct,
@@ -73,7 +73,7 @@ class TrainingFileMesg extends Mesg {
   }
 
   int? getGarminProduct() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: TrainingFileProductSubfield.GarminProduct,
@@ -82,7 +82,7 @@ class TrainingFileMesg extends Mesg {
   }
 
   int? getSerialNumber() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -91,7 +91,7 @@ class TrainingFileMesg extends Mesg {
   }
 
   DateTime? getTimeCreated() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

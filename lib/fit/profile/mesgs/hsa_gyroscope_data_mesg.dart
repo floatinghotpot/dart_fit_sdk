@@ -19,7 +19,7 @@ class HsaGyroscopeDataMesg extends Mesg {
   HsaGyroscopeDataMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       253,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -32,7 +32,7 @@ class HsaGyroscopeDataMesg extends Mesg {
   }
 
   int? getTimestampMs() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -41,7 +41,7 @@ class HsaGyroscopeDataMesg extends Mesg {
   }
 
   int? getSamplingInterval() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -50,7 +50,7 @@ class HsaGyroscopeDataMesg extends Mesg {
   }
 
   double? getGyroX() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -59,7 +59,7 @@ class HsaGyroscopeDataMesg extends Mesg {
   }
 
   double? getGyroY() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -68,7 +68,7 @@ class HsaGyroscopeDataMesg extends Mesg {
   }
 
   double? getGyroZ() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -77,7 +77,7 @@ class HsaGyroscopeDataMesg extends Mesg {
   }
 
   int? getTimestamp32k() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

@@ -28,7 +28,7 @@ class WeatherConditionsMesg extends Mesg {
   WeatherConditionsMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       253,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -41,7 +41,7 @@ class WeatherConditionsMesg extends Mesg {
   }
 
   int? getWeatherReport() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -50,7 +50,7 @@ class WeatherConditionsMesg extends Mesg {
   }
 
   int? getTemperature() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -59,7 +59,7 @@ class WeatherConditionsMesg extends Mesg {
   }
 
   int? getCondition() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -68,7 +68,7 @@ class WeatherConditionsMesg extends Mesg {
   }
 
   int? getWindDirection() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -77,7 +77,7 @@ class WeatherConditionsMesg extends Mesg {
   }
 
   double? getWindSpeed() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -86,7 +86,7 @@ class WeatherConditionsMesg extends Mesg {
   }
 
   int? getPrecipitationProbability() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -95,7 +95,7 @@ class WeatherConditionsMesg extends Mesg {
   }
 
   int? getTemperatureFeelsLike() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -104,7 +104,7 @@ class WeatherConditionsMesg extends Mesg {
   }
 
   int? getRelativeHumidity() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       7,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -113,7 +113,7 @@ class WeatherConditionsMesg extends Mesg {
   }
 
   String? getLocation() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       8,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -122,7 +122,7 @@ class WeatherConditionsMesg extends Mesg {
   }
 
   DateTime? getObservedAtTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       9,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -135,7 +135,7 @@ class WeatherConditionsMesg extends Mesg {
   }
 
   int? getObservedLocationLat() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       10,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -144,7 +144,7 @@ class WeatherConditionsMesg extends Mesg {
   }
 
   int? getObservedLocationLong() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       11,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -153,7 +153,7 @@ class WeatherConditionsMesg extends Mesg {
   }
 
   int? getDayOfWeek() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       12,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -162,7 +162,7 @@ class WeatherConditionsMesg extends Mesg {
   }
 
   int? getHighTemperature() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       13,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -171,7 +171,7 @@ class WeatherConditionsMesg extends Mesg {
   }
 
   int? getLowTemperature() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       14,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

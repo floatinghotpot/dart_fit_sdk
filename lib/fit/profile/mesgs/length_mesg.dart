@@ -33,7 +33,7 @@ class LengthMesg extends Mesg {
   LengthMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       254,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -42,7 +42,7 @@ class LengthMesg extends Mesg {
   }
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       253,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -55,7 +55,7 @@ class LengthMesg extends Mesg {
   }
 
   int? getEvent() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -64,7 +64,7 @@ class LengthMesg extends Mesg {
   }
 
   int? getEventType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -73,7 +73,7 @@ class LengthMesg extends Mesg {
   }
 
   DateTime? getStartTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -86,7 +86,7 @@ class LengthMesg extends Mesg {
   }
 
   double? getTotalElapsedTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -95,7 +95,7 @@ class LengthMesg extends Mesg {
   }
 
   double? getTotalTimerTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -104,7 +104,7 @@ class LengthMesg extends Mesg {
   }
 
   int? getTotalStrokes() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -113,7 +113,7 @@ class LengthMesg extends Mesg {
   }
 
   double? getAvgSpeed() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -122,7 +122,7 @@ class LengthMesg extends Mesg {
   }
 
   int? getSwimStroke() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       7,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -131,7 +131,7 @@ class LengthMesg extends Mesg {
   }
 
   int? getAvgSwimmingCadence() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       9,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -140,7 +140,7 @@ class LengthMesg extends Mesg {
   }
 
   int? getEventGroup() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       10,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -149,7 +149,7 @@ class LengthMesg extends Mesg {
   }
 
   int? getTotalCalories() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       11,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -158,7 +158,7 @@ class LengthMesg extends Mesg {
   }
 
   int? getLengthType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       12,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -167,7 +167,7 @@ class LengthMesg extends Mesg {
   }
 
   int? getPlayerScore() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       18,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -176,7 +176,7 @@ class LengthMesg extends Mesg {
   }
 
   int? getOpponentScore() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       19,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -185,7 +185,7 @@ class LengthMesg extends Mesg {
   }
 
   int? getStrokeCount() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       20,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -194,7 +194,7 @@ class LengthMesg extends Mesg {
   }
 
   int? getZoneCount() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       21,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -203,7 +203,7 @@ class LengthMesg extends Mesg {
   }
 
   double? getEnhancedAvgRespirationRate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       22,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -212,7 +212,7 @@ class LengthMesg extends Mesg {
   }
 
   double? getEnhancedMaxRespirationRate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       23,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -221,7 +221,7 @@ class LengthMesg extends Mesg {
   }
 
   int? getAvgRespirationRate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       24,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -230,7 +230,7 @@ class LengthMesg extends Mesg {
   }
 
   int? getMaxRespirationRate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       25,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

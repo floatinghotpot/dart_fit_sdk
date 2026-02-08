@@ -45,7 +45,7 @@ class Mesg {
     }
     for (var devField in other.developerFields) {
       if (devField.values.isNotEmpty) {
-        var key = DeveloperDataKey(devField.developerDataIndex, devField.num);
+        final key = DeveloperDataKey(devField.developerDataIndex, devField.num);
         _developerFields[key] = DeveloperField.fromOther(devField);
       }
     }
@@ -62,15 +62,15 @@ class Mesg {
 
   void read(EndianBinaryReader reader, MesgDefinition def) {
     localNum = def.localMesgNum;
-    bool originalEndian = reader.isBigEndian;
+    final bool originalEndian = reader.isBigEndian;
     reader.isBigEndian = def.isBigEndian;
 
     for (var fieldDef in def.getFields()) {
       bool shouldRead = true;
       Field? field = getField(fieldDef.num);
       if (field == null) {
-        Mesg profileMesg = Profile.getMesg(num);
-        Field? profileField = profileMesg.getField(fieldDef.num);
+        final Mesg profileMesg = Profile.getMesg(num);
+        final Field? profileField = profileMesg.getField(fieldDef.num);
         if (profileField != null) {
           field = Field.fromOther(profileField);
         } else {
@@ -89,8 +89,8 @@ class Mesg {
       }
 
       if (field.type != fieldDef.type) {
-        int fieldSize = Fit.baseType[field.type & Fit.baseTypeNumMask].size;
-        int defSize = Fit.baseType[fieldDef.type & Fit.baseTypeNumMask].size;
+        final int fieldSize = Fit.baseType[field.type & Fit.baseTypeNumMask].size;
+        final int defSize = Fit.baseType[fieldDef.type & Fit.baseTypeNumMask].size;
 
         if (defSize < fieldSize) {
           field.type = fieldDef.type;
@@ -122,10 +122,10 @@ class Mesg {
   }
 
   void _readFieldValue(FieldBase field, int size, EndianBinaryReader reader) {
-    int baseTypeNum = field.type & Fit.baseTypeNumMask;
+    final int baseTypeNum = field.type & Fit.baseTypeNumMask;
     if (baseTypeNum == Fit.string) {
-      Uint8List bytes = reader.readBytes(size);
-      List<int> currentStringBytes = [];
+      final Uint8List bytes = reader.readBytes(size);
+      final List<int> currentStringBytes = [];
 
       if (!bytes.any((b) => b != 0)) {
         return;
@@ -144,10 +144,10 @@ class Mesg {
         field.addValue(Uint8List.fromList(currentStringBytes));
       }
     } else {
-      int baseTypeSize = Fit.baseType[baseTypeNum].size;
-      int numElements = size ~/ baseTypeSize;
+      final int baseTypeSize = Fit.baseType[baseTypeNum].size;
+      final int numElements = size ~/ baseTypeSize;
       for (int i = 0; i < numElements; i++) {
-        Object? value = _readRawValue(field.type, reader);
+        final Object? value = _readRawValue(field.type, reader);
         if (value != null || numElements > 1) {
           field.setRawValue(i, value);
         }
@@ -156,8 +156,8 @@ class Mesg {
   }
 
   Object? _readRawValue(int type, EndianBinaryReader reader) {
-    int baseTypeNum = type & Fit.baseTypeNumMask;
-    var invalid = Fit.baseType[baseTypeNum].invalidValue;
+    final int baseTypeNum = type & Fit.baseTypeNumMask;
+    final invalid = Fit.baseType[baseTypeNum].invalidValue;
     Object? value;
 
     switch (baseTypeNum) {
@@ -206,13 +206,13 @@ class Mesg {
   }
 
   void write(EndianBinaryWriter writer, [MesgDefinition? def]) {
-    MesgDefinition mesgDef = def ?? MesgDefinition.fromMesg(this);
+    final MesgDefinition mesgDef = def ?? MesgDefinition.fromMesg(this);
     writer.writeByte(localNum);
 
     for (var fieldDef in mesgDef.getFields()) {
       Field? field = getField(fieldDef.num);
       if (field == null) {
-        Field? profileField = Profile.getMesg(num).getField(fieldDef.num);
+        final Field? profileField = Profile.getMesg(num).getField(fieldDef.num);
         if (profileField != null) {
           field = Field.fromOther(profileField);
           fields.add(field);
@@ -246,18 +246,18 @@ class Mesg {
   }
 
   void _writeField(FieldBase field, int size, EndianBinaryWriter writer) {
-    int baseTypeNum = field.type & Fit.baseTypeNumMask;
+    final int baseTypeNum = field.type & Fit.baseTypeNumMask;
 
     // Strings are special because getSize() is complex
     if (baseTypeNum == Fit.string) {
-      int currentSize = field.getSize();
+      final int currentSize = field.getSize();
       if (currentSize < size) {
         // We need to pad. For strings, we add null bytes to the last string or add a new empty string.
-        int padAmount = size - currentSize;
+        final int padAmount = size - currentSize;
         if (field.getNumValues() == 0) {
           field.addValue(Uint8List(padAmount));
         } else {
-          var lastVal = field.values.last;
+          final lastVal = field.values.last;
           List<int> bytes = [];
           if (lastVal is String) {
             bytes = utf8.encode(lastVal);
@@ -273,19 +273,19 @@ class Mesg {
         _writeRawValue(field.type, field.values[i], writer);
       }
     } else {
-      int baseTypeSize = Fit.baseType[baseTypeNum].size;
-      int numValues = size ~/ baseTypeSize;
+      final int baseTypeSize = Fit.baseType[baseTypeNum].size;
+      final int numValues = size ~/ baseTypeSize;
 
       for (int i = 0; i < numValues; i++) {
-        Object? value = i < field.getNumValues() ? field.values[i] : null;
+        final Object? value = i < field.getNumValues() ? field.values[i] : null;
         _writeRawValue(field.type, value, writer);
       }
     }
   }
 
   void _writeRawValue(int type, Object? value, EndianBinaryWriter writer) {
-    int baseTypeNum = type & Fit.baseTypeNumMask;
-    var val = value ?? Fit.baseType[baseTypeNum].invalidValue;
+    final int baseTypeNum = type & Fit.baseTypeNumMask;
+    final val = value ?? Fit.baseType[baseTypeNum].invalidValue;
 
     switch (baseTypeNum) {
       case Fit.enum_:
@@ -366,7 +366,7 @@ class Mesg {
   }
 
   void setDeveloperField(DeveloperField field) {
-    var devKey = DeveloperDataKey(field.developerDataIndex, field.num);
+    final devKey = DeveloperDataKey(field.developerDataIndex, field.num);
     _developerFields[devKey] = field;
   }
 
@@ -389,13 +389,13 @@ class Mesg {
   int getNumFields() => fields.length;
 
   DeveloperField? _getDeveloperField(int fieldNum, int developerIndex) {
-    var devKey = DeveloperDataKey(developerIndex, fieldNum);
+    final devKey = DeveloperDataKey(developerIndex, fieldNum);
     return _developerFields[devKey];
   }
 
   Iterable<FieldBase> getOverrideField(int fieldNum) {
-    List<FieldBase> localFields = [];
-    Field? nativeField = getField(fieldNum);
+    final List<FieldBase> localFields = [];
+    final Field? nativeField = getField(fieldNum);
     if (nativeField != null) {
       localFields.add(nativeField);
     }
@@ -425,7 +425,7 @@ class Mesg {
   }
 
   int getActiveSubFieldIndex(int fieldNum) {
-    Field? testField = getField(fieldNum);
+    final Field? testField = getField(fieldNum);
     if (testField == null) return Fit.subfieldIndexMainField;
 
     for (int i = 0; i < testField.subfields.length; i++) {
@@ -437,7 +437,7 @@ class Mesg {
   }
 
   String getActiveSubFieldName(int fieldNum) {
-    Field? testField = getField(fieldNum);
+    final Field? testField = getField(fieldNum);
     if (testField == null) return Fit.subfieldNameMainField;
 
     for (var subfield in testField.subfields) {
@@ -481,7 +481,7 @@ class Mesg {
   }
 
   Object? getFieldValue(int fieldNum, {int index = 0, Object? subfieldInfo}) {
-    Field? field = getField(fieldNum);
+    final Field? field = getField(fieldNum);
     if (field == null) return null;
 
     int subfieldIndex;
@@ -491,14 +491,14 @@ class Mesg {
     } else if (subfieldInfo is int) {
       subfieldIndex = subfieldInfo;
     } else if (subfieldInfo is String) {
-      Subfield? sub = field.getSubfieldByName(subfieldInfo);
+      final Subfield? sub = field.getSubfieldByName(subfieldInfo);
       if (sub == null) return null;
       subfieldIndex = field.subfields.indexOf(sub);
     } else {
       return null;
     }
 
-    Subfield? subfield = field.getSubfieldByIndex(subfieldIndex);
+    final Subfield? subfield = field.getSubfieldByIndex(subfieldIndex);
     if (subfield == null || subfield.canMesgSupport(this)) {
       return field.getValue(
         index,
@@ -511,10 +511,10 @@ class Mesg {
   }
 
   Object? getFieldValueByName(String name, {int index = 0}) {
-    Field? field = getFieldByName(name, checkMesgSupportForSubFields: false);
+    final Field? field = getFieldByName(name, checkMesgSupportForSubFields: false);
     if (field == null) return null;
 
-    Subfield? subfield = field.getSubfieldByName(name);
+    final Subfield? subfield = field.getSubfieldByName(name);
     if (subfield == null || subfield.canMesgSupport(this)) {
       return field.getValue(index, subfieldName: name);
     }
@@ -522,7 +522,7 @@ class Mesg {
   }
 
   bool getIsFieldAccumulated(int num) {
-    Field? field = getField(num);
+    final Field? field = getField(num);
     return field?.isAccumulated ?? false;
   }
 
@@ -537,13 +537,13 @@ class Mesg {
       subfieldIndex = getActiveSubFieldIndex(fieldNum);
     } else if (subfieldId is int) {
       subfieldIndex = subfieldId;
-      Subfield? subfield = getField(
+      final Subfield? subfield = getField(
         fieldNum,
       )?.getSubfieldByIndex(subfieldIndex);
       if (subfield != null && !subfield.canMesgSupport(this)) return;
     } else if (subfieldId is String) {
-      Field? testField = getField(fieldNum);
-      Subfield? subfield = testField?.getSubfieldByName(subfieldId);
+      final Field? testField = getField(fieldNum);
+      final Subfield? subfield = testField?.getSubfieldByName(subfieldId);
       if (subfield != null && !subfield.canMesgSupport(this)) return;
       subfieldIndex =
           testField?.subfields.indexOf(subfield!) ?? Fit.subfieldIndexMainField;
@@ -553,8 +553,8 @@ class Mesg {
 
     Field? field = getField(fieldNum);
     if (field == null) {
-      Mesg profileMesg = Profile.getMesg(num);
-      Field? profileField = profileMesg.getField(fieldNum);
+      final Mesg profileMesg = Profile.getMesg(num);
+      final Field? profileField = profileMesg.getField(fieldNum);
       if (profileField != null) {
         field = Field.fromOther(profileField);
       } else {
@@ -581,8 +581,8 @@ class Mesg {
   }
 
   void setFieldValueByName(String name, Object? value, {int index = 0}) {
-    Field? testField = getFieldByName(name);
-    Subfield? subfield = testField?.getSubfieldByName(name);
+    final Field? testField = getFieldByName(name);
+    final Subfield? subfield = testField?.getSubfieldByName(name);
     if (subfield != null && !subfield.canMesgSupport(this)) return;
 
     Field? field = getFieldByName(name, checkMesgSupportForSubFields: false);
@@ -612,10 +612,10 @@ class Mesg {
     // Traverse the field list
     // Use a length-based loop because fields might be added during expansion
     for (int i = 0; i < fields.length; ++i) {
-      Field field = fields[i];
+      final Field field = fields[i];
       List<FieldComponent> componentList = [];
 
-      int activeSubfield = getActiveSubFieldIndex(field.num);
+      final int activeSubfield = getActiveSubFieldIndex(field.num);
       if (activeSubfield == Fit.subfieldIndexMainField) {
         componentList = field.components;
       } else {
@@ -631,7 +631,7 @@ class Mesg {
           newField = Field.fromOther(newField);
           newField.isExpandedField = true;
 
-          Field? f = getField(newField.num);
+          final Field? f = getField(newField.num);
 
           int? bitsValue = field.getBitsValue(offset, fC.bits, newField.type);
           if (bitsValue == null) break;

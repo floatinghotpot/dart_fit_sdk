@@ -25,7 +25,7 @@ class FileIdMesg extends Mesg {
   FileIdMesg.fromMesg(super.mesg) : super.from();
 
   int? getType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -34,7 +34,7 @@ class FileIdMesg extends Mesg {
   }
 
   int? getManufacturer() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -43,7 +43,7 @@ class FileIdMesg extends Mesg {
   }
 
   int? getProduct() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -52,7 +52,7 @@ class FileIdMesg extends Mesg {
   }
 
   int? getFaveroProduct() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: FileIdProductSubfield.FaveroProduct,
@@ -61,7 +61,7 @@ class FileIdMesg extends Mesg {
   }
 
   int? getGarminProduct() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: FileIdProductSubfield.GarminProduct,
@@ -70,7 +70,7 @@ class FileIdMesg extends Mesg {
   }
 
   int? getSerialNumber() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -79,7 +79,7 @@ class FileIdMesg extends Mesg {
   }
 
   DateTime? getTimeCreated() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -92,7 +92,7 @@ class FileIdMesg extends Mesg {
   }
 
   int? getNumber() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -101,7 +101,7 @@ class FileIdMesg extends Mesg {
   }
 
   String? getProductName() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       8,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

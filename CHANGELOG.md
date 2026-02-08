@@ -26,3 +26,7 @@
 * **Enhanced Encoding API**: Added optional `MesgDefinition` parameter to `writeMesg()` method for more flexible message encoding
 * **Code Quality Improvements**: Applied consistent code formatting across multiple files
 * Tested and validated in production project
+
+## 0.3.0
+
+* **Run dart fix --apply**: auto fix the code style

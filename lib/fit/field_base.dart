@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'defines.dart';
 import 'subfield.dart';
 
@@ -54,7 +55,7 @@ abstract class FieldBase {
 
   int getSize() {
     int size = 0;
-    int baseTypeNum = type & Fit.baseTypeNumMask;
+    final int baseTypeNum = type & Fit.baseTypeNumMask;
 
     switch (baseTypeNum) {
       case Fit.string:
@@ -62,8 +63,7 @@ abstract class FieldBase {
           if (element is List<int>) {
             size += element.length;
           } else if (element is String) {
-            size += element.length +
-                1; // +1 for null terminator if handled as bytes
+            size += utf8.encode(element).length + 1;
           }
         }
         break;
@@ -83,7 +83,7 @@ abstract class FieldBase {
     } else if (subfieldName != null) {
       subfield = getSubfieldByName(subfieldName);
     }
-    int t = subfield == null ? type : subfield.type;
+    final int t = subfield == null ? type : subfield.type;
     return Fit.baseType[t & Fit.baseTypeNumMask].isSigned;
   }
 
@@ -136,7 +136,7 @@ abstract class FieldBase {
       }
 
       // Round if it's an integer type
-      int baseTypeNum = type & Fit.baseTypeNumMask;
+      final int baseTypeNum = type & Fit.baseTypeNumMask;
       if (Fit.baseType[baseTypeNum].isInteger) {
         value = value.round();
       }
@@ -166,12 +166,24 @@ abstract class FieldBase {
       o = subfield.offset;
     }
 
-    Object? value = values[index];
+    final Object? value = values[index];
     if (value == null) return null;
 
+    final int baseTypeNum = type & Fit.baseTypeNumMask;
+    if (baseTypeNum == Fit.string) {
+      if (value is List<int>) {
+        // Remove null terminator if present
+        int len = value.length;
+        if (len > 0 && value[len - 1] == 0) {
+          len--;
+        }
+        return utf8.decode(value.sublist(0, len));
+      }
+      return value.toString();
+    }
+
     if (isNumeric()) {
-      int baseTypeNum = type & Fit.baseTypeNumMask;
-      var invalid = Fit.baseType[baseTypeNum].invalidValue;
+      final invalid = Fit.baseType[baseTypeNum].invalidValue;
       if (value == invalid) {
         return null;
       }
@@ -192,19 +204,19 @@ abstract class FieldBase {
     // Concatenate all values into a single large integer if needed,
     // or extract from the appropriate index.
 
-    int baseTypeNum = type & Fit.baseTypeNumMask;
-    int baseSize = Fit.baseType[baseTypeNum].size * 8;
+    final int baseTypeNum = type & Fit.baseTypeNumMask;
+    final int baseSize = Fit.baseType[baseTypeNum].size * 8;
 
-    int valIndex = offset ~/ baseSize;
-    int bitOffset = offset % baseSize;
+    final int valIndex = offset ~/ baseSize;
+    final int bitOffset = offset % baseSize;
 
     if (valIndex >= values.length) return null;
 
-    Object? val = values[valIndex];
+    final Object? val = values[valIndex];
     if (val is! int) return null;
 
     // Extract bits
-    int mask = (1 << bits) - 1;
+    final int mask = (1 << bits) - 1;
     return (val >> bitOffset) & mask;
   }
 
@@ -213,7 +225,7 @@ abstract class FieldBase {
   }
 
   bool isNumeric() {
-    int baseTypeNum = type & Fit.baseTypeNumMask;
+    final int baseTypeNum = type & Fit.baseTypeNumMask;
     if (baseTypeNum >= Fit.baseType.length) return false;
     switch (baseTypeNum) {
       case Fit.enum_:

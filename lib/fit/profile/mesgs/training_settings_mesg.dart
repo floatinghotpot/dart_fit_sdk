@@ -16,7 +16,7 @@ class TrainingSettingsMesg extends Mesg {
   TrainingSettingsMesg.fromMesg(super.mesg) : super.from();
 
   double? getTargetDistance() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       31,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -25,7 +25,7 @@ class TrainingSettingsMesg extends Mesg {
   }
 
   double? getTargetSpeed() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       32,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -34,7 +34,7 @@ class TrainingSettingsMesg extends Mesg {
   }
 
   int? getTargetTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       33,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -43,7 +43,7 @@ class TrainingSettingsMesg extends Mesg {
   }
 
   double? getPreciseTargetSpeed() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       153,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

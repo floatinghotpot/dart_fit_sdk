@@ -18,7 +18,7 @@ class WorkoutSessionMesg extends Mesg {
   WorkoutSessionMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       254,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -27,7 +27,7 @@ class WorkoutSessionMesg extends Mesg {
   }
 
   int? getSport() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -36,7 +36,7 @@ class WorkoutSessionMesg extends Mesg {
   }
 
   int? getSubSport() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -45,7 +45,7 @@ class WorkoutSessionMesg extends Mesg {
   }
 
   int? getNumValidSteps() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -54,7 +54,7 @@ class WorkoutSessionMesg extends Mesg {
   }
 
   int? getFirstStepIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -63,7 +63,7 @@ class WorkoutSessionMesg extends Mesg {
   }
 
   double? getPoolLength() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -72,7 +72,7 @@ class WorkoutSessionMesg extends Mesg {
   }
 
   int? getPoolLengthUnit() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

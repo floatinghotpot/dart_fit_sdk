@@ -14,7 +14,7 @@ class VideoMesg extends Mesg {
   VideoMesg.fromMesg(super.mesg) : super.from();
 
   String? getUrl() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -23,7 +23,7 @@ class VideoMesg extends Mesg {
   }
 
   String? getHostingProvider() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -32,7 +32,7 @@ class VideoMesg extends Mesg {
   }
 
   int? getDuration() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

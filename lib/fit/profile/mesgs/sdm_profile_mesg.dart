@@ -19,7 +19,7 @@ class SdmProfileMesg extends Mesg {
   SdmProfileMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       254,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -28,7 +28,7 @@ class SdmProfileMesg extends Mesg {
   }
 
   bool? getEnabled() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -37,7 +37,7 @@ class SdmProfileMesg extends Mesg {
   }
 
   int? getSdmAntId() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -46,7 +46,7 @@ class SdmProfileMesg extends Mesg {
   }
 
   double? getSdmCalFactor() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -55,7 +55,7 @@ class SdmProfileMesg extends Mesg {
   }
 
   double? getOdometer() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -64,7 +64,7 @@ class SdmProfileMesg extends Mesg {
   }
 
   bool? getSpeedSource() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -73,7 +73,7 @@ class SdmProfileMesg extends Mesg {
   }
 
   int? getSdmAntIdTransType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -82,7 +82,7 @@ class SdmProfileMesg extends Mesg {
   }
 
   int? getOdometerRollover() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       7,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

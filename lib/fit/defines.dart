@@ -79,13 +79,13 @@ class Fit {
   ];
 
   static double _getFloat32Invalid() {
-    var bd = ByteData(4);
+    final bd = ByteData(4);
     bd.setUint32(0, 0xffffffff);
     return bd.getFloat32(0);
   }
 
   static double _getFloat64Invalid() {
-    var bd = ByteData(8);
+    final bd = ByteData(8);
     //bd.setUint64(0, 0xffffffffffffffff);
     for (int i = 0; i < 8; i++) {
       bd.setUint8(i, 0xff);
@@ -130,9 +130,9 @@ class Fit {
 
   static bool isNumericInvalid(Object? value, int type) {
     if (value == null) return true;
-    int baseTypeNum = type & Fit.baseTypeNumMask;
+    final int baseTypeNum = type & Fit.baseTypeNumMask;
     if (baseTypeNum >= Fit.baseType.length) return true;
-    var invalid = Fit.baseType[baseTypeNum].invalidValue;
+    final invalid = Fit.baseType[baseTypeNum].invalidValue;
 
     if (value is double && invalid is double) {
       if (value.isNaN && invalid.isNaN) return true;

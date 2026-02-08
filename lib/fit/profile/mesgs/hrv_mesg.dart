@@ -12,7 +12,7 @@ class HrvMesg extends Mesg {
   HrvMesg.fromMesg(super.mesg) : super.from();
 
   double? getTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

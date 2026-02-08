@@ -24,7 +24,7 @@ class AviationAttitudeMesg extends Mesg {
   AviationAttitudeMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       253,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -37,7 +37,7 @@ class AviationAttitudeMesg extends Mesg {
   }
 
   int? getTimestampMs() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -46,7 +46,7 @@ class AviationAttitudeMesg extends Mesg {
   }
 
   int? getSystemTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -55,7 +55,7 @@ class AviationAttitudeMesg extends Mesg {
   }
 
   double? getPitch() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -64,7 +64,7 @@ class AviationAttitudeMesg extends Mesg {
   }
 
   double? getRoll() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -73,7 +73,7 @@ class AviationAttitudeMesg extends Mesg {
   }
 
   double? getAccelLateral() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -82,7 +82,7 @@ class AviationAttitudeMesg extends Mesg {
   }
 
   double? getAccelNormal() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -91,7 +91,7 @@ class AviationAttitudeMesg extends Mesg {
   }
 
   double? getTurnRate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -100,7 +100,7 @@ class AviationAttitudeMesg extends Mesg {
   }
 
   int? getStage() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       7,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -109,7 +109,7 @@ class AviationAttitudeMesg extends Mesg {
   }
 
   int? getAttitudeStageComplete() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       8,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -118,7 +118,7 @@ class AviationAttitudeMesg extends Mesg {
   }
 
   double? getTrack() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       9,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -127,7 +127,7 @@ class AviationAttitudeMesg extends Mesg {
   }
 
   int? getValidity() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       10,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

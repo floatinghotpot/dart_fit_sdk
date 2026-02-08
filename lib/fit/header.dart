@@ -72,9 +72,9 @@ class Header {
   }
 
   void updateCrc() {
-    EndianBinaryWriter writer = EndianBinaryWriter(false);
+    final EndianBinaryWriter writer = EndianBinaryWriter(false);
     write(writer);
-    Uint8List buffer = writer.contents();
+    final Uint8List buffer = writer.contents();
     crc = Crc.calc16(buffer, buffer.length - 2);
   }
 }

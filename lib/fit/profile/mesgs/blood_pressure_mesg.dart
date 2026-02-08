@@ -22,7 +22,7 @@ class BloodPressureMesg extends Mesg {
   BloodPressureMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       253,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -35,7 +35,7 @@ class BloodPressureMesg extends Mesg {
   }
 
   int? getSystolicPressure() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -44,7 +44,7 @@ class BloodPressureMesg extends Mesg {
   }
 
   int? getDiastolicPressure() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -53,7 +53,7 @@ class BloodPressureMesg extends Mesg {
   }
 
   int? getMeanArterialPressure() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -62,7 +62,7 @@ class BloodPressureMesg extends Mesg {
   }
 
   int? getMap3SampleMean() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -71,7 +71,7 @@ class BloodPressureMesg extends Mesg {
   }
 
   int? getMapMorningValues() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -80,7 +80,7 @@ class BloodPressureMesg extends Mesg {
   }
 
   int? getMapEveningValues() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -89,7 +89,7 @@ class BloodPressureMesg extends Mesg {
   }
 
   int? getHeartRate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -98,7 +98,7 @@ class BloodPressureMesg extends Mesg {
   }
 
   int? getHeartRateType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       7,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -107,7 +107,7 @@ class BloodPressureMesg extends Mesg {
   }
 
   int? getStatus() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       8,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -116,7 +116,7 @@ class BloodPressureMesg extends Mesg {
   }
 
   int? getUserProfileIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       9,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

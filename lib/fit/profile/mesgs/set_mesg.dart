@@ -22,7 +22,7 @@ class SetMesg extends Mesg {
   SetMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       254,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -35,7 +35,7 @@ class SetMesg extends Mesg {
   }
 
   double? getDuration() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -44,7 +44,7 @@ class SetMesg extends Mesg {
   }
 
   int? getRepetitions() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -53,7 +53,7 @@ class SetMesg extends Mesg {
   }
 
   double? getWeight() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -62,7 +62,7 @@ class SetMesg extends Mesg {
   }
 
   int? getSetType() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -71,7 +71,7 @@ class SetMesg extends Mesg {
   }
 
   DateTime? getStartTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -84,7 +84,7 @@ class SetMesg extends Mesg {
   }
 
   int? getCategory() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       7,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -93,7 +93,7 @@ class SetMesg extends Mesg {
   }
 
   int? getCategorySubtype() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       8,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -102,7 +102,7 @@ class SetMesg extends Mesg {
   }
 
   int? getWeightDisplayUnit() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       9,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -111,7 +111,7 @@ class SetMesg extends Mesg {
   }
 
   int? getMessageIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       10,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -120,7 +120,7 @@ class SetMesg extends Mesg {
   }
 
   int? getWktStepIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       11,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

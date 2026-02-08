@@ -13,7 +13,7 @@ class FileCreatorMesg extends Mesg {
   FileCreatorMesg.fromMesg(super.mesg) : super.from();
 
   int? getSoftwareVersion() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -22,7 +22,7 @@ class FileCreatorMesg extends Mesg {
   }
 
   int? getHardwareVersion() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

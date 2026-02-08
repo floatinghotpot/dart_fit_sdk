@@ -18,7 +18,7 @@ class SegmentPointMesg extends Mesg {
   SegmentPointMesg.fromMesg(super.mesg) : super.from();
 
   int? getMessageIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       254,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -27,7 +27,7 @@ class SegmentPointMesg extends Mesg {
   }
 
   int? getPositionLat() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -36,7 +36,7 @@ class SegmentPointMesg extends Mesg {
   }
 
   int? getPositionLong() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -45,7 +45,7 @@ class SegmentPointMesg extends Mesg {
   }
 
   double? getDistance() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -54,7 +54,7 @@ class SegmentPointMesg extends Mesg {
   }
 
   double? getAltitude() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -63,7 +63,7 @@ class SegmentPointMesg extends Mesg {
   }
 
   double? getLeaderTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -72,7 +72,7 @@ class SegmentPointMesg extends Mesg {
   }
 
   double? getEnhancedAltitude() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,

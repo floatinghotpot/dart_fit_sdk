@@ -34,7 +34,7 @@ class DiveSummaryMesg extends Mesg {
   DiveSummaryMesg.fromMesg(super.mesg) : super.from();
 
   DateTime? getTimestamp() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       253,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -47,7 +47,7 @@ class DiveSummaryMesg extends Mesg {
   }
 
   int? getReferenceMesg() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       0,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -56,7 +56,7 @@ class DiveSummaryMesg extends Mesg {
   }
 
   int? getReferenceIndex() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       1,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -65,7 +65,7 @@ class DiveSummaryMesg extends Mesg {
   }
 
   double? getAvgDepth() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       2,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -74,7 +74,7 @@ class DiveSummaryMesg extends Mesg {
   }
 
   double? getMaxDepth() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       3,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -83,7 +83,7 @@ class DiveSummaryMesg extends Mesg {
   }
 
   int? getSurfaceInterval() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       4,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -92,7 +92,7 @@ class DiveSummaryMesg extends Mesg {
   }
 
   int? getStartCns() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       5,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -101,7 +101,7 @@ class DiveSummaryMesg extends Mesg {
   }
 
   int? getEndCns() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       6,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -110,7 +110,7 @@ class DiveSummaryMesg extends Mesg {
   }
 
   int? getStartN2() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       7,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -119,7 +119,7 @@ class DiveSummaryMesg extends Mesg {
   }
 
   int? getEndN2() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       8,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -128,7 +128,7 @@ class DiveSummaryMesg extends Mesg {
   }
 
   int? getO2Toxicity() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       9,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -137,7 +137,7 @@ class DiveSummaryMesg extends Mesg {
   }
 
   int? getDiveNumber() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       10,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -146,7 +146,7 @@ class DiveSummaryMesg extends Mesg {
   }
 
   double? getBottomTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       11,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -155,7 +155,7 @@ class DiveSummaryMesg extends Mesg {
   }
 
   double? getAvgPressureSac() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       12,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -164,7 +164,7 @@ class DiveSummaryMesg extends Mesg {
   }
 
   double? getAvgVolumeSac() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       13,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -173,7 +173,7 @@ class DiveSummaryMesg extends Mesg {
   }
 
   double? getAvgRmv() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       14,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -182,7 +182,7 @@ class DiveSummaryMesg extends Mesg {
   }
 
   double? getDescentTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       15,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -191,7 +191,7 @@ class DiveSummaryMesg extends Mesg {
   }
 
   double? getAscentTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       16,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -200,7 +200,7 @@ class DiveSummaryMesg extends Mesg {
   }
 
   double? getAvgAscentRate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       17,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -209,7 +209,7 @@ class DiveSummaryMesg extends Mesg {
   }
 
   double? getAvgDescentRate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       22,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -218,7 +218,7 @@ class DiveSummaryMesg extends Mesg {
   }
 
   double? getMaxAscentRate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       23,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -227,7 +227,7 @@ class DiveSummaryMesg extends Mesg {
   }
 
   double? getMaxDescentRate() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       24,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
@@ -236,7 +236,7 @@ class DiveSummaryMesg extends Mesg {
   }
 
   double? getHangTime() {
-    var val = getFieldValue(
+    final val = getFieldValue(
       25,
       index: 0,
       subfieldInfo: Fit.subfieldIndexMainField,
